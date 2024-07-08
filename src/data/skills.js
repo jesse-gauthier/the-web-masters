@@ -1,0 +1,16 @@
+export const skills = [
+	{ name: 'JavaScript', image: '/assets/skills/javascript.svg' },
+	{ name: 'CSS', image: '/assets/skills/css-3.svg' },
+	{ name: 'Vue.js', image: '/assets/skills/vue.svg' },
+	{ name: 'Tailwind CSS', image: '/assets/skills/tailwindcss.svg' },
+	{ name: 'Node.js', image: '/assets/skills/nodejs.svg' },
+	{ name: 'PHP', image: '/assets/skills/php.svg' },
+	{ name: 'WordPress', image: '/assets/skills/wordpress.svg' },
+	{ name: 'Shopify', image: '/assets/skills/shopify.svg' },
+	{ name: 'React', image: '/assets/skills/react.svg' },
+	{ name: 'Elementor', image: '/assets/skills/elementor.svg' },
+	{ name: 'git', image: '/assets/skills/git.svg' },
+	{ name: 'Google Cloud', image: '/assets/skills/google-cloud.svg' },
+	{ name: 'MongoDB', image: '/assets/skills/mongodb.svg' },
+	{ name: 'SASS', image: '/assets/skills/sass.svg' },
+]

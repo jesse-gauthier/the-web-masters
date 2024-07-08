@@ -1,0 +1,137 @@
+<template>
+  <header
+    class="w-[100%] bg-[#2b3d4f] flex justify-between items-center px-5 py-3 text-white"
+    role="banner"
+  >
+    <div class="navbar inner-wrapper">
+      <!-- Mobile -->
+      <div class="flex justify-between w-full lg:navbar-start">
+        <router-link class="" to="/" aria-label="Home">
+          <logoComponent />
+        </router-link>
+        <div class="">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden" @click="isOpen = !isOpen">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-10 w-10"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <div
+            v-if="isOpen"
+            tabindex="0"
+            class="absolute h-screen bg-[#2b3d4f] w-screen left-0 z-50 top-28 p-10"
+          >
+            <ul class="text-right text-xl *:my-2">
+              <li v-for="(link, index) in links" :key="link.path">
+                <div v-if="link.subPages" @click="toggleDropdown(index)" class="cursor-pointer">
+                  {{ link.name }} <span>↓</span>
+                </div>
+                <router-link v-else :to="link.path" @click="isOpen = false">
+                  {{ link.name }}
+                </router-link>
+                <ul class="my-4" v-if="link.subPages && showDropdown === index">
+                  <li v-for="subPage in link.subPages" :key="subPage.path">
+                    <router-link :to="subPage.path" @click="isOpen = false">
+                      {{ subPage.name }}
+                    </router-link>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Desktop -->
+      <div class="navbar-end hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li
+            v-for="(link, index) in links"
+            :key="link.path"
+            @mouseenter="showDropdown = index"
+            @mouseleave="showDropdown = null"
+            class="relative"
+          >
+            <router-link v-if="!link.subPages" :to="link.path" class="text-xl state-focus">
+              {{ link.name }}
+            </router-link>
+            <div v-else class="flex flex-col text-xl cursor-pointer">
+              <router-link :to="link.path" class="text-xl state-focus">
+                {{ link.name }}
+              </router-link>
+              <ul v-if="showDropdown === index" class="dropdown shadow-lg">
+                <li v-for="subPage in link.subPages" :key="subPage.path">
+                  <router-link class="hover:underline text-xl" :to="subPage.path">
+                    {{ subPage.name }}
+                  </router-link>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+import LogoComponent from './branding/LogoComponent.vue'
+
+const isOpen = ref(false)
+const showDropdown = ref(null)
+
+const links = [
+  { name: 'Home', path: '/' },
+  {
+    name: 'Services',
+    path: '/services',
+    subPages: [{ name: 'WordPress', path: 'wordpress' }]
+  },
+  { name: 'Our Work', path: '/ourwork' },
+  { name: 'Contact', path: '/contact' }
+]
+
+const toggleDropdown = (index) => {
+  showDropdown.value = showDropdown.value === index ? null : index
+}
+</script>
+
+<style>
+.active {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+  text-decoration-color: #febf45;
+}
+
+.fa-canadian-maple-leaf {
+  color: #ff0000;
+}
+
+.menu {
+  top: 7dvh;
+  right: 0dvw !important;
+}
+.state-focus:focus {
+  color: orange !important;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: -20%;
+  background-color: #273441;
+  padding: 10px;
+  border-radius: 3px;
+}
+</style>
