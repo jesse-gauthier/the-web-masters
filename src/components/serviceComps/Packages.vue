@@ -1,6 +1,12 @@
 <template>
-	<section class="max-w-[80dvw] mx-auto min-h-[50dvh] p-8">
-		<h2 class="capitalize text-4xl font-bold text-center mb-12">
+	<section
+		class="max-w-[80dvw] mx-auto min-h-[50dvh] p-8"
+		aria-labelledby="solutions-title"
+	>
+		<h2
+			id="solutions-title"
+			class="capitalize text-4xl font-bold text-center mb-12"
+		>
 			Solutions For All Budgets
 		</h2>
 		<!-- Holds Each Package -->
@@ -10,8 +16,12 @@
 			<!-- Starter -->
 			<div
 				class="border p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+				role="region"
+				aria-labelledby="starter-package-title"
 			>
-				<h3 class="text-2xl font-semibold mb-4">Starter <br />Package</h3>
+				<h3 id="starter-package-title" class="text-2xl font-semibold mb-4">
+					Starter <br />Package
+				</h3>
 				<p class="mb-4">
 					Get your business online with a professional domain, a visually
 					appealing template-based website, reliable hosting, and fundamental
@@ -35,10 +45,11 @@
 			<!-- Growth Package -->
 			<div
 				class="border p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+				role="region"
+				aria-labelledby="growth-package-title"
 			>
-				<h3 class="text-2xl font-semibold mb-4">
-					Growth <br />
-					Package
+				<h3 id="growth-package-title" class="text-2xl font-semibold mb-4">
+					Growth <br />Package
 				</h3>
 				<p class="mb-4">
 					Elevate your online presence with a custom-designed website, engaging
@@ -67,10 +78,11 @@
 			<!-- E-Commerce Package -->
 			<div
 				class="border p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+				role="region"
+				aria-labelledby="ecommerce-package-title"
 			>
-				<h3 class="text-2xl font-semibold mb-4">
-					E-Commerce <br />
-					Package
+				<h3 id="ecommerce-package-title" class="text-2xl font-semibold mb-4">
+					E-Commerce <br />Package
 				</h3>
 				<p class="mb-4">
 					Build a powerful online store with a robust e-commerce platform,
@@ -102,10 +114,11 @@
 			<!-- Custom Package -->
 			<div
 				class="border p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+				role="region"
+				aria-labelledby="custom-package-title"
 			>
-				<h3 class="text-2xl font-semibold mb-4">
-					Custom <br />
-					Package
+				<h3 id="custom-package-title" class="text-2xl font-semibold mb-4">
+					Custom <br />Package
 				</h3>
 				<p class="mb-4">
 					Receive a personalized approach with a mix of services tailored to
@@ -137,5 +150,9 @@ h2 {
 h3 {
 	font-size: 1.8em;
 	font-weight: medium;
+}
+
+*:text-white {
+	color: #ffffff;
 }
 </style>
