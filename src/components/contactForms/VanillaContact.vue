@@ -180,8 +180,8 @@
 					/>
 				</div>
 				<div class="ml-3 text-sm">
-					<label for="acceptTerms" class="font-medium text-gray-700"
-						>I con to be Contacted</label
+					<label for="acceptTerms" class="font-medium text-gray-700 capitalize"
+						>I consent to be Contacted</label
 					>
 				</div>
 				<span v-if="errors.acceptTerms" class="text-red-500 text-sm">{{
