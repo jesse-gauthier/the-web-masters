@@ -8,33 +8,24 @@
 			role="region"
 			aria-labelledby="testimonials-heading"
 		>
-			<div
-				v-for="item in testimony"
-				:key="item.name"
-				class="flex flex-col justify-center"
-			>
-				<div class="flex flex-col lg:flex-row gap-6 text-center px-1">
+			<div v-for="item in testimony" :key="item.name" class="hero">
+				<div class="hero-content flex-col lg:flex-row-reverse">
 					<img
 						:src="item.image"
-						class="p-3 w-[200px] mx-auto rounded-md"
+						class="p-3 w-[280px] mx-auto rounded-md"
 						:alt="`Image of ${item.name}`"
 					/>
-					<blockquote
-						class="my-4 md:my-0 italic w-100 text-justify lg:text-center text-lg self-center"
-						role="document"
+					<div
+						class="flex flex-col gap-4 justify-center align-middle self-center"
 					>
-						<span>{{
-							isExpanded[item.name] ? item.text : truncatedText(item.text)
-						}}</span>
-						<button
-							@click="toggleText(item.name)"
-							class="underline hover-orange mx-auto"
-						>
-							{{ isExpanded[item.name] ? 'Hide Review' : 'Full Review' }}
-						</button>
-					</blockquote>
+						<h3 class="text-3xl capitalize m-0 self-center italic text-center">
+							Web Masters is an exceptional talent in website design and Google
+							Analytics, consistently enhancing our digital strategies with
+							innovative solutions.
+						</h3>
+						<a :href="item.link" class="btn mx-auto">View Project</a>
+					</div>
 				</div>
-				<a :href="item.link" class="btn mx-auto">View The Work</a>
 			</div>
 		</div>
 	</section>

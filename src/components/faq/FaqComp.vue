@@ -3,7 +3,7 @@
 		<h3 class="text-center text-5xl">Frequently Asked Questions</h3>
 		<ul class="my-16 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
 			<li
-				class="shadow border-[0.50px] border-[#577594] rounded-md cursor-pointer self-start"
+				class="shadow border-[0.50px] border-[#577594] rounded-md cursor-pointer self-start max-w-[22dvw]"
 				v-for="faq in faqs"
 				:key="faq.question"
 			>
