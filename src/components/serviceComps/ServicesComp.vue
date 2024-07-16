@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="hidden md:block py-14 w-[65vw] mx-auto"
+		class="hidden md:block pt-14 w-[65vw] mx-auto"
 		role="region"
 		aria-label="Solutions"
 	>

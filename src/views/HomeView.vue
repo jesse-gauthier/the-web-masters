@@ -4,7 +4,7 @@ import AboutComp from '@/components/about/AboutComp.vue'
 import ServicesComp from '@/components/serviceComps/ServicesComp.vue'
 import FaqComp from '@/components/faq/FaqComp.vue'
 import TestimonyComp from '@/components/TestimonyComp.vue'
-
+import Packages from '@/components/serviceComps/Packages.vue'
 import { useHead } from '@unhead/vue'
 
 useHead({
@@ -18,6 +18,7 @@ useHead({
 		<AboutComp id="about" />
 		<TestimonyComp />
 		<ServicesComp id="services" />
+		<Packages />
 		<FaqComp id="faq" />
 	</main>
 </template>
