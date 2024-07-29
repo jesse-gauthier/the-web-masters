@@ -9,21 +9,18 @@
 			aria-labelledby="testimonials-heading"
 		>
 			<div v-for="item in testimony" :key="item.name" class="hero">
-				<div class="hero-content flex-col lg:flex-row-reverse">
+				<div class="flex flex-col lg:flex-row-reverse">
 					<img
 						:src="item.image"
-						class="p-3 w-[280px] mx-auto rounded-md"
+						class="w-[280px] mx-auto rounded-md self-start"
 						:alt="`Image of ${item.name}`"
 					/>
-					<div
-						class="flex flex-col gap-4 justify-center align-middle self-center"
-					>
+					<div class="flex flex-col gap-4 self-center">
 						<h3 class="text-3xl capitalize m-0 self-center italic text-center">
 							Web Masters is an exceptional talent in website design and Google
 							Analytics, consistently enhancing our digital strategies with
 							innovative solutions.
 						</h3>
-						<a :href="item.link" class="btn mx-auto">View Project</a>
 					</div>
 				</div>
 			</div>

@@ -72,7 +72,6 @@
 					<li>Google Friendly XML Sitemap</li>
 					<li>How To Tutorial</li>
 					<li>4 Rounds of Revisions</li>
-					<li>100% Satisfaction Guarantee</li>
 				</ul>
 			</div>
 			<!-- E-Commerce Package -->

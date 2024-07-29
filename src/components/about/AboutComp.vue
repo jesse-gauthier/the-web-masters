@@ -36,7 +36,7 @@
 						clients at every level.
 					</p>
 					<router-link
-						class="underline hover-orange mx-auto"
+						class="my-12 mx-auto flex w-[fit-content] px-6 btn bg-white border-1 border-[#2b3c4f] hover:bg-[#2b3d4f] hover:text-white hover:underline underline-offset-4"
 						to="/contact"
 						aria-label="Contact us for a free consultation"
 					>

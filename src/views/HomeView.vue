@@ -17,7 +17,6 @@ useHead({
 		<HeroComp id="hero" />
 		<AboutComp id="about" />
 		<TestimonyComp />
-		<ServicesComp id="services" />
 		<Packages />
 		<FaqComp id="faq" />
 	</main>
