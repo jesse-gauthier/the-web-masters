@@ -18,10 +18,10 @@
 					<p class="mb-5 text-2xl font-medium text-left text-white">
 						Our web design and SEO strategies are designed to significantly
 						increase traffic and lead generation for your business.
-						<span class="block text-3xl my-8 orange-bg w-fit rounded py-2 px-3"
-							>Backed By Our Guarantee!</span
-						>
 					</p>
+					<span class="block text-3xl my-8 orange-bg w-fit rounded py-2 px-3"
+						>Backed By Our Guarantee!</span
+					>
 					<router-link
 						to="/contact"
 						class="flex btn btn-lg w-fit bg-white border-1 border-[#2b3c4f] hover:bg-[#2b3d4f] hover:text-white"

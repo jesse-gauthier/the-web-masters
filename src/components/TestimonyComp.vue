@@ -4,7 +4,7 @@
 		aria-labelledby="testimonials-heading"
 	>
 		<div
-			class="mx-auto w-[80dvw] md:w-[60dvw]"
+			class="mx-auto w-[95dvw] md:w-[60dvw]"
 			role="region"
 			aria-labelledby="testimonials-heading"
 		>
@@ -15,13 +15,14 @@
 						class="w-[280px] mx-auto rounded-md self-start"
 						:alt="`Image of ${item.name}`"
 					/>
-					<div class="flex flex-col gap-4 self-center">
-						<h3 class="text-3xl capitalize m-0 self-center italic text-center">
-							Web Masters is an exceptional talent in website design and Google
-							Analytics, consistently enhancing our digital strategies with
-							innovative solutions.
-						</h3>
-					</div>
+
+					<h3
+						class="text-3xl capitalize md:m-0 self-center italic text-center mt-2"
+					>
+						Web Masters is an exceptional talent in website design and Google
+						Analytics, consistently enhancing our digital strategies with
+						innovative solutions.
+					</h3>
 				</div>
 			</div>
 		</div>
