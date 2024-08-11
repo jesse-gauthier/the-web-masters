@@ -5,12 +5,12 @@
 		<h1 class="text-4xl font-bold text-center mb-10 text-gray-800">
 			Our Services
 		</h1>
-
+		<!-- Wordpress -->
 		<div class="flex flex-col md:flex-row mb-20">
 			<div class="md:order-2 md:w-1/2 flex items-center justify-center">
 				<img
 					class="w-[300px] h-[200px] object-contain rounded-lg shadow-md p-3"
-					src="@/assets/svgs/1.svg"
+					:src="wordpresslogo"
 					alt="WordPress Development"
 				/>
 			</div>
@@ -34,12 +34,12 @@
 				</RouterLink>
 			</div>
 		</div>
-
+		<!-- Shopify -->
 		<div class="flex flex-col md:flex-row mb-20">
 			<div class="md:order-1 md:w-1/2 flex items-center justify-center">
 				<img
 					class="w-[300px] h-[200px] object-contain p-3 rounded-lg shadow-md"
-					src="@/assets/svgs/2.svg"
+					:src="shopifylogo"
 					alt="Shopify Development"
 				/>
 			</div>
@@ -63,7 +63,7 @@
 				</RouterLink>
 			</div>
 		</div>
-
+		<!-- UI Design -->
 		<div class="flex flex-col md:flex-row mb-20">
 			<div class="md:order-2 md:w-1/2 flex items-center justify-center">
 				<img
@@ -86,7 +86,7 @@
 				</p>
 			</div>
 		</div>
-
+		<!-- Optimization -->
 		<div class="flex flex-col md:flex-row mb-20">
 			<div class="md:order-1 md:w-1/2 flex items-center justify-center">
 				<img
@@ -111,7 +111,7 @@
 				</p>
 			</div>
 		</div>
-
+		<!-- SEO -->
 		<div class="flex flex-col md:flex-row mb-20">
 			<div class="md:order-2 md:w-1/2 flex items-center justify-center">
 				<img
@@ -134,7 +134,7 @@
 				</p>
 			</div>
 		</div>
-
+		<!-- Consultation Services -->
 		<div class="flex flex-col md:flex-row mb-20">
 			<div class="md:order-1 md:w-1/2 flex items-center justify-center">
 				<img
@@ -160,7 +160,7 @@
 				</p>
 			</div>
 		</div>
-
+		<!-- Other Solutions We Offer -->
 		<div class="mt-16 hidden md:block">
 			<h2 class="text-3xl font-bold text-center mb-10 text-gray-800">
 				Other Solutions We Offer
@@ -181,19 +181,8 @@
 </template>
 
 <script setup>
-const solutions = [
-	'E-commerce Development',
-	'Information Architecture',
-	'SEO',
-	'Application Development',
-	'UI/UX Design',
-	'Content Management Systems',
-	'Web Analytics',
-	'Cloud Solutions',
-	'Security Audits',
-	'Accessibility Compliance',
-]
-
+import shopifylogo from '@/assets/shopifylogo.svg'
+import wordpresslogo from '@/assets/wordpresslogo.svg'
 import { useHead } from '@unhead/vue'
 
 useHead({
@@ -201,8 +190,4 @@ useHead({
 })
 </script>
 
-<style scoped>
-.container {
-	max-width: 1200px;
-}
-</style>
+<style scoped></style>
