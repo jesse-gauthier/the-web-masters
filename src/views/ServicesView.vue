@@ -29,6 +29,9 @@
 					design, plugin development, and ongoing maintenance to ensure your
 					WordPress site remains secure and up-to-date.
 				</p>
+				<RouterLink to="/wordpress" class="btn btn-outline w-fit mx-auto">
+					More Information
+				</RouterLink>
 			</div>
 		</div>
 
@@ -55,6 +58,9 @@
 					store not only stands out but also operates flawlessly, catering to
 					your unique business needs.
 				</p>
+				<RouterLink to="/shopify" class="btn btn-outline w-fit mx-auto">
+					More Information
+				</RouterLink>
 			</div>
 		</div>
 

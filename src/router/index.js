@@ -8,6 +8,7 @@ import ContactView from '@/views/ContactView.vue'
 import PrivacyPolicy from '@/views/PrivacyPolicy.vue'
 import NotFound from '@/views/NotFound.vue'
 import AboutPage from '@/views/AboutPage.vue'
+import ShopifyServicesView from '@/views/ShopifyServicesView.vue'
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,8 +25,13 @@ const router = createRouter({
 		},
 		{
 			path: '/wordpress',
-			name: 'WordPressService',
+			name: 'WordPress',
 			component: WordPressServiceView,
+		},
+		{
+			path: '/shopify',
+			name: 'Shopify',
+			component: ShopifyServicesView,
 		},
 		{
 			path: '/ourwork',
@@ -54,7 +60,6 @@ const router = createRouter({
 		},
 	],
 	scrollBehavior(to, from, savedPosition) {
-		// always scroll to top
 		return { top: 0 }
 	},
 })
