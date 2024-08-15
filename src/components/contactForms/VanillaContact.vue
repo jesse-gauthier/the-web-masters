@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="max-w-xs md:max-w-xl mx-auto p-6 bg-white border text-black border-gray-300 rounded-lg shadow-md"
+		class="max-w-xs sm:max-w-md md:max-w-xl mx-auto p-6 bg-white border text-black border-gray-300 rounded-lg shadow-md"
 	>
 		<form
 			@submit.prevent="submitForm"

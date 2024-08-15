@@ -9,7 +9,7 @@
 		<div class="navbar inner-wrapper">
 			<!-- Mobile -->
 			<div class="flex justify-between w-full lg:navbar-start">
-				<div class="flex justify-between align-middle">
+				<div class="flex justify-between align-middle w-screen">
 					<router-link class="" to="/" aria-label="Home">
 						<LogoComponent />
 					</router-link>
@@ -34,6 +34,7 @@
 							/>
 						</svg>
 					</div>
+					<!-- Nav -->
 					<div
 						v-if="isOpen"
 						tabindex="0"

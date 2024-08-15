@@ -8,6 +8,11 @@ import CookiesBanner from './components/CookiesBanner.vue'
 
 <template>
 	<HeaderComp />
+	<div class="text-center orange-bg">
+		<button class="btn btn-ghost text-2xl w-screen rounded-none underline">
+			Get a Free SEO Audit
+		</button>
+	</div>
 	<RouterView />
 	<ContactForm id="contact_form" />
 	<CookiesBanner />

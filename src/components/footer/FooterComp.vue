@@ -1,6 +1,6 @@
 <template>
 	<footer
-		class="footer p-10 bg-[#2b3d4f] flex justify-center gap-12 text-white min-h-[10vh]"
+		class="footer p-10 bg-[#2b3d4f] flex flex-wrap justify-center gap-12 text-white min-h-[10vh]"
 		role="contentinfo"
 	>
 		<div class="max-w-[300px]">

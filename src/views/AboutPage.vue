@@ -11,7 +11,7 @@
 			<div class="hero-overlay bg-opacity-60"></div>
 			<div class="hero-content text-neutral-content text-center">
 				<div class="max-w-md">
-					<h1 id="about-us-heading" class="mb-5 text-8xl font-bold">
+					<h1 id="about-us-heading" class="mb-5 text-5xl md:text-8xl font-bold">
 						About Us
 					</h1>
 				</div>
@@ -71,6 +71,11 @@
 						Magento. Whatever your vision, we have the skills to bring it to
 						life.
 					</p>
+					<div class="flex justify-center my-3">
+						<router-link to="/freeseo" class="btn btn-outline"
+							>Get A Free SEO Audit</router-link
+						>
+					</div>
 				</article>
 
 				<!-- Why We Do It -->
@@ -91,6 +96,11 @@
 						meeting the needs of small businesses, speaking your language, and
 						helping you design a website that fulfills all your requirements.
 					</p>
+					<div class="flex justify-center my-3">
+						<router-link to="/freeseo" class="btn btn-outline"
+							>Get A Free SEO Audit</router-link
+						>
+					</div>
 				</article>
 			</div>
 		</section>
