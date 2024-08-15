@@ -128,7 +128,7 @@
 						v-model="formData.freeAudit"
 						class="checkbox checkbox-primary"
 					/>
-					<span class="label-text ml-2">Request a free website audit</span>
+					<span class="label-text ml-2">Request a free SEO audit</span>
 				</label>
 			</div>
 
@@ -144,7 +144,7 @@
 						aria-required="true"
 						class="checkbox checkbox-primary"
 					/>
-					<span class="label-text ml-2">I consent to be Contacted</span>
+					<span class="label-text ml-2">I consent to be contacted</span>
 				</label>
 				<span v-if="errors.acceptTerms" class="text-error text-sm">{{
 					errors.acceptTerms
@@ -154,7 +154,7 @@
 			<!-- Send -->
 			<button
 				type="submit"
-				class="btn btn-primary w-full text-lg"
+				class="btn btn-outline w-full text-lg"
 				role="button"
 			>
 				Submit
