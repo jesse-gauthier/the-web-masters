@@ -4,12 +4,13 @@
 		aria-labelledby="testimonials-heading"
 	>
 		<div
-			class="mx-auto w-[95dvw] md:w-[60dvw]"
+			data-aos="fade-up"
+			class="mx-auto w-[95dvw] md:w-[75dvw]"
 			role="region"
 			aria-labelledby="testimonials-heading"
 		>
 			<div v-for="item in testimony" :key="item.name" class="hero">
-				<div class="flex flex-col lg:flex-row-reverse">
+				<div class="flex flex-col lg:flex-row-reverse justify-evenly">
 					<img
 						:src="item.image"
 						class="w-[280px] mx-auto rounded-md self-start"
@@ -17,7 +18,7 @@
 					/>
 
 					<h3
-						class="text-3xl capitalize md:m-0 self-center italic text-center mt-2"
+						class="text-3xl capitalize md:m-0 self-center italic md:text-center mt-8"
 					>
 						Web Masters is an exceptional talent in website design and Google
 						Analytics, consistently enhancing our digital strategies with

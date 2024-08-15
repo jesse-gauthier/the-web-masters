@@ -3,7 +3,7 @@
 		class="footer p-10 bg-[#2b3d4f] flex flex-wrap justify-center gap-12 text-white min-h-[10vh]"
 		role="contentinfo"
 	>
-		<div class="max-w-[300px]">
+		<div class="max-w-[300px]" data-aos="fade-up">
 			<h4 class="footer-title">Our Mission</h4>
 			<p>
 				Our mission is to craft high-quality websites designed to empower
@@ -14,7 +14,7 @@
 				<a href="mailto:Jesse@ottawawebmasters.ca">Jesse@ottawawebmasters.ca</a>
 			</div>
 		</div>
-		<nav aria-label="Services">
+		<nav aria-label="Services" data-aos="fade-up">
 			<h2 class="footer-title">Services</h2>
 			<ul class="">
 				<li>
@@ -39,7 +39,7 @@
 				</li>
 			</ul>
 		</nav>
-		<nav aria-label="Company">
+		<nav data-aos="fade-up" aria-label="Company">
 			<h2 class="footer-title">Company</h2>
 			<ul>
 				<!-- <li><a href="/about-us" class="link link-hover">About us</a></li> -->

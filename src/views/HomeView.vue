@@ -1,11 +1,18 @@
 <script setup>
+import { onMounted } from 'vue'
 import HeroComp from '@/components/HeroComp.vue'
 import AboutComp from '@/components/about/AboutComp.vue'
-import ServicesComp from '@/components/serviceComps/ServicesComp.vue'
 import FaqComp from '@/components/faq/FaqComp.vue'
 import TestimonyComp from '@/components/TestimonyComp.vue'
 import Packages from '@/components/serviceComps/Packages.vue'
 import { useHead } from '@unhead/vue'
+import AOS from 'aos'
+
+onMounted(() => {
+	AOS.init({
+		duration: 3000,
+	})
+})
 
 useHead({
 	title: 'Ottawa Web Masters - Leading Web Development Services in Ottawa',
@@ -66,15 +73,9 @@ useHead({
 </template>
 
 <style scoped>
-/* Ensuring SVGs have consistent styling and accessibility */
 svg {
 	color: #e89e1d;
 	align-self: center;
 	margin: auto 0;
-}
-
-/* Additional styles for better SEO and UX */
-main {
-	overflow-x: hidden; /* Prevent horizontal scroll which can impact SEO */
 }
 </style>

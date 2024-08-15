@@ -5,7 +5,10 @@
 		style="background-image: url('../assets/workspace.jpg')"
 		aria-label="Background image of digital themes representing online presence"
 	>
-		<div class="hero-content text-neutral-content inner-wrapper">
+		<div
+			data-aos="fade-up"
+			class="hero-content text-neutral-content inner-wrapper"
+		>
 			<div class="md:grid grid-cols-1 md:grid-cols-6 gap-x-5">
 				<div
 					class="self-center md:col-span-4 lg:col-span-3 md:col-start-1 text-black"

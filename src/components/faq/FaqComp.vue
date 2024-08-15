@@ -1,5 +1,5 @@
 <template>
-	<section class="inner-wrapper">
+	<section class="inner-wrapper" data-aos="fade-up">
 		<h3 class="text-center text-5xl">Frequently Asked Questions</h3>
 		<ul class="my-16 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
 			<li

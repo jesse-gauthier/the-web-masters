@@ -1,4 +1,6 @@
 import './assets/base.css'
+import 'aos/dist/aos.css'
+
 import VueGtag from 'vue-gtag-next'
 
 import { createHead } from '@unhead/vue'

@@ -1,6 +1,6 @@
 <template>
 	<div class="bg-white min-h-[40vh] py-8" role="main">
-		<div class="inner-wrapper">
+		<div class="inner-wrapper" data-aos="fade-up">
 			<div class="grid grid-cols-1 md:grid-cols-4">
 				<div class="col-span-1 md:col-span-2 order-2 flex flex-col gap-3">
 					<img
