@@ -9,7 +9,7 @@ import PrivacyPolicy from '@/views/PrivacyPolicy.vue'
 import NotFound from '@/views/NotFound.vue'
 import AboutPage from '@/views/AboutPage.vue'
 import ShopifyServicesView from '@/views/ShopifyServicesView.vue'
-
+import FreeSeoForm from '@/views/FreeSeoForm.vue'
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
 	routes: [
@@ -42,6 +42,11 @@ const router = createRouter({
 			path: '/contact',
 			name: 'Contact Us',
 			component: ContactView,
+		},
+		{
+			path: '/freeseo',
+			name: 'Free Seo Report',
+			component: FreeSeoForm,
 		},
 		{
 			path: '/privacy-policy',

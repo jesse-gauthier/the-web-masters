@@ -1,7 +1,7 @@
 <template>
 	<header
 		:class="[
-			'w-[100%] bg-[#2b3d4f] flex justify-between items-center px-5 py-3 text-white',
+			'w-[100%] bg-[#2b3d4f] flex justify-between items-center px-5 py-3 text-white overflow-hidden',
 			{ sticky: isSticky },
 		]"
 		role="banner"
@@ -37,9 +37,9 @@
 					<div
 						v-if="isOpen"
 						tabindex="0"
-						class="absolute h-screen bg-[#2b3d4f] w-screen left-0 top-0 z-50 p-4"
+						class="absolute h-screen bg-[#2b3d4f] w-screen overflow-hidden left-0 top-0 z-50 py-3 px-8"
 					>
-						<div>
+						<div class="mr-8">
 							<div class="flex justify-between">
 								<router-link
 									@click="isOpen = !isOpen"
@@ -73,37 +73,14 @@
 							</div>
 							<ul class="text-right text-xl *:my-2 mt-12">
 								<li v-for="(link, index) in links" :key="link.path">
-									<div
-										v-if="link.subPages"
-										@click="toggleDropdown(index)"
-										class="cursor-pointer btn w-[200px]"
-									>
-										{{ link.name }} <span>↓</span>
-									</div>
 									<router-link
 										class="btn w-[200px]"
-										v-else
 										:to="link.path"
 										@click="isOpen = false"
 										active-class="active"
 									>
 										{{ link.name }}
 									</router-link>
-									<ul
-										class="my-4"
-										v-if="link.subPages && showDropdown === index"
-									>
-										<li v-for="subPage in link.subPages" :key="subPage.path">
-											<router-link
-												class="btn btn-outline bg-white w-[250px]"
-												:to="subPage.path"
-												@click="isOpen = false"
-												active-class="active"
-											>
-												{{ subPage.name }}
-											</router-link>
-										</li>
-									</ul>
 								</li>
 							</ul>
 						</div>
@@ -121,33 +98,12 @@
 						class="relative"
 					>
 						<router-link
-							v-if="!link.subPages"
 							:to="link.path"
 							class="text-xl state-focus"
 							active-class="active"
 						>
 							{{ link.name }}
 						</router-link>
-						<div v-else class="flex flex-col text-xl cursor-pointer">
-							<router-link
-								:to="link.path"
-								class="text-xl state-focus"
-								active-class="active"
-							>
-								{{ link.name }}
-							</router-link>
-							<ul v-if="showDropdown === index" class="dropdown shadow-lg">
-								<li v-for="subPage in link.subPages" :key="subPage.path">
-									<router-link
-										class="hover:underline text-xl"
-										:to="subPage.path"
-										active-class="active"
-									>
-										{{ subPage.name }}
-									</router-link>
-								</li>
-							</ul>
-						</div>
 					</li>
 				</ul>
 			</div>

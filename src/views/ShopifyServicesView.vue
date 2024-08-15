@@ -1,48 +1,41 @@
 <template>
-	<section class="">
-		<div class="">
-			<!-- Hero -->
+	<section>
+		<div>
+			<!-- Hero Section -->
 			<section
 				class="hero min-h-screen bg-fixed"
 				:style="{ backgroundImage: `url(${backgroundImage})` }"
+				aria-labelledby="hero-heading"
 			>
-				<div class="hero-content flex-col text-[#0e2a24] max-w-[55dvw]">
+				<div class="hero-content flex-col text-white max-w-[55dvw] text-center">
 					<h1
-						class="md:text-8xl text-6xl font-bold text-center bg-[#ffffff26] py-8"
+						id="hero-heading"
+						class="md:text-8xl text-6xl font-bold bg-black bg-opacity-70 py-8"
 					>
 						Custom Shopify Solutions in Ottawa, ON
 					</h1>
-					<div class="flex justify-center space-x-4">
+					<div class="flex justify-center space-x-4 mt-6">
 						<router-link
 							to="/contact"
-							class="flex btn w-fit bg-white border-1 border-[#2b3c4f] hover:bg-[#2b3d4f] hover:text-white"
+							class="flex btn w-fit bg-white border border-[#2b3c4f] hover:bg-[#2b3d4f] hover:text-white"
 							role="button"
 							aria-label="Start your Shopify project with us"
 						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 512 512"
-								width="25"
-								aria-hidden="true"
-								focusable="false"
-							>
-								<!-- SVG Path for the button icon -->
-							</svg>
-							Get Started</router-link
-						>
+							Get Started
+						</router-link>
 					</div>
 				</div>
 			</section>
 
-			<!-- Information Text -->
+			<!-- Information Text Section -->
 			<section
-				class="inner-wrapper px-3 py-4 min-h-[50dvh] flex flex-col justify-center"
+				class="inner-wrapper px-3 py-12 min-h-[50dvh] flex flex-col justify-center"
 			>
-				<h2 class="text-4xl">
+				<h2 class="text-4xl text-center font-bold text-gray-800">
 					Elevate Your Shopify Store with Expert Development in Ottawa, ON
 				</h2>
 				<hr class="my-6 bg-[#2b3d4f] h-[3px]" />
-				<p class="text-lg self-center text-gray-600">
+				<p class="text-lg text-gray-600 max-w-3xl mx-auto">
 					We specialize in creating stunning Shopify stores tailored
 					specifically for small businesses in Ottawa, ON. Our experienced team
 					is dedicated to ensuring your online presence is not only strong and
@@ -56,42 +49,66 @@
 				</p>
 			</section>
 
-			<!-- Icons for Shopify, Liquid, and Polaris -->
-			<section class="inner-wrapper">
-				<h2 class="text-4xl">We Only Work With The Best</h2>
+			<!-- Technology and Partner Logos Section -->
+			<section class="inner-wrapper py-8">
+				<h2 class="text-4xl text-center font-bold text-gray-800">
+					We Only Work With The Best
+				</h2>
 				<hr class="my-6 bg-[#2b3d4f] h-[3px]" />
-				<div class="grid grid-cols-2 md:grid-cols-5 content-end gap-4 p-6">
-					<img class="self-center" :src="shopifylogo" alt="" />
-					<img class="self-center" :src="pageflylogo" alt="" />
-					<img class="self-center" :src="klaviyo_logo" alt="" />
-					<img class="self-center" :src="qb_logo" alt="" />
-					<img class="self-center" :src="shipstationlogo" alt="" />
+				<div class="grid grid-cols-2 md:grid-cols-5 gap-4 p-6">
+					<img
+						class="self-center col-span-1 w-[100%]"
+						:src="shopifylogo"
+						alt="Shopify logo"
+					/>
+					<img
+						class="self-center col-span-1 w-[100%]"
+						:src="pageflylogo"
+						alt="PageFly logo"
+					/>
+					<img
+						class="self-center col-span-1 w-[100%]"
+						:src="klaviyo_logo"
+						alt="Klaviyo logo"
+					/>
+					<img
+						class="self-center col-span-1 w-[100%]"
+						:src="qb_logo"
+						alt="QuickBooks logo"
+					/>
+					<img
+						class="self-center col-span-1 w-[100%]"
+						:src="shipstationlogo"
+						alt="ShipStation logo"
+					/>
 				</div>
 			</section>
 
+			<!-- Projects Component -->
 			<ProjectsComp />
 
-			<!-- Services -->
+			<!-- Services Section -->
 			<section
-				class="flex flex-col text-center max-w-[80dvw] mx-auto my-5 gap-4"
+				class="flex flex-col text-center max-w-[80dvw] mx-auto my-12 gap-4"
 			>
 				<h2 class="text-2xl font-bold text-gray-800">Our Services</h2>
+				<hr class="my-6 bg-[#2b3d4f] h-[3px]" />
 				<ul
-					class="list-disc list-inside mx-auto text-gray-600 grid md:grid-cols-8 gap-5"
+					class="list-disc list-inside mx-auto text-gray-600 grid md:grid-cols-2 gap-5"
 				>
-					<li class="p-3 rounded-md border-2 border-[#2b3c4f] col-span-4">
+					<li class="p-3 rounded-md border-2 border-[#2b3c4f]">
 						Custom Shopify theme development
 					</li>
-					<li class="p-3 rounded-md border-2 border-[#2b3c4f] col-span-4">
+					<li class="p-3 rounded-md border-2 border-[#2b3c4f]">
 						App development and customization
 					</li>
-					<li class="p-3 rounded-md border-2 border-[#2b3c4f] col-span-4">
+					<li class="p-3 rounded-md border-2 border-[#2b3c4f]">
 						Responsive design for mobile and tablet
 					</li>
-					<li class="p-3 rounded-md border-2 border-[#2b3c4f] col-span-4">
+					<li class="p-3 rounded-md border-2 border-[#2b3c4f]">
 						SEO optimization and performance enhancements
 					</li>
-					<li class="p-3 rounded-md border-2 border-[#2b3c4f] col-span-4">
+					<li class="p-3 rounded-md border-2 border-[#2b3c4f]">
 						eCommerce solutions and integrations
 					</li>
 				</ul>
@@ -108,4 +125,58 @@ import klaviyo_logo from '@/assets/klaviyo_logo.webp'
 import qb_logo from '@/assets/qb-logo.svg'
 import shipstationlogo from '@/assets/shipstation_logo.webp'
 import backgroundImage from '@/assets/shopify-background.webp'
+import { useHead } from '@unhead/vue'
+
+useHead({
+	title: 'Custom Shopify Solutions in Ottawa, ON | Ottawa Web Masters',
+	meta: [
+		{
+			name: 'description',
+			content:
+				'Ottawa Web Masters specializes in custom Shopify solutions for small businesses in Ottawa, ON. Our expert team offers theme development, app customization, responsive design, SEO optimization, and more to elevate your online store.',
+		},
+		{
+			property: 'og:title',
+			content: 'Custom Shopify Solutions in Ottawa, ON | Ottawa Web Masters',
+		},
+		{
+			property: 'og:description',
+			content:
+				'Elevate your Shopify store with our expert development services in Ottawa, ON. From theme customization to SEO, we ensure your eCommerce business thrives online.',
+		},
+		{
+			property: 'og:image',
+			content: 'https://yourwebsite.com/path-to-shopify-background-image.jpg',
+		}, // replace with actual image URL
+		{
+			property: 'og:url',
+			content: 'https://yourwebsite.com/shopify-solutions',
+		},
+		{
+			name: 'keywords',
+			content:
+				'Shopify, custom Shopify solutions, Ottawa, Shopify development, eCommerce, web design, SEO, small business',
+		},
+	],
+})
 </script>
+
+<style scoped>
+/* Ensure good contrast and readability */
+.hero-content h1 {
+	background: rgba(0, 0, 0, 0.7);
+	padding: 1rem;
+	border-radius: 0.5rem;
+}
+
+/* Responsive and visual improvements */
+@media (max-width: 768px) {
+	.hero-content h1 {
+		font-size: 2.5rem;
+	}
+}
+
+ul.list-disc {
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+</style>
