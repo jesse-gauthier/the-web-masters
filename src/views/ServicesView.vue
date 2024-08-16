@@ -157,6 +157,9 @@
 						research, content optimization, and link building to boost your
 						rankings and attract high-quality traffic.
 					</p>
+					<RouterLink to="/seo" class="btn btn-outline w-fit mx-auto">
+						Learn More About SEO
+					</RouterLink>
 				</div>
 			</div>
 		</section>

@@ -10,6 +10,8 @@ import NotFound from '@/views/NotFound.vue'
 import AboutPage from '@/views/AboutPage.vue'
 import ShopifyServicesView from '@/views/ShopifyServicesView.vue'
 import FreeSeoForm from '@/views/FreeSeoForm.vue'
+import SeoServicesView from '@/views/SeoServicesView.vue'
+
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
 	routes: [
@@ -27,6 +29,11 @@ const router = createRouter({
 			path: '/wordpress',
 			name: 'WordPress',
 			component: WordPressServiceView,
+		},
+		{
+			path: '/seo',
+			name: 'Search Optimization',
+			component: SeoServicesView,
 		},
 		{
 			path: '/shopify',
