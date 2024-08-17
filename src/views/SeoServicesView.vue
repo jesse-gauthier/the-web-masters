@@ -187,9 +187,9 @@
 			</div>
 		</div>
 		<!-- Our Seo Services -->
-		<div class="inner-wrapper">
-			<h3>Our Seo Services</h3>
-			<ul>
+		<div class="my-8 max-w-[80dvw] mx-auto">
+			<h3 class="text-3xl font-bold">Our Seo Services</h3>
+			<ul class="list-disc list-inside marker:text-[#e89e1d] marker:text-3xl">
 				<li>SEO Audit & Analysis</li>
 				<li>Keyword Research & Strategy</li>
 				<li>On-Page Optimization</li>
@@ -203,6 +203,7 @@
 		</div>
 		<!-- Packages -->
 		<div class="inner-wrapper">
+			<h3 class="text-3xl font-bold">Our Packages</h3>
 			<ul>
 				<li>
 					<h3>Essential Package</h3>
@@ -257,7 +258,6 @@
 				effectively.
 			</p>
 		</div>
-		s
 	</section>
 </template>
 <script setup>
