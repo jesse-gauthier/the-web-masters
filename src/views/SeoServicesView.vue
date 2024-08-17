@@ -1,5 +1,5 @@
 <template>
-	<section>
+	<section class="">
 		<!-- Hero -->
 		<div
 			class="hero min-h-[75dvh]"
@@ -12,7 +12,7 @@
 			<div class="hero-overlay bg-opacity-60"></div>
 			<div class="hero-content flex-col text-neutral-content">
 				<h1 class="text-5xl max-w-4xl text-center">SEO Services Ottawa</h1>
-				<p class="max-w-3xl text-lg text-start">
+				<p class="max-w-3xl text-xl text-start">
 					At Ottawa SEO Masters, we’re dedicated to optimizing websites for
 					better search engine rankings and user experiences. SEO is more than
 					just keywords; it’s about making your site accessible and
@@ -24,9 +24,9 @@
 				>
 			</div>
 		</div>
-		<div class="max-w-4xl mx-auto">
+		<div class="max-w-4xl mx-auto flex flex-col gap-y-4">
 			<!-- Starting Content -->
-			<div class="mt-7">
+			<div>
 				<div class="inner-wrapper py-4 flex flex-col gap-5">
 					<!-- Why Choose -->
 					<div class="flex flex-col justify-start">
@@ -34,7 +34,9 @@
 							Why Choose OttawaWebMasters.ca for Your SEO Needs?
 						</h3>
 						<div class="bg-[#e89e1d] h-[2.5px] mt-2 mb-4 w-1/3 mx-auto"></div>
-						<ol class="list-decimal w-2/3 mx-auto">
+						<ol
+							class="list-decimal w-2/3 mx-auto text-lg flex flex-col gap-y-4"
+						>
 							<li>
 								<span class="font-bold">Results-Driven Approach:</span> We focus
 								on delivering measurable outcomes for your business, including
@@ -189,7 +191,7 @@
 				</div>
 			</div>
 			<!-- Our Seo Services -->
-			<div class="my-8 mx-auto">
+			<div>
 				<h3 class="text-3xl font-bold">Our Seo Services</h3>
 				<ul class="list-disc list-inside marker:text-[#e89e1d] marker:text-3xl">
 					<li>SEO Audit & Analysis</li>
@@ -204,7 +206,7 @@
 				</ul>
 			</div>
 			<!-- Packages -->
-			<div class="inner-wrapper">
+			<div>
 				<h3 class="text-3xl font-bold">Our Packages</h3>
 				<ul>
 					<li>
@@ -251,7 +253,7 @@
 				</ul>
 			</div>
 			<!-- Extra Text -->
-			<div class="inner-wrapper">
+			<div>
 				<p class="text-lg text-start">
 					At Ottawa SEO Masters, we’re dedicated to optimizing websites for
 					better search engine rankings and user experiences. SEO is more than
