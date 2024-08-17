@@ -24,7 +24,7 @@
 				>
 			</div>
 		</div>
-		<div class="max-w-4xl mx-auto flex flex-col gap-y-4">
+		<div class="max-w-4xl mx-auto flex flex-col gap-y-8 p-4">
 			<!-- Starting Content -->
 			<div>
 				<div class="inner-wrapper py-4 flex flex-col gap-5">
@@ -193,7 +193,9 @@
 			<!-- Our Seo Services -->
 			<div>
 				<h3 class="text-3xl font-bold">Our Seo Services</h3>
-				<ul class="list-disc list-inside marker:text-[#e89e1d] marker:text-3xl">
+				<ul
+					class="list-disc list-inside marker:text-[#e89e1d] marker:text-3xl text-lg grid grid-cols-1 md:grid-cols-2"
+				>
 					<li>SEO Audit & Analysis</li>
 					<li>Keyword Research & Strategy</li>
 					<li>On-Page Optimization</li>
@@ -208,50 +210,83 @@
 			<!-- Packages -->
 			<div>
 				<h3 class="text-3xl font-bold">Our Packages</h3>
-				<ul>
-					<li>
-						<h3>Essential Package</h3>
-						<p>$1200 Per Month</p>
-						<p>Ranking improvements within 2-3 months</p>
-						<ul>
-							<li>20 Quality Backlinks</li>
-							<li>Directory Citations (For Google Local Listing)</li>
-							<li>Keyword Ranking Reports (Real Time Results)</li>
-							<li>Link Building Reports</li>
-							<li>Google Webmaster Tools and Google G4 Analytics Setup</li>
+				<ul
+					class="flex justify-evenly flex-wrap lg:flex-nowrap *:border-[4px] *:border-[#e89e1d] gap-3"
+				>
+					<li class="flex flex-col w-1/3 rounded-lg">
+						<div class="orange-bg px-1 py-5 text-center shadow-xl">
+							<h3 class="font-bold text-2xl my-0">Essential Package</h3>
+							<p class="italic text-lg my-1">$1500 Per Month</p>
+							<p class="font-medium my-0">Results In 2-3 months</p>
+						</div>
+						<ul class="p-3">
+							<li class="font-bold mb-2">Plan Includes:</li>
+							<li>20 Backlinks per month</li>
+							<li>Comprehensive website audit</li>
+							<li>Competitor analysis</li>
+							<li>Competitive keyword analysis</li>
+							<li>Meta tags (title, description, header tags) optimization</li>
+							<li>Mobile optimization</li>
+							<li>Site speed optimization</li>
+							<li>Local keyword optimization</li>
 						</ul>
-						<p><strong>GET STARTED</strong></p>
+						<router-link
+							to="/contact"
+							class="text-center btn btn-outline mt-auto mb-2 mx-2"
+							><strong>GET STARTED</strong></router-link
+						>
 					</li>
-					<li>
-						<h3>Premier Package</h3>
-						<p>$2300 Per Month</p>
-						<p>Ranking improvements within 1-2 months</p>
-						<ul>
-							<li>40 Quality Backlinks</li>
-							<li>Directory Citations (For Google Local Listing)</li>
+					<li class="flex flex-col w-1/3 rounded-lg shadow-lg shadow-[#e89e1d]">
+						<div class="orange-bg px-1 py-5 text-center shadow-xl">
+							<h3 class="font-bold text-2xl my-0">Premium Package</h3>
+							<p class="italic text-lg my-1">$2500 Per Month</p>
+							<p class="font-medium my-0">Results In 1-2 months</p>
+						</div>
+						<ul class="p-3">
+							<li class="font-bold mb-2">Essential +</li>
 							<li>Keyword Ranking Reports (Real Time Results)</li>
 							<li>Link Building Reports</li>
-							<li>Google Webmaster Tools and Google G4 Analytics Setup</li>
-							<li>Google Ad Setup ($100 Free Credit)</li>
+							<li>Product page optimization</li>
+							<li>Conversion tracking setup</li>
+							<li>Customized SEO strategies</li>
+							<li>Ongoing SEO consulting and support</li>
+							<li>Crawl error fixing</li>
+							<li>SEO-friendly content writing</li>
 						</ul>
-						<p><strong>GET STARTED</strong></p>
+						<router-link
+							to="/contact"
+							class="text-center btn btn-outline mt-auto mb-2 mx-2"
+							><strong>GET STARTED</strong></router-link
+						>
 					</li>
-					<li>
-						<h3>Most Popular: Elite Package</h3>
-						<p>$5000 Per Month</p>
-						<p>Ranking improvements within 1 month</p>
-						<ul>
-							<li>100 Quality Backlinks</li>
-							<li>Directory Citations (For Google Local Listing)</li>
-							<li>Keyword Ranking Reports (Real Time Results)</li>
-							<li>Link Building Reports</li>
-							<li>Google Webmaster Tools and Google G4 Analytics Setup</li>
-							<li>Google Ad Setup ($200 Free Credit)</li>
+					<li class="flex flex-col w-1/3 rounded-lg">
+						<div class="orange-bg px-1 py-5 text-center shadow-xl">
+							<h3 class="font-bold text-2xl my-0">Ecommerce Package</h3>
+							<p class="italic text-lg my-1">$5500 Per Month</p>
+							<p class="font-medium my-0">Results In 1 month</p>
+						</div>
+						<ul class="p-3">
+							<li class="font-bold mb-2">Premier +</li>
+							<li>Influencer outreach</li>
+							<li>Forum and community engagement</li>
+							<li>Product page optimization</li>
+							<li>Category page SEO</li>
+							<li>E-commerce site architecture optimization</li>
+							<li>
+								Schema markup for products SEO for online marketplaces (e.g.,
+								Amazon, Etsy)
+							</li>
+							<li>Conversion rate optimization</li>
 						</ul>
-						<p><strong>GET STARTED</strong></p>
+						<router-link
+							to="/contact"
+							class="text-center btn btn-outline mt-auto mb-2 mx-2"
+							><strong>GET STARTED</strong></router-link
+						>
 					</li>
 				</ul>
 			</div>
+			<div>Looking for something more custom?</div>
 			<!-- Extra Text -->
 			<div>
 				<p class="text-lg text-start">
