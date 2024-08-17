@@ -287,6 +287,85 @@
 				</ul>
 			</div>
 			<div>Looking for something more custom?</div>
+			<div>
+				<ul>
+					<li>
+						<strong>Keyword Research & Strategy</strong>
+						<p>
+							Improve your rankings with targeted keyword research and strategic
+							planning, constantly monitored for performance and refinement.
+						</p>
+						<p><a href="#">Talk To An SEO Expert</a></p>
+					</li>
+					<li>
+						<strong>Content Writing</strong>
+						<p>
+							Engage your audience and boost rankings with high-quality,
+							SEO-friendly content designed to improve conversions and reduce
+							bounce rates.
+						</p>
+						<p><a href="#">Talk To An SEO Expert</a></p>
+					</li>
+					<li>
+						<strong>Link Building</strong>
+						<p>
+							Increase authority and performance through expert link-building
+							strategies and compelling, optimized content.
+						</p>
+						<p><a href="#">Talk To An SEO Expert</a></p>
+					</li>
+					<li>
+						<strong>Technical SEO</strong>
+						<p>
+							Optimize your site’s backend for speed and efficiency with
+							thorough technical SEO, including server and code improvements.
+						</p>
+						<p><a href="#">Talk To An SEO Expert</a></p>
+					</li>
+					<li>
+						<strong>On-Page SEO</strong>
+						<p>
+							Optimize your site’s content and structure for higher rankings and
+							seamless integration with search engines.
+						</p>
+						<p><a href="#">Talk To An SEO Expert</a></p>
+					</li>
+					<li>
+						<strong>Off-Page SEO</strong>
+						<p>
+							Expand your online presence with strategies designed to enhance
+							visibility and reputation across the web.
+						</p>
+						<p><a href="#">Talk To An SEO Expert</a></p>
+					</li>
+					<li>
+						<strong>Local SEO</strong>
+						<p>
+							Dominate local search results with tailored strategies to increase
+							visibility and attract more local customers.
+						</p>
+						<p><a href="#">Talk To An SEO Expert</a></p>
+					</li>
+					<li>
+						<strong>Ecommerce SEO</strong>
+						<p>
+							Boost product visibility and drive sales with specialized SEO
+							techniques, including backlinks, social media, and influencer
+							partnerships.
+						</p>
+						<p><a href="#">Talk To An SEO Expert</a></p>
+					</li>
+					<li>
+						<strong>Shopify SEO</strong>
+						<p>
+							Enhance your Shopify platform with targeted SEO, including keyword
+							optimization, site structure improvements, and better product
+							descriptions.
+						</p>
+						<p><a href="#">Talk To An SEO Expert</a></p>
+					</li>
+				</ul>
+			</div>
 			<!-- Extra Text -->
 			<div>
 				<p class="text-lg text-start">
