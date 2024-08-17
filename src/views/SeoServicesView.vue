@@ -10,7 +10,10 @@
 			"
 		>
 			<div class="hero-overlay bg-opacity-60"></div>
-			<div class="hero-content flex-col text-neutral-content">
+			<div
+				data-aos="fade-up"
+				class="hero-content flex-col text-neutral-content"
+			>
 				<h1 class="text-5xl max-w-4xl text-center">SEO Services Ottawa</h1>
 				<p class="max-w-3xl text-xl text-start">
 					At Ottawa SEO Masters, we’re dedicated to optimizing websites for
@@ -26,7 +29,7 @@
 		</div>
 		<div class="max-w-4xl mx-auto flex flex-col gap-y-8 p-4">
 			<!-- Starting Content -->
-			<div>
+			<div data-aos="fade-up">
 				<div class="inner-wrapper py-4 flex flex-col gap-5">
 					<!-- Why Choose -->
 					<div class="flex flex-col justify-start">
@@ -191,7 +194,7 @@
 				</div>
 			</div>
 			<!-- Our Seo Services -->
-			<div>
+			<div data-aos="fade-up">
 				<h3 class="text-3xl font-bold">Our Seo Services</h3>
 				<ul
 					class="list-disc list-inside marker:text-[#e89e1d] marker:text-3xl text-lg grid grid-cols-1 md:grid-cols-2"
@@ -208,12 +211,12 @@
 				</ul>
 			</div>
 			<!-- Packages -->
-			<div>
+			<div data-aos="fade-up">
 				<h3 class="text-3xl font-bold">Our Packages</h3>
 				<ul
 					class="flex justify-evenly flex-wrap lg:flex-nowrap *:border-[4px] *:border-[#e89e1d] gap-3"
 				>
-					<li class="flex flex-col w-1/3 rounded-lg">
+					<li class="flex flex-col w-3/4 md:w-1/3 rounded-lg">
 						<div class="orange-bg px-1 py-5 text-center shadow-xl">
 							<h3 class="font-bold text-2xl my-0">Essential Package</h3>
 							<p class="italic text-lg my-1">$1500 Per Month</p>
@@ -236,7 +239,9 @@
 							><strong>GET STARTED</strong></router-link
 						>
 					</li>
-					<li class="flex flex-col w-1/3 rounded-lg shadow-lg shadow-[#e89e1d]">
+					<li
+						class="flex flex-col w-3/4 md:w-1/3 rounded-lg shadow-lg shadow-[#e89e1d]"
+					>
 						<div class="orange-bg px-1 py-5 text-center shadow-xl">
 							<h3 class="font-bold text-2xl my-0">Premium Package</h3>
 							<p class="italic text-lg my-1">$2500 Per Month</p>
@@ -259,7 +264,7 @@
 							><strong>GET STARTED</strong></router-link
 						>
 					</li>
-					<li class="flex flex-col w-1/3 rounded-lg">
+					<li class="flex flex-col w-3/4 md:w-1/3 rounded-lg">
 						<div class="orange-bg px-1 py-5 text-center shadow-xl">
 							<h3 class="font-bold text-2xl my-0">Ecommerce Package</h3>
 							<p class="italic text-lg my-1">$5500 Per Month</p>
@@ -286,89 +291,131 @@
 					</li>
 				</ul>
 			</div>
-			<div>Looking for something more custom?</div>
-			<div>
-				<ul>
-					<li>
-						<strong>Keyword Research & Strategy</strong>
-						<p>
+			<div data-aos="fade-up">
+				<h3 class="text-3xl font-bold">Looking for something more custom?</h3>
+			</div>
+			<div data-aos="fade-up">
+				<ul
+					class="grid grid-cols-1 md:grid-cols-2 gap-5 *:border-4 *:border-[#e89e1d] *:p-3"
+				>
+					<li class="flex flex-col gap-3 gradient_bg rounded-lg">
+						<h3 class="text-2xl font-bold">Keyword Research & Strategy</h3>
+						<p class="text-lg">
 							Improve your rankings with targeted keyword research and strategic
 							planning, constantly monitored for performance and refinement.
 						</p>
-						<p><a href="#">Talk To An SEO Expert</a></p>
+						<router-link
+							class="btn btn-outline w-fit mx-auto mt-auto"
+							to="/contact"
+							>Talk To An SEO Expert</router-link
+						>
 					</li>
-					<li>
-						<strong>Content Writing</strong>
-						<p>
+					<li class="flex flex-col gap-3 gradient_bg rounded-lg">
+						<h3 class="text-2xl font-bold">Content Writing</h3>
+						<p class="text-lg">
 							Engage your audience and boost rankings with high-quality,
 							SEO-friendly content designed to improve conversions and reduce
 							bounce rates.
 						</p>
-						<p><a href="#">Talk To An SEO Expert</a></p>
+						<router-link
+							class="btn btn-outline w-fit mx-auto mt-auto"
+							to="/contact"
+							>Talk To An SEO Expert</router-link
+						>
 					</li>
-					<li>
-						<strong>Link Building</strong>
-						<p>
+					<li class="flex flex-col gap-3 gradient_bg rounded-lg">
+						<h3 class="text-2xl font-bold">Link Building</h3>
+						<p class="text-lg">
 							Increase authority and performance through expert link-building
 							strategies and compelling, optimized content.
 						</p>
-						<p><a href="#">Talk To An SEO Expert</a></p>
+						<router-link
+							class="btn btn-outline w-fit mx-auto mt-auto"
+							to="/contact"
+							>Talk To An SEO Expert</router-link
+						>
 					</li>
-					<li>
-						<strong>Technical SEO</strong>
-						<p>
+					<li class="flex flex-col gap-3 gradient_bg rounded-lg">
+						<h3 class="text-2xl font-bold">Technical SEO</h3>
+						<p class="text-lg">
 							Optimize your site’s backend for speed and efficiency with
 							thorough technical SEO, including server and code improvements.
 						</p>
-						<p><a href="#">Talk To An SEO Expert</a></p>
+						<router-link
+							class="btn btn-outline w-fit mx-auto mt-auto"
+							to="/contact"
+							>Talk To An SEO Expert</router-link
+						>
 					</li>
-					<li>
-						<strong>On-Page SEO</strong>
-						<p>
+					<li class="flex flex-col gap-3 gradient_bg rounded-lg">
+						<h3 class="text-2xl font-bold">On-Page SEO</h3>
+						<p class="text-lg">
 							Optimize your site’s content and structure for higher rankings and
 							seamless integration with search engines.
 						</p>
-						<p><a href="#">Talk To An SEO Expert</a></p>
+						<router-link
+							class="btn btn-outline w-fit mx-auto mt-auto"
+							to="/contact"
+							>Talk To An SEO Expert</router-link
+						>
 					</li>
-					<li>
-						<strong>Off-Page SEO</strong>
-						<p>
+					<li class="flex flex-col gap-3 gradient_bg rounded-lg">
+						<h3 class="text-2xl font-bold">Off-Page SEO</h3>
+						<p class="text-lg">
 							Expand your online presence with strategies designed to enhance
 							visibility and reputation across the web.
 						</p>
-						<p><a href="#">Talk To An SEO Expert</a></p>
+						<router-link
+							class="btn btn-outline w-fit mx-auto mt-auto"
+							to="/contact"
+							>Talk To An SEO Expert</router-link
+						>
 					</li>
-					<li>
-						<strong>Local SEO</strong>
-						<p>
+					<li class="flex flex-col gap-3 gradient_bg rounded-lg">
+						<h3 class="text-2xl font-bold">Local SEO</h3>
+						<p class="text-lg">
 							Dominate local search results with tailored strategies to increase
 							visibility and attract more local customers.
 						</p>
-						<p><a href="#">Talk To An SEO Expert</a></p>
+						<router-link
+							class="btn btn-outline w-fit mx-auto mt-auto"
+							to="/contact"
+							>Talk To An SEO Expert</router-link
+						>
 					</li>
-					<li>
-						<strong>Ecommerce SEO</strong>
-						<p>
+					<li class="flex flex-col gap-3 gradient_bg rounded-lg">
+						<h3 class="text-2xl font-bold">Ecommerce SEO</h3>
+						<p class="text-lg">
 							Boost product visibility and drive sales with specialized SEO
 							techniques, including backlinks, social media, and influencer
 							partnerships.
 						</p>
-						<p><a href="#">Talk To An SEO Expert</a></p>
+						<router-link
+							class="btn btn-outline w-fit mx-auto mt-auto"
+							to="/contact"
+							>Talk To An SEO Expert</router-link
+						>
 					</li>
-					<li>
-						<strong>Shopify SEO</strong>
-						<p>
+					<li class="flex flex-col gap-3 gradient_bg rounded-lg">
+						<h3 class="text-2xl font-bold">Shopify SEO</h3>
+						<p class="text-lg">
 							Enhance your Shopify platform with targeted SEO, including keyword
 							optimization, site structure improvements, and better product
 							descriptions.
 						</p>
-						<p><a href="#">Talk To An SEO Expert</a></p>
+						<router-link
+							class="btn btn-outline w-fit mx-auto mt-auto"
+							to="/contact"
+							>Talk To An SEO Expert</router-link
+						>
 					</li>
 				</ul>
 			</div>
-			<!-- Extra Text -->
-			<div>
-				<p class="text-lg text-start">
+		</div>
+		<!-- Extra Text -->
+		<div data-aos="fade-up" class="bg-[#2b3d4f] min-h-[30dvh] flex">
+			<div class="max-w-[95dvw] md:max-w-[50dvw] mx-auto self-center">
+				<p class="text-2xl text-center text-white">
 					At Ottawa SEO Masters, we’re dedicated to optimizing websites for
 					better search engine rankings and user experiences. SEO is more than
 					just keywords; it’s about making your site accessible and
@@ -380,7 +427,53 @@
 	</section>
 </template>
 <script setup>
-import { ref } from 'vue'
+import { useHead } from '@unhead/vue'
+import { onMounted, ref } from 'vue'
+import AOS from 'aos'
+
+onMounted(() => {
+	AOS.init({
+		duration: 3000,
+	})
+})
+
+// SEO Metadata
+useHead({
+	title: 'SEO Services Ottawa - Ottawa SEO Masters',
+	meta: [
+		{
+			name: 'description',
+			content:
+				'Ottawa SEO Masters offers expert SEO services in Ottawa, helping businesses improve search engine rankings, enhance user experience, and drive more traffic.',
+		},
+		{
+			name: 'keywords',
+			content:
+				'SEO, Ottawa SEO, SEO Services, Search Engine Optimization, Ottawa, Web Masters, SEO Audit',
+		},
+		{
+			property: 'og:title',
+			content: 'SEO Services Ottawa - Ottawa SEO Masters',
+		},
+		{
+			property: 'og:description',
+			content:
+				'At Ottawa SEO Masters, we’re dedicated to optimizing websites for better search engine rankings and user experiences. Get a free SEO audit today!',
+		},
+		{
+			property: 'og:image',
+			content: '/assets/seohero.jpg',
+		},
+		{
+			property: 'og:url',
+			content: 'https://www.ottawaseomasters.ca/seo-services-ottawa',
+		},
+		{
+			name: 'twitter:card',
+			content: 'summary_large_image',
+		},
+	],
+})
 
 const openSection = ref(null)
 
@@ -388,3 +481,9 @@ const toggleDetails = (section) => {
 	openSection.value = openSection.value === section ? null : section
 }
 </script>
+
+<style>
+.gradient_bg:hover {
+	background: linear-gradient(135deg, #e89e1d 0%, #ffcc66 100%);
+}
+</style>
