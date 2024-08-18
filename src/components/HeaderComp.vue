@@ -100,7 +100,7 @@
 					>
 						<router-link
 							:to="link.path"
-							class="text-xl state-focus"
+							class="text-xl state-focus hover:underline underline-offset-4"
 							active-class="active"
 						>
 							{{ link.name }}
