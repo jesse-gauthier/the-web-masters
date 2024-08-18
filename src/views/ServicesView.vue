@@ -4,7 +4,7 @@
 		<!-- Banner Section -->
 		<div
 			id="contact_banner"
-			class="hero min-h-screen col-span-3 flex items-center justify-center bg-cover bg-center"
+			class="hero min-h-screen col-span-3 flex items-center justify-center bg-cover bg-center bg-fixed"
 		>
 			<h1
 				id="services-heading"
@@ -20,7 +20,7 @@
 		>
 			<!-- WordPress Development Section -->
 			<div data-aos="fade-up" aria-labelledby="wordpress-development">
-				<div class="flex flex-col md:flex-row mb-20">
+				<div class="flex flex-col md:flex-row h-[100%]">
 					<div
 						class="md:w-full p-6 flex flex-col justify-center bg-white rounded-lg shadow-lg"
 					>
@@ -49,7 +49,7 @@
 
 			<!-- Shopify Development Section -->
 			<div data-aos="fade-up" aria-labelledby="shopify-development">
-				<div class="flex flex-col md:flex-row mb-20">
+				<div class="flex flex-col md:flex-row h-[100%]">
 					<div
 						class="md:w-full p-6 flex flex-col justify-center bg-white rounded-lg shadow-lg"
 					>
@@ -67,7 +67,7 @@
 						</p>
 						<RouterLink
 							to="/shopify"
-							class="btn btn-outline w-fit mx-auto mt-4"
+							class="btn btn-outline w-fit mx-auto mt-auto"
 							aria-label="Learn More About Shopify Development"
 						>
 							Learn More About Shopify Development
@@ -78,7 +78,7 @@
 
 			<!-- SEO Services Section -->
 			<div data-aos="fade-up" aria-labelledby="seo-services">
-				<div class="flex flex-col md:flex-row mb-20">
+				<div class="flex flex-col md:flex-row h-[100%]">
 					<div
 						class="md:w-full p-6 flex flex-col justify-center bg-white rounded-lg shadow-lg"
 					>
@@ -96,7 +96,7 @@
 						</p>
 						<RouterLink
 							to="/seo"
-							class="btn btn-outline w-fit mx-auto mt-4"
+							class="btn btn-outline w-fit mx-auto mt-auto"
 							aria-label="Learn More About SEO Services"
 						>
 							Learn More About SEO
@@ -107,7 +107,7 @@
 
 			<!-- UX/UI Design Section -->
 			<div data-aos="fade-up" aria-labelledby="ux-ui-design">
-				<div class="flex flex-col md:flex-row mb-20">
+				<div class="flex flex-col md:flex-row h-[100%]">
 					<div
 						class="md:w-full p-6 flex flex-col justify-center bg-white rounded-lg shadow-lg"
 					>
@@ -130,7 +130,7 @@
 
 			<!-- Website Optimization Section -->
 			<div data-aos="fade-up" aria-labelledby="website-optimization">
-				<div class="flex flex-col md:flex-row mb-20">
+				<div class="flex flex-col md:flex-row h-[100%]">
 					<div
 						class="md:w-full p-6 flex flex-col justify-center bg-white rounded-lg shadow-lg"
 					>
@@ -153,7 +153,7 @@
 
 			<!-- Consultation Services Section -->
 			<div data-aos="fade-up" aria-labelledby="consultation-services">
-				<div class="flex flex-col md:flex-row mb-20">
+				<div class="flex flex-col md:flex-row h-[100%]">
 					<div
 						class="md:w-full p-6 flex flex-col justify-center bg-white rounded-lg shadow-lg"
 					>
