@@ -1,20 +1,28 @@
 <template>
-	<section class="">
-		<div id="contact_banner" class="hero min-h-screen col-span-3">
+	<!-- Main Services Section -->
+	<section aria-labelledby="services-heading" class="">
+		<!-- Banner Section -->
+		<div
+			id="contact_banner"
+			class="hero min-h-screen col-span-3 flex items-center justify-center bg-cover bg-center"
+		>
 			<h1
+				id="services-heading"
 				class="text-5xl font-bold text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl"
 			>
 				Our Services
 			</h1>
 		</div>
+
+		<!-- Services Grid -->
 		<div
 			class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
 		>
-			<!-- WordPress Section -->
+			<!-- WordPress Development Section -->
 			<div data-aos="fade-up" aria-labelledby="wordpress-development">
 				<div class="flex flex-col md:flex-row mb-20">
 					<div
-						class="md:order-1 md:w-full p-6 flex flex-col justify-center bg-white rounded-lg shadow-lg"
+						class="md:w-full p-6 flex flex-col justify-center bg-white rounded-lg shadow-lg"
 					>
 						<h2
 							id="wordpress-development"
@@ -39,11 +47,11 @@
 				</div>
 			</div>
 
-			<!-- Shopify Section -->
+			<!-- Shopify Development Section -->
 			<div data-aos="fade-up" aria-labelledby="shopify-development">
 				<div class="flex flex-col md:flex-row mb-20">
 					<div
-						class="md:order-1 md:w-full p-6 flex flex-col justify-center bg-white rounded-lg shadow-lg"
+						class="md:w-full p-6 flex flex-col justify-center bg-white rounded-lg shadow-lg"
 					>
 						<h2
 							id="shopify-development"
@@ -68,11 +76,11 @@
 				</div>
 			</div>
 
-			<!-- SEO Section -->
+			<!-- SEO Services Section -->
 			<div data-aos="fade-up" aria-labelledby="seo-services">
 				<div class="flex flex-col md:flex-row mb-20">
 					<div
-						class="md:order-1 md:w-full p-6 flex flex-col justify-center bg-white rounded-lg shadow-lg"
+						class="md:w-full p-6 flex flex-col justify-center bg-white rounded-lg shadow-lg"
 					>
 						<h2
 							id="seo-services"
@@ -101,7 +109,7 @@
 			<div data-aos="fade-up" aria-labelledby="ux-ui-design">
 				<div class="flex flex-col md:flex-row mb-20">
 					<div
-						class="md:order-1 md:w-full p-6 flex flex-col justify-center bg-white rounded-lg shadow-lg"
+						class="md:w-full p-6 flex flex-col justify-center bg-white rounded-lg shadow-lg"
 					>
 						<h2
 							id="ux-ui-design"
@@ -124,7 +132,7 @@
 			<div data-aos="fade-up" aria-labelledby="website-optimization">
 				<div class="flex flex-col md:flex-row mb-20">
 					<div
-						class="md:order-1 md:w-full p-6 flex flex-col justify-center bg-white rounded-lg shadow-lg"
+						class="md:w-full p-6 flex flex-col justify-center bg-white rounded-lg shadow-lg"
 					>
 						<h2
 							id="website-optimization"
@@ -147,7 +155,7 @@
 			<div data-aos="fade-up" aria-labelledby="consultation-services">
 				<div class="flex flex-col md:flex-row mb-20">
 					<div
-						class="md:order-1 md:w-full p-6 flex flex-col justify-center bg-white rounded-lg shadow-lg"
+						class="md:w-full p-6 flex flex-col justify-center bg-white rounded-lg shadow-lg"
 					>
 						<h2
 							id="consultation-services"

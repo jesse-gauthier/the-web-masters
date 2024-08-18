@@ -2,14 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Define custom CSS variables */
+:root {
+	--color-lightblue: #2980b9;
+	--color-orange: #e89e1d;
+	--color-gold: #efd81d;
+	--color-bluewood: #2b3d4f;
+	--color-lightgreen: #1abc9c;
+	--color-black: #000000;
+	--color-white: #ffffff;
+
+	--font-heading: 'Montserrat', sans-serif;
+	--font-subheading: 'Roboto', sans-serif;
+	--font-text: 'Raleway', sans-serif;
+	--font-abeezee: 'ABeeZee', sans-serif;
+	--font-monda: 'Monda', sans-serif;
+}
+
 html {
 	scroll-behavior: smooth;
 }
 
 body {
-	/* background-color: #e0ffff; */
+	/* Use custom variables for background color and fonts */
+	/* background-color: var(--color-lightblue); */
 	scroll-behavior: smooth;
-	font-family: 'ABeeZee', sans-serif;
+	font-family: var(--font-abeezee);
 	font-weight: 400;
 	font-style: normal;
 	overflow-x: hidden;
@@ -21,31 +39,31 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Monda', sans-serif;
+	font-family: var(--font-monda);
 	font-weight: 400;
 	font-style: normal;
 }
 
 .monda-regular {
-	font-family: 'Monda', sans-serif;
+	font-family: var(--font-monda);
 	font-weight: 400;
 	font-style: normal;
 }
 
 .monda-bold {
-	font-family: 'Monda', sans-serif;
+	font-family: var(--font-monda);
 	font-weight: 700;
 	font-style: normal;
 }
 
 .abeezee-regular {
-	font-family: 'ABeeZee', sans-serif;
+	font-family: var(--font-abeezee);
 	font-weight: 400;
 	font-style: normal;
 }
 
 .abeezee-regular-italic {
-	font-family: 'ABeeZee', sans-serif;
+	font-family: var(--font-abeezee);
 	font-weight: 400;
 	font-style: italic;
 }
@@ -53,7 +71,7 @@ h6 {
 main h2 {
 	font-size: 1.6rem;
 	font-weight: bold;
-	color: #2b3d4f;
+	color: var(--color-bluewood);
 	margin: 8px 0;
 }
 
@@ -62,74 +80,85 @@ h3 {
 }
 
 .orange-text {
-	color: #e89e1d;
+	color: var(--color-orange);
 }
 
 .orange-bg {
-	background-color: #e89e1d;
-	color: black;
+	background-color: var(--color-orange);
+	color: var(--color-black);
 }
+
 .gold-bg-hover {
 	transition: 1s;
 }
+
 .gold-bg-hover:hover {
-	color: black;
+	color: var(--color-black);
 	transition: 1s;
-	background-color: #efd81d;
+	background-color: var(--color-gold);
 }
+
 .hover-orange:hover {
-	color: #e89e1d;
+	color: var(--color-orange);
 }
+
 .hover-orange-bg:hover {
-	background-color: #e89e1d;
+	background-color: var(--color-orange);
 }
 
 #tldr:hover #tldr_title {
-	color: black !important;
+	color: var(--color-black) !important;
 	transition: 1s;
 }
+
 #tldr_title {
 	transition: 1s;
 }
+
 .blue-text {
-	color: #2b3d4f;
+	color: var(--color-bluewood);
 }
 
 .blue-bg {
-	color: white;
-	background-color: #2b3d4f;
+	color: var(--color-white);
+	background-color: var(--color-bluewood);
 }
+
 .hover-blue-text:hover {
-	color: #2b3d4f;
+	color: var(--color-bluewood);
 }
 
 .heading-text {
-	font-family: 'Montserrat', sans-serif;
+	font-family: var(--font-heading);
 }
+
 .sub-heading-text {
-	font-family: 'Roboto', sans-serif;
+	font-family: var(--font-subheading);
 }
+
 .text {
-	font-family: 'Raleway', sans-serif;
+	font-family: var(--font-text);
 }
 
 .lightblue {
-	background-color: #2980b9;
+	background-color: var(--color-lightblue);
 }
 
 .lightblue-hover:hover {
-	background-color: #2980b9;
-	color: white;
+	background-color: var(--color-lightblue);
+	color: var(--color-white);
 }
+
 .project {
 	border-radius: 10px;
 }
 
 .lightgreen:hover {
-	background-color: #1abc9c;
+	background-color: var(--color-lightgreen);
 }
+
 .bluewood {
-	background-color: #2b3d4f;
+	background-color: var(--color-bluewood);
 }
 
 .skip-links {
@@ -137,14 +166,16 @@ h3 {
 	margin: 0;
 	padding: 0;
 }
+
 .skip-links a {
 	position: absolute;
 	top: -3em;
-	background-color: black;
-	color: white;
+	background-color: var(--color-black);
+	color: var(--color-white);
 	padding: 0.5em 1em;
 	font-weight: bold;
 }
+
 .skip-links a:focus {
 	top: 0;
 }
@@ -155,7 +186,7 @@ h3 {
 
 .list-circle li::before {
 	content: '•';
-	color: white;
+	color: var(--color-white);
 	display: inline-block;
 	font-size: 2em;
 	margin-right: 10px;
@@ -163,18 +194,13 @@ h3 {
 }
 
 #tldr:hover li::before {
-	color: black;
+	color: var(--color-black);
 	transition: 1s;
 }
 
 .group:hover .bg-gradient-to-br {
 	transform: rotate3d(0, 1, 0, 180deg);
 }
-
-/* .inner-wrapper {
-  max-width: 73dvw;
-  margin: 0 auto;
-} */
 
 @media screen and (min-width: 800px) {
 	.inner-wrapper {

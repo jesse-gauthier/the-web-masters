@@ -167,7 +167,7 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue'
+import { reactive, watch, ref } from 'vue'
 
 const formData = reactive({
 	name: '',
@@ -187,6 +187,33 @@ const toast = reactive({
 	message: '',
 	type: '',
 })
+
+// Variable to track if the form start event has been fired
+const formStarted = ref(false)
+
+// Watcher to detect when the user starts typing
+watch(
+	() => [
+		formData.name,
+		formData.email,
+		formData.phone,
+		formData.website,
+		formData.message,
+	],
+	(newValues) => {
+		if (!formStarted.value && newValues.some((value) => value !== '')) {
+			// Google Analytics event tracking
+			if (typeof gtag === 'function') {
+				gtag('event', 'form started', {
+					event_category: 'Contact Form',
+					event_label: 'Form Started',
+				})
+			}
+			formStarted.value = true // Ensure it only fires once
+		}
+	},
+	{ immediate: false }
+)
 
 const validateForm = () => {
 	errors.name = formData.name ? '' : 'Name is required.'
@@ -260,6 +287,8 @@ const resetForm = () => {
 	formData.freeAudit = false
 	formData.acceptTerms = false
 	Object.keys(errors).forEach((key) => (errors[key] = ''))
+	// Reset the formStarted tracker for a new submission
+	formStarted.value = false
 }
 </script>
 
