@@ -4,15 +4,29 @@
 		class="min-h-[80vh] flex justify-center items-center bg-fixed text-center"
 	>
 		<h1
+			data-aos="fade-up"
 			class="text-5xl font-bold text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl"
 		>
 			We Would Love To Work With You
 		</h1>
 	</div>
+	<OttawaMap
+		heading="Located in our Nation's Capital
+"
+	/>
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
 import { useHead } from '@unhead/vue'
+import OttawaMap from '@/components/OttawaMap.vue'
+import AOS from 'aos'
+
+onMounted(() => {
+	AOS.init({
+		duration: 3000,
+	})
+})
 
 useHead({
 	title: 'Contact Us - Ottawa Web Masters',

@@ -1,9 +1,14 @@
 <template>
 	<div>
-		<section aria-labelledby="portfolio-heading">
-			<h1 id="portfolio-heading" class="text-4xl font-bold text-center my-10">
-				Our Work - Portfolio
+		<div
+			class="hero min-h-screen"
+			style="background-image: url('../assets/workspace.jpg')"
+		>
+			<h1 class="hero-content text-8xl font-bold text-center my-10 text-white">
+				Our Work
 			</h1>
+		</div>
+		<section aria-labelledby="portfolio-heading">
 			<ProjectsComp />
 		</section>
 	</div>
@@ -44,9 +49,4 @@ useHead({
 })
 </script>
 
-<style scoped>
-/* Additional styles can be added to ensure a cohesive design */
-h1 {
-	color: #2b3d4f; /* Ensure the heading stands out */
-}
-</style>
+<style scoped></style>

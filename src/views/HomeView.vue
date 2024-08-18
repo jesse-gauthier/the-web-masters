@@ -1,12 +1,14 @@
 <script setup>
 import { onMounted } from 'vue'
+import { useHead } from '@unhead/vue'
+import AOS from 'aos'
+
 import HeroComp from '@/components/HeroComp.vue'
 import AboutComp from '@/components/about/AboutComp.vue'
 import FaqComp from '@/components/faq/FaqComp.vue'
 import TestimonyComp from '@/components/TestimonyComp.vue'
 import Packages from '@/components/serviceComps/Packages.vue'
-import { useHead } from '@unhead/vue'
-import AOS from 'aos'
+import OttawaMap from '@/components/OttawaMap.vue'
 
 onMounted(() => {
 	AOS.init({
@@ -69,6 +71,10 @@ useHead({
 		</section>
 
 		<FaqComp />
+		<OttawaMap
+			heading="Located in our Nation's Capital
+"
+		/>
 	</main>
 </template>
 

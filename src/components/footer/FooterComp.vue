@@ -23,7 +23,12 @@
 					>
 				</li>
 				<li>
-					<router-link class="link link-hover" to="/services"
+					<router-link class="link link-hover" to="/shopify"
+						>Shopify</router-link
+					>
+				</li>
+				<li>
+					<router-link class="link link-hover" to="/wordpress"
 						>WordPress</router-link
 					>
 				</li>

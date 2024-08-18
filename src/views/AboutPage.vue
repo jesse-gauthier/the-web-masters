@@ -106,34 +106,10 @@
 		</section>
 
 		<!-- Location Section -->
-		<section data-aos="fade-up" class="my-8">
-			<h2 class="text-center text-4xl capitalize mb-8">
-				Located in our Nation's Capital
-			</h2>
-			<div style="max-width: 100%; overflow: hidden; height: 500px">
-				<div
-					id="my-map-canvas"
-					style="height: 100%; width: 100%; max-width: 100%"
-				>
-					<iframe
-						style="height: 100%; width: 100%; border: 0"
-						frameborder="0"
-						src="https://www.google.com/maps/embed/v1/place?q=Ottawa+Ontario&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
-						alt="Google Map showing the location of Ottawa Web Masters"
-					></iframe>
-				</div>
-				<!-- Fallback link for users who may not see the iframe -->
-				<p class="text-center mt-4">
-					<a
-						href="https://www.google.com/maps/place/Ottawa,+ON,+Canada"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						View our location on Google Maps
-					</a>
-				</p>
-			</div>
-		</section>
+		<OttawaMap
+			heading="Located in our Nation's Capital
+"
+		/>
 	</div>
 </template>
 
@@ -141,6 +117,7 @@
 import { useHead } from '@unhead/vue'
 import { onMounted, ref } from 'vue'
 import AOS from 'aos'
+import OttawaMap from '../components/OttawaMap.vue'
 
 onMounted(() => {
 	AOS.init({
@@ -174,13 +151,3 @@ useHead({
 	],
 })
 </script>
-
-<style scoped>
-#my-map-canvas img.text-marker {
-	max-width: none !important;
-	background: none !important;
-}
-img {
-	max-width: none;
-}
-</style>

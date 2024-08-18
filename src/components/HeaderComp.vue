@@ -38,7 +38,7 @@
 					<div
 						v-if="isOpen"
 						tabindex="0"
-						class="absolute h-screen bg-[#2b3d4f] w-screen overflow-hidden left-0 top-0 z-50 py-3 px-8"
+						class="fixed h-[100dvh] bg-[#2b3d4f] w-screen left-0 top-0 z-50 py-3 px-8"
 					>
 						<div class="mr-8">
 							<div class="flex justify-between">
