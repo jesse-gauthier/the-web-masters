@@ -19,7 +19,7 @@
 		</section>
 
 		<!-- Core Values Section -->
-		<section class="w-[95dvw] md:w-[75dvw] mx-auto mt-14">
+		<section data-aos="fade-up" class="w-[95dvw] md:w-[75dvw] mx-auto mt-14">
 			<h2 class="text-center text-4xl capitalize mb-14">
 				"We Love What We Do & We Do What We Love"
 				<span class="block self-end text-2xl w-full py-2">
@@ -106,7 +106,7 @@
 		</section>
 
 		<!-- Location Section -->
-		<section class="my-8">
+		<section data-aos="fade-up" class="my-8">
 			<h2 class="text-center text-4xl capitalize mb-8">
 				Located in our Nation's Capital
 			</h2>
@@ -139,7 +139,14 @@
 
 <script setup>
 import { useHead } from '@unhead/vue'
+import { onMounted, ref } from 'vue'
+import AOS from 'aos'
 
+onMounted(() => {
+	AOS.init({
+		duration: 3000,
+	})
+})
 useHead({
 	title: 'About Us - Ottawa Web Masters',
 	meta: [
