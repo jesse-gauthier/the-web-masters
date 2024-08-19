@@ -133,7 +133,7 @@ useHead({
 		{
 			name: 'description',
 			content:
-				'Ottawa Web Masters specializes in custom Shopify solutions for small businesses in Ottawa, ON. Our expert team offers theme development, app customization, responsive design, SEO optimization, and more to elevate your online store.',
+				'Ottawa Web Masters specializes in custom Shopify solutions for small businesses in Ottawa, ON.',
 		},
 		{
 			property: 'og:title',

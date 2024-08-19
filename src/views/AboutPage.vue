@@ -125,12 +125,12 @@ onMounted(() => {
 	})
 })
 useHead({
-	title: 'About Us - Ottawa Web Masters',
+	title: 'About Our Team - Ottawa Web Masters',
 	meta: [
 		{
 			name: 'description',
 			content:
-				'Learn more about Ottawa Web Masters, a passionate team of web design specialists dedicated to helping small businesses in Ottawa succeed online. Discover who we are, what we do, and why we do it.',
+				'A passionate team of web design specialists dedicated to helping small businesses in Ottawa succeed. Discover who we are, what we do, and why we do it.',
 		},
 		{ property: 'og:title', content: 'About Us - Ottawa Web Masters' },
 		{

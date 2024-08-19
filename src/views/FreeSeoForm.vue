@@ -94,7 +94,19 @@
 </template>
 
 <script setup>
+import { useHead } from '@unhead/vue'
 import { reactive } from 'vue'
+
+useHead({
+	title: 'Request a Free SEO Audit - Improve Your Website Performance',
+	meta: [
+		{
+			name: 'description',
+			content:
+				'Free SEO audit for your website. We will analyze your site’s performance and provide actionable recommendations to improve your search engine rankings.',
+		},
+	],
+})
 
 const form = reactive({
 	name: '',
@@ -133,6 +145,4 @@ const submitForm = async () => {
 }
 </script>
 
-<style>
-/* Additional custom styles can be added here */
-</style>
+<style></style>

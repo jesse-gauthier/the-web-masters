@@ -13,11 +13,11 @@
 				<div
 					class="self-center md:col-span-4 lg:col-span-3 md:col-start-1 text-black"
 				>
-					<h2
+					<h1
 						class="mb-5 text-4xl md:text-5xl font-bold tracking-widest text-white"
 					>
 						Ottawa Web Design, SEO and E-Commerce Strategy
-					</h2>
+					</h1>
 					<p class="mb-5 text-2xl font-medium text-left text-white">
 						Our web design and SEO strategies are designed to significantly
 						increase traffic and lead generation for your business.

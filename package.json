@@ -13,6 +13,7 @@
   "dependencies": {
     "@unhead/vue": "^1.9.16",
     "aos": "^2.3.4",
+    "highlight.run": "^9.3.0",
     "pinia": "^2.1.7",
     "vue": "^3.4.21",
     "vue-gtag-next": "^1.14.0",

@@ -181,5 +181,22 @@
 </template>
 
 <script setup>
+import { useHead } from '@unhead/vue'
 import ProjectsComp from '@/components/ProjectsComp.vue'
+
+// Set the SEO meta tags using useHead
+useHead({
+	title: 'Custom WordPress Solutions - Tailored for Your Business',
+	meta: [
+		{
+			name: 'description',
+			content:
+				'We create stunning, custom WordPress websites for small businesses. Enhance your online presence with our responsive designs, SEO optimization, and more.',
+		},
+		{
+			name: 'robots',
+			content: 'index, follow',
+		},
+	],
+})
 </script>

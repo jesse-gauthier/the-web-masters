@@ -188,12 +188,12 @@ onMounted(() => {
 	})
 })
 useHead({
-	title: 'Our Services - Ottawa Web Masters',
+	title: 'Services We Offer - Ottawa Web Masters',
 	meta: [
 		{
 			name: 'description',
 			content:
-				'Discover the professional services offered by Ottawa Web Masters, including WordPress development, Shopify development, UX/UI design, website optimization, SEO, and consultation services.',
+				'Professional services offered by Ottawa Web Masters. WordPress, Shopify, SEO, and more.',
 		},
 		{ property: 'og:title', content: 'Our Services - Ottawa Web Masters' },
 		{

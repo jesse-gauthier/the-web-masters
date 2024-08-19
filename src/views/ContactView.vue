@@ -29,12 +29,12 @@ onMounted(() => {
 })
 
 useHead({
-	title: 'Contact Us - Ottawa Web Masters',
+	title: 'Contact Us - Fill displayed form - Ottawa Web Masters',
 	meta: [
 		{
 			name: 'description',
 			content:
-				'Get in touch with Ottawa Web Masters. We are excited to collaborate with you on your next web project. Contact us today to start your journey towards a better online presence.',
+				'Get in touch with Ottawa Web Masters. We are excited to collaborate with you on your next web project.',
 		},
 		{ property: 'og:title', content: 'Contact Us - Ottawa Web Masters' },
 		{
@@ -42,11 +42,6 @@ useHead({
 			content:
 				'Reach out to Ottawa Web Masters for expert web development and digital marketing services. We look forward to working with you.',
 		},
-		{
-			property: 'og:image',
-			content: 'https://yourwebsite.com/path-to-contact-banner-image.jpg',
-		}, // replace with actual image URL
-		{ property: 'og:url', content: 'https://yourwebsite.com/contact' },
 		{
 			name: 'keywords',
 			content:

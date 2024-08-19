@@ -22,7 +22,7 @@ useHead({
 		{
 			name: 'description',
 			content:
-				'Ottawa Web Masters offers professional web development services in Ottawa. We specialize in WordPress, Shopify, UX/UI design, SEO, and more. Contact us today to elevate your online presence.',
+				'Ottawa Web Masters offers professional web development services in Ottawa. We specialize in WordPress, Shopify, UX/UI design, SEO, and more',
 		},
 		{
 			property: 'og:title',

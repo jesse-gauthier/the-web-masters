@@ -19,12 +19,12 @@ import ProjectsComp from '@/components/ProjectsComp.vue'
 import { useHead } from '@unhead/vue'
 
 useHead({
-	title: 'Our Work - Portfolio | Ottawa Web Masters',
+	title: 'Take A Peek At Our Work | Ottawa Web Masters',
 	meta: [
 		{
 			name: 'description',
 			content:
-				'Explore the portfolio of Ottawa Web Masters. See our diverse range of web development projects, including custom websites, e-commerce platforms, and UX/UI designs. Get inspired and envision your next project with us.',
+				'Explore the portfolio of Ottawa Web Masters. Get inspired and envision your next project with us.',
 		},
 		{
 			property: 'og:title',

@@ -444,7 +444,7 @@ useHead({
 		{
 			name: 'description',
 			content:
-				'Ottawa SEO Masters offers expert SEO services in Ottawa, helping businesses improve search engine rankings, enhance user experience, and drive more traffic.',
+				'Expert SEO services in Ottawa, helping businesses improve search engine rankings, enhance user experience, and drive more traffic.',
 		},
 		{
 			name: 'keywords',
