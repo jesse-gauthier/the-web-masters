@@ -3,9 +3,7 @@
 		<!-- Hero Section -->
 		<section
 			class="hero min-h-screen"
-			style="
-				background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);
-			"
+			style="background-image: url('./assets/about_bg.jpg')"
 			aria-labelledby="about-us-heading"
 		>
 			<div class="hero-overlay bg-opacity-60"></div>
@@ -27,7 +25,7 @@
 				</span>
 			</h2>
 
-			<div class="flex flex-wrap lg:flex-nowrap justify-evenly gap-3">
+			<div class="flex flex-wrap lg:flex-nowrap justify-center gap-3">
 				<!-- Who We Are -->
 				<article
 					class="lg:w-[33%] border-4 p-3 rounded-md"
@@ -138,11 +136,6 @@ useHead({
 			content:
 				'Meet the Ottawa Web Masters team. We are dedicated to crafting quality websites for small businesses in Ottawa and beyond.',
 		},
-		{
-			property: 'og:image',
-			content: 'https://yourwebsite.com/path-to-about-us-image.jpg',
-		}, // replace with actual image URL
-		{ property: 'og:url', content: 'https://yourwebsite.com/about' },
 		{
 			name: 'keywords',
 			content:
