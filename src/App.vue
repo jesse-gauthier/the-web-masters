@@ -1,6 +1,7 @@
 <script setup>
 import { RouterView } from 'vue-router'
 import HeaderComp from './components/HeaderComp.vue'
+import AlertBar from './components/misc/AlertBar.vue'
 import FooterComp from './components/footer/FooterComp.vue'
 import ContactForm from '@/components/ContactForm.vue'
 import CookiesBanner from './components/CookiesBanner.vue'
@@ -8,13 +9,7 @@ import CookiesBanner from './components/CookiesBanner.vue'
 
 <template>
 	<HeaderComp />
-	<div class="text-center orange-bg flex">
-		<router-link
-			to="/freeseo"
-			class="btn btn-ghost hover:text-white text-2xl w-screen rounded-none underline"
-			>Get a Free SEO Audit</router-link
-		>
-	</div>
+	<AlertBar />
 	<RouterView />
 	<ContactForm data-aos="fade-up" id="contact_form" />
 	<CookiesBanner />
