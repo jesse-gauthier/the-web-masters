@@ -13,6 +13,9 @@ import ShopifyServicesView from '@/views/ShopifyServicesView.vue'
 import FreeSeoForm from '@/views/FreeSeoForm.vue'
 import SeoServicesView from '@/views/SeoServicesView.vue'
 
+// Blogs
+import OttawaWordpress from '@/landingpages/OttawaWordpress.vue'
+
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
 	routes: [
@@ -80,6 +83,12 @@ const router = createRouter({
 			path: '/about',
 			name: 'About Page',
 			component: AboutPage,
+			meta: { robots: 'index, follow' },
+		},
+		{
+			path: '/OttawaWordPress',
+			name: 'Ottawa Wordpress',
+			component: OttawaWordpress,
 			meta: { robots: 'index, follow' },
 		},
 	],
