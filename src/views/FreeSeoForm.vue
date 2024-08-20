@@ -1,94 +1,134 @@
 <template>
-	<div
-		class="min-h-screen flex items-center justify-center bg-[#2b3d4f] py-12 px-4 sm:px-6 lg:px-8"
-	>
-		<div class="max-w-md w-full space-y-8">
-			<div class="text-center">
-				<h2 class="text-3xl font-extrabold text-white">
-					Request a Free SEO Audit
-				</h2>
-				<p class="mt-2 text-sm text-[#febf45]">
-					Fill out the form below to get started
-				</p>
+	<div class="min-h-screen bg-[#2b3d4f] py-12 px-4 sm:px-6 lg:px-8">
+		<div class="max-w-4xl mx-auto space-y-16">
+			<!-- Section 1: Get a Free SEO Checklist -->
+			<div class="bg-white p-8 rounded-lg shadow-lg">
+				<div class="text-center">
+					<h2 class="text-3xl font-extrabold text-gray-900">
+						Get Your Free SEO Checklist
+					</h2>
+					<p class="mt-2 text-sm text-gray-600">
+						Enter your email below to receive a free copy of our SEO checklist.
+					</p>
+				</div>
+				<form @submit.prevent="submitChecklistForm" class="mt-8 space-y-6">
+					<div class="rounded-md shadow-sm -space-y-px">
+						<div>
+							<label for="email" class="sr-only">Email Address</label>
+							<input
+								v-model="checklistForm.email"
+								id="email"
+								name="email"
+								type="email"
+								required
+								class="appearance-none rounded relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-[#febf45] focus:border-[#febf45] focus:z-10 sm:text-sm"
+								placeholder="Email Address"
+							/>
+						</div>
+					</div>
+					<div>
+						<button
+							type="submit"
+							class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[#febf45] hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#febf45]"
+						>
+							Download Checklist
+						</button>
+					</div>
+				</form>
 			</div>
-			<form @submit.prevent="submitForm" class="space-y-6">
-				<div class="rounded-md shadow-sm -space-y-px">
-					<div>
-						<label for="name" class="sr-only">Name</label>
-						<input
-							v-model="form.name"
-							id="name"
-							name="name"
-							type="text"
-							required
-							class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-[#febf45] focus:border-[#febf45] focus:z-10 sm:text-sm"
-							placeholder="Your Name"
-						/>
-					</div>
-					<div>
-						<label for="email" class="sr-only">Email address</label>
-						<input
-							v-model="form.email"
-							id="email"
-							name="email"
-							type="email"
-							required
-							class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-[#febf45] focus:border-[#febf45] focus:z-10 sm:text-sm"
-							placeholder="Email Address"
-						/>
-					</div>
-					<div>
-						<label for="website" class="sr-only">Website URL</label>
-						<input
-							v-model="form.website"
-							id="website"
-							name="website"
-							type="url"
-							required
-							class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-[#febf45] focus:border-[#febf45] focus:z-10 sm:text-sm"
-							placeholder="Website URL"
-						/>
-					</div>
-				</div>
 
-				<div class="mt-4">
-					<label for="message" class="block text-sm font-medium text-[#febf45]"
-						>Additional Information</label
-					>
-					<textarea
-						v-model="form.message"
-						id="message"
-						name="message"
-						rows="3"
-						class="mt-1 shadow-sm focus:ring-[#febf45] focus:border-[#febf45] block w-full sm:text-sm border border-gray-300 rounded-md"
-						placeholder="Tell us more about your business..."
-					></textarea>
+			<!-- Section 2: Request a Free SEO Audit -->
+			<div class="bg-white p-8 rounded-lg shadow-lg">
+				<div class="text-center">
+					<h2 class="text-3xl font-extrabold text-gray-900">
+						Request a Free SEO Audit
+					</h2>
+					<p class="mt-2 text-sm text-gray-600">
+						Fill out the form below to get started with your free SEO audit.
+					</p>
 				</div>
+				<form @submit.prevent="submitAuditForm" class="mt-8 space-y-6">
+					<div class="rounded-md shadow-sm -space-y-px">
+						<div>
+							<label for="name" class="sr-only">Name</label>
+							<input
+								v-model="auditForm.name"
+								id="name"
+								name="name"
+								type="text"
+								required
+								class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-[#febf45] focus:border-[#febf45] focus:z-10 sm:text-sm"
+								placeholder="Your Name"
+							/>
+						</div>
+						<div>
+							<label for="email" class="sr-only">Email Address</label>
+							<input
+								v-model="auditForm.email"
+								id="email"
+								name="email"
+								type="email"
+								required
+								class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-[#febf45] focus:border-[#febf45] focus:z-10 sm:text-sm"
+								placeholder="Email Address"
+							/>
+						</div>
+						<div>
+							<label for="website" class="sr-only">Website URL</label>
+							<input
+								v-model="auditForm.website"
+								id="website"
+								name="website"
+								type="url"
+								required
+								class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-[#febf45] focus:border-[#febf45] focus:z-10 sm:text-sm"
+								placeholder="Website URL"
+							/>
+						</div>
+					</div>
 
-				<div class="flex items-center justify-between">
-					<div class="flex items-center">
-						<input
-							v-model="form.newsletter"
-							id="newsletter"
-							name="newsletter"
-							type="checkbox"
-							class="h-4 w-4 text-[#febf45] focus:ring-[#febf45] border-gray-300 rounded"
-						/>
-						<label for="newsletter" class="ml-2 block text-sm text-[#febf45]">
-							Sign up for our newsletter
+					<div class="mt-4">
+						<label
+							for="message"
+							class="block text-sm font-medium text-gray-900"
+						>
+							Additional Information
 						</label>
+						<textarea
+							v-model="auditForm.message"
+							id="message"
+							name="message"
+							rows="3"
+							class="mt-1 shadow-sm focus:ring-[#febf45] focus:border-[#febf45] block w-full sm:text-sm border border-gray-300 rounded-md"
+							placeholder="Tell us more about your business..."
+						></textarea>
 					</div>
-				</div>
 
-				<div>
-					<button
-						type="submit"
-						class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[#febf45] hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#febf45]"
-					>
-						Request Audit
-					</button>
-				</div>
-			</form>
+					<div class="flex items-center justify-between">
+						<div class="flex items-center">
+							<input
+								v-model="auditForm.newsletter"
+								id="newsletter"
+								name="newsletter"
+								type="checkbox"
+								class="h-4 w-4 text-[#febf45] focus:ring-[#febf45] border-gray-300 rounded"
+							/>
+							<label for="newsletter" class="ml-2 block text-sm text-gray-900">
+								Sign up for our newsletter
+							</label>
+						</div>
+					</div>
+
+					<div>
+						<button
+							type="submit"
+							class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[#febf45] hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#febf45]"
+						>
+							Request Audit
+						</button>
+					</div>
+				</form>
+			</div>
 		</div>
 	</div>
 </template>
@@ -97,18 +137,25 @@
 import { useHead } from '@unhead/vue'
 import { reactive } from 'vue'
 
+// Metadata for the page
 useHead({
-	title: 'Request a Free SEO Audit - Improve Your Website Performance',
+	title: 'SEO Tools - Free Checklist and Audit',
 	meta: [
 		{
 			name: 'description',
 			content:
-				'Free SEO audit for your website. We will analyze your site’s performance and provide actionable recommendations to improve your search engine rankings.',
+				'Download a free SEO checklist and request a free SEO audit for your website. Improve your search engine rankings with our expert advice.',
 		},
 	],
 })
 
-const form = reactive({
+// Form data for the SEO Checklist form
+const checklistForm = reactive({
+	email: '',
+})
+
+// Form data for the SEO Audit form (existing form)
+const auditForm = reactive({
 	name: '',
 	email: '',
 	website: '',
@@ -116,14 +163,50 @@ const form = reactive({
 	newsletter: false,
 })
 
-const submitForm = async () => {
+// Function to handle the SEO Checklist form submission
+const submitChecklistForm = async () => {
+	try {
+		const response = await fetch(
+			'https://ottawawebmasters.ca/seo_checklist.php',
+			{
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(checklistForm),
+			}
+		)
+
+		if (!response.ok) {
+			throw new Error('Network response was not ok')
+		}
+
+		const result = await response.json()
+		alert(result.message)
+
+		// Trigger file download
+		const link = document.createElement('a')
+		link.href = '/seo_checklist.pdf'
+		link.download = 'seo_checklist.pdf'
+		link.click()
+
+		// Reset form
+		checklistForm.email = ''
+	} catch (error) {
+		alert('There was an error submitting the form. Please try again.')
+		console.error('Error:', error)
+	}
+}
+
+// Function to handle the SEO Audit form submission (existing functionality)
+const submitAuditForm = async () => {
 	try {
 		const response = await fetch('https://ottawawebmasters.ca/seoform.php', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify(form),
+			body: JSON.stringify(auditForm),
 		})
 
 		if (!response.ok) {
@@ -132,12 +215,13 @@ const submitForm = async () => {
 
 		const result = await response.json()
 		alert(result.message)
+
 		// Reset form
-		form.name = ''
-		form.email = ''
-		form.website = ''
-		form.message = ''
-		form.newsletter = false
+		auditForm.name = ''
+		auditForm.email = ''
+		auditForm.website = ''
+		auditForm.message = ''
+		auditForm.newsletter = false
 	} catch (error) {
 		alert('There was an error submitting the form. Please try again.')
 		console.error('Error:', error)
