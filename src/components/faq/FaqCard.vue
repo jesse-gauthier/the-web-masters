@@ -1,51 +1,54 @@
 <template>
-  <div
-    v-if="faq"
-    @click="toggleExpand"
-    class="px-3 flex gap-3 align-middle py-2"
-    role="button"
-    :aria-expanded="isExpanded"
-    tabindex="0"
-    @keydown.enter="toggleExpand"
-    @keydown.space="toggleExpand"
-  >
-    <h4>{{ faq.question }}</h4>
-  </div>
-  <p
-    class="p-3 border-t-2 mt-2 border-orange-400"
-    v-if="isExpanded"
-    :id="'answer-' + faq.id"
-    tabindex="0"
-  >
-    {{ faq.answer }}
-  </p>
+	<div>
+		<div
+			v-if="faq"
+			@click="toggleExpand"
+			class="px-3 flex gap-3 align-middle py-2"
+			role="button"
+			:aria-expanded="isExpanded"
+			:aria-controls="'answer-' + faq.id"
+			tabindex="0"
+			@keydown.enter="toggleExpand"
+			@keydown.space.prevent="toggleExpand"
+		>
+			<h4 class="m-0" role="heading" aria-level="4">
+				{{ faq.question }}
+			</h4>
+		</div>
+		<p
+			class="p-3 border-t-2 mt-2 border-orange-400"
+			v-if="isExpanded"
+			:id="'answer-' + faq.id"
+			tabindex="-1"
+			ref="answer"
+		>
+			{{ faq.answer }}
+		</p>
+	</div>
 </template>
 
-<script>
-import { ref, defineComponent, toRefs } from 'vue'
+<script setup>
+import { ref, watch } from 'vue'
 
-export default defineComponent({
-  name: 'FaqCard',
-  props: {
-    faq: {
-      type: Object,
-      required: true
-    }
-  },
-  setup(props) {
-    const { faq } = toRefs(props)
-    const isExpanded = ref(false)
+const props = defineProps({
+	faq: {
+		type: Object,
+		required: true,
+	},
+})
 
-    const toggleExpand = () => {
-      isExpanded.value = !isExpanded.value
-    }
+const isExpanded = ref(false)
+const answer = ref(null)
 
-    return {
-      faq,
-      isExpanded,
-      toggleExpand
-    }
-  }
+const toggleExpand = () => {
+	isExpanded.value = !isExpanded.value
+}
+
+// Watch for the expanded state and focus on the answer when it's expanded
+watch(isExpanded, (newVal) => {
+	if (newVal && answer.value) {
+		// Focus the answer paragraph when expanded
+		answer.value.focus()
+	}
 })
 </script>
-s
