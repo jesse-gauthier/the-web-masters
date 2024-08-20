@@ -16,6 +16,7 @@
 					<div
 						tabindex="0"
 						role="button"
+						aria-label="Toggle Navigation Menu"
 						class="btn btn-ghost lg:hidden self-center"
 						@click="isOpen = !isOpen"
 					>
@@ -25,6 +26,7 @@
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
+							aria-hidden="true"
 						>
 							<path
 								stroke-linecap="round"
@@ -39,6 +41,7 @@
 						v-if="isOpen"
 						tabindex="0"
 						class="fixed h-[100dvh] bg-[#2b3d4f] w-screen left-0 top-0 z-50 py-3 px-8"
+						aria-label="Mobile Navigation Menu"
 					>
 						<div class="mr-8">
 							<div class="flex justify-between">
@@ -53,6 +56,7 @@
 								<div
 									tabindex="0"
 									role="button"
+									aria-label="Close Navigation Menu"
 									class="btn btn-ghost lg:hidden self-center"
 									@click="isOpen = !isOpen"
 								>
@@ -62,6 +66,7 @@
 										fill="none"
 										viewBox="0 0 24 24"
 										stroke="currentColor"
+										aria-hidden="true"
 									>
 										<path
 											stroke-linecap="round"
@@ -72,12 +77,14 @@
 									</svg>
 								</div>
 							</div>
-							<ul class="text-right text-xl *:my-2 mt-12">
-								<li v-for="(link, index) in links" :key="link.path">
+							<ul class="text-right text-xl *:my-2 mt-12" role="menu">
+								<li v-for="(link, index) in links" :key="link.path" role="none">
 									<router-link
 										class="btn w-[200px]"
 										:to="link.path"
 										@click="isOpen = false"
+										:aria-label="link.name"
+										role="menuitem"
 										active-class="active"
 									>
 										{{ link.name }}
@@ -90,17 +97,20 @@
 			</div>
 			<!-- Desktop -->
 			<div class="navbar-end hidden lg:flex">
-				<ul class="menu menu-horizontal px-1">
+				<ul class="menu menu-horizontal px-1" role="menubar">
 					<li
 						v-for="(link, index) in links"
 						:key="link.path"
 						@mouseenter="showDropdown = index"
 						@mouseleave="showDropdown = null"
 						class="relative"
+						role="none"
 					>
 						<router-link
 							:to="link.path"
 							class="text-xl state-focus hover:underline underline-offset-4"
+							:aria-label="link.name"
+							role="menuitem"
 							active-class="active"
 						>
 							{{ link.name }}
