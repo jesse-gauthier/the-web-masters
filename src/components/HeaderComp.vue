@@ -16,7 +16,7 @@
 						:class="
 							isSticky
 								? 'max-w-[10dvw] lg:max-w-[7dvw] xl:max-w-[3dvw]'
-								: 'max-w-[20dvw] lg:max-w-[15dvw] xl:max-w-[7dvw]'
+								: 'max-w-[75dvw] lg:max-w-[15dvw] xl:max-w-[17dvw]'
 						"
 						to="/"
 						aria-label="Home"
