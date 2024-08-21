@@ -37,6 +37,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $email_content .= "Additional Information: $message\n";
         $email_content .= "Newsletter Signup: $newsletter\n";
 
+        // Log the email content to a file
+        $log_content = "[" . date('Y-m-d H:i:s') . "]\n";
+        $log_content .= $email_content . "\n--------------------------\n";
+        file_put_contents('mail_log.txt', $log_content, FILE_APPEND);
+
         // Send the email
         if (mail($to, $subject, $email_content, $headers)) {
             http_response_code(200);
