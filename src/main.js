@@ -1,6 +1,5 @@
 import './assets/base.css'
 import 'aos/dist/aos.css'
-import { H } from 'highlight.run'
 import { createHead } from '@unhead/vue'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
@@ -34,19 +33,6 @@ if (process.env.NODE_ENV === 'production') {
 } else {
 	console.log('Google Analytics are off')
 }
-
-H.init('7e387k6d', {
-	environment: 'production',
-	version: 'commit:abcdefg12345',
-	networkRecording: {
-		enabled: true,
-		recordHeadersAndBody: true,
-		urlBlocklist: [
-			'https://www.googleapis.com/identitytoolkit',
-			'https://securetoken.googleapis.com',
-		],
-	},
-})
 
 // Mount the app to the DOM
 app.mount('#app')

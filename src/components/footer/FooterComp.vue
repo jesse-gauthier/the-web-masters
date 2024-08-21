@@ -47,7 +47,7 @@
 		<nav data-aos="fade-up" aria-label="Company">
 			<h2 class="footer-title">Company</h2>
 			<ul>
-				<!-- <li><a href="/about-us" class="link link-hover">About us</a></li> -->
+				<li><a href="/about-us" class="link link-hover">About us</a></li>
 				<li>
 					<router-link class="link link-hover" to="/contact"
 						>Contact</router-link
@@ -79,5 +79,13 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
 import { RouterLink } from 'vue-router'
+import AOS from 'aos'
+
+onMounted(() => {
+	AOS.init({
+		duration: 3000,
+	})
+})
 </script>
