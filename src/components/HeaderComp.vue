@@ -10,7 +10,11 @@
 			<!-- Mobile -->
 			<div class="flex justify-between w-full lg:navbar-start">
 				<div class="flex justify-between align-middle w-screen">
-					<router-link class="" to="/" aria-label="Home">
+					<router-link
+						class="max-w-[20dvw] lg:max-w-[15dvw] xl:max-w-[7dvw]"
+						to="/"
+						aria-label="Home"
+					>
 						<LogoComponent />
 					</router-link>
 					<div
@@ -47,7 +51,7 @@
 							<div class="flex justify-between">
 								<router-link
 									@click="isOpen = !isOpen"
-									class=""
+									class="max-w-[20dvw] lg:max-w-[15dvw] xl:max-w-[7dvw]"
 									to="/"
 									aria-label="Home"
 								>
@@ -96,8 +100,8 @@
 				</div>
 			</div>
 			<!-- Desktop -->
-			<div class="navbar-end hidden lg:flex">
-				<ul class="menu menu-horizontal px-1" role="menubar">
+			<div class="navbar-end hidden lg:flex self-end">
+				<ul class="menu menu-horizontal px-1 align-end" role="menubar">
 					<li
 						v-for="(link, index) in links"
 						:key="link.path"

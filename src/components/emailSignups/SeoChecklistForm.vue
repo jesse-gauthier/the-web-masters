@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-white p-8 rounded-lg shadow-lg">
+	<div data-aos="fade-up" class="bg-white p-8 rounded-lg shadow-lg">
 		<div class="text-center">
 			<h2 class="text-3xl font-extrabold leading-relaxed">
 				<span class="">Get Your </span>

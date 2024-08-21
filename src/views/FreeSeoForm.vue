@@ -4,7 +4,7 @@
 			<!-- Section 1: Get a Free SEO Checklist -->
 			<SeoChecklistForm />
 
-			<div class="bg-white p-8 rounded-lg shadow-lg">
+			<div data-aos="fade-up" class="bg-white p-8 rounded-lg shadow-lg">
 				<div class="text-center">
 					<h2 class="text-3xl font-extrabold text-gray-900">
 						Request a Free SEO Audit
