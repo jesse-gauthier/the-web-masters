@@ -1,7 +1,7 @@
 <template>
 	<!-- Location Section -->
 	<section data-aos="fade-up" class="my-8">
-		<h2 class="text-center text-4xl capitalize mb-8">
+		<h2 class="text-center text-4xl font-regular capitalize mb-8">
 			{{ heading }}
 		</h2>
 		<div style="max-width: 100%; overflow: hidden; height: 500px">
