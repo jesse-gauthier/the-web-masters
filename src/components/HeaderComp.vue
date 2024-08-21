@@ -1,9 +1,10 @@
 <template>
 	<header
 		:class="[
-			'w-[100%] bg-[#2b3d4f] flex justify-between items-center px-5 py-3 text-white overflow-hidden',
+			'w-[100%] bg-[#2b3d4f] flex justify-between items-center px-5 text-white overflow-hidden transition-all duration-300',
 			{ sticky: isSticky },
 		]"
+		:style="{ padding: isSticky ? '0.5rem 1rem' : '1rem 1.25rem' }"
 		role="banner"
 	>
 		<div class="navbar inner-wrapper">
@@ -11,7 +12,12 @@
 			<div class="flex justify-between w-full lg:navbar-start">
 				<div class="flex justify-between align-middle w-screen">
 					<router-link
-						class="max-w-[20dvw] lg:max-w-[15dvw] xl:max-w-[7dvw]"
+						class="transition-all duration-300"
+						:class="
+							isSticky
+								? 'max-w-[10dvw] lg:max-w-[7dvw] xl:max-w-[3dvw]'
+								: 'max-w-[20dvw] lg:max-w-[15dvw] xl:max-w-[7dvw]'
+						"
 						to="/"
 						aria-label="Home"
 					>
@@ -51,7 +57,11 @@
 							<div class="flex justify-between">
 								<router-link
 									@click="isOpen = !isOpen"
-									class="max-w-[20dvw] lg:max-w-[15dvw] xl:max-w-[7dvw]"
+									:class="
+										isSticky
+											? 'max-w-[10dvw] lg:max-w-[7dvw] xl:max-w-[5dvw]'
+											: 'max-w-[20dvw] lg:max-w-[15dvw] xl:max-w-[7dvw]'
+									"
 									to="/"
 									aria-label="Home"
 								>
@@ -151,7 +161,7 @@ const toggleDropdown = (index) => {
 }
 
 const handleScroll = () => {
-	isSticky.value = window.scrollY > 0
+	isSticky.value = window.scrollY > 50
 }
 
 onMounted(() => {
