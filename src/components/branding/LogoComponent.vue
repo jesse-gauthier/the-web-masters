@@ -589,15 +589,4 @@
 	</div>
 </template>
 
-<style>
-@font-face {
-	font-family: 'MyCustomFont';
-	src: url('@/assets/fonts/Baloo-Regular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
-.brand-font {
-	font-family: 'MyCustomFont', sans-serif;
-}
-</style>
+<style></style>

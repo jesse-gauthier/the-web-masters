@@ -7,7 +7,7 @@
 		:style="{ padding: isSticky ? '0.5rem 1rem' : '1rem 1.25rem' }"
 		role="banner"
 	>
-		<div class="navbar inner-wrapper">
+		<div class="navbar inner-wrapper brand-font">
 			<!-- Mobile -->
 			<div class="flex justify-between w-full lg:navbar-start">
 				<div class="flex justify-between align-middle w-screen">

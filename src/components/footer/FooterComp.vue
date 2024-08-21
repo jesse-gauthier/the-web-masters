@@ -4,19 +4,19 @@
 		role="contentinfo"
 	>
 		<div class="max-w-[300px]" data-aos="fade-up">
-			<h4 class="footer-title">Our Mission</h4>
+			<h4 class="text-2xl">Our Mission</h4>
 			<p>
 				Our mission is to craft high-quality websites designed to empower
 				businesses with a strong, reliable foundation for growth and success.
 			</p>
 			<div>
-				<p class="footer-title">Quick Contact</p>
+				<h4 class="text-2xl">Quick Contact</h4>
 				<a href="mailto:Jesse@ottawawebmasters.ca">Jesse@ottawawebmasters.ca</a>
 			</div>
 		</div>
 		<!-- Services -->
 		<nav aria-label="Services" data-aos="fade-up">
-			<h2 class="footer-title">Services</h2>
+			<h4 class="text-2xl">Services</h4>
 			<ul class="">
 				<li>
 					<router-link class="link link-hover" to="/services"
@@ -45,7 +45,7 @@
 		</nav>
 		<!-- Company -->
 		<nav data-aos="fade-up" aria-label="Company">
-			<h2 class="footer-title">Company</h2>
+			<h4 class="text-2xl">Company</h4>
 			<ul>
 				<li><a href="/about-us" class="link link-hover">About us</a></li>
 				<li>

@@ -17,11 +17,13 @@
 				<div
 					class="col-span-1 md:col-span-2 flex flex-col gap-4 md:order-2 justify-center my-3 px-3 md:pr-24 *:text-justify"
 				>
-					<h2 class="font-bold text-xl">
+					<h2 class="font-bold text-xl poppins-bold">
 						Based in Canada's Capital:<br />
-						<span class="block mt-2">Expert Web Developers and Designers</span>
+						<span class="block mt-2 poppins-bold"
+							>Expert Web Developers and Designers</span
+						>
 					</h2>
-					<p class="text-md">
+					<p class="text-lg poppins-medium">
 						At The Web Masters, we craft impactful digital experiences that
 						resonate globally. Our expertise spans Branding, Web Design, Web
 						Development, UX Design, SEO, and Digital Marketing. Our clients seek
@@ -30,7 +32,7 @@
 						develop aim to improve the end user experience by focusing on
 						usability, accessibility, and availability.
 					</p>
-					<p class="text-md">
+					<p class="text-lg poppins-medium">
 						Our highly skilled technical team is dedicated to delivering
 						innovative solutions tailored to meet the diverse needs of our
 						clients at every level.

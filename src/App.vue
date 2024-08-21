@@ -23,7 +23,7 @@ import CookiesBanner from './components/CookiesBanner.vue'
 	<CookiesBanner />
 	<FooterComp id="footer" />
 	<aside class="bg-[#2b3d4f] text-white text-center py-4">
-		<p>Copyright © 2024 - All right reserved</p>
+		<p class="text-xl">Copyright © 2024 - All right reserved</p>
 	</aside>
 </template>
 

@@ -20,7 +20,7 @@
 				role="region"
 				aria-labelledby="starter-package-title"
 			>
-				<h3 id="starter-package-title" class="text-2xl font-semibold mb-4">
+				<h3 id="starter-package-title" class="text-2xl mb-4 font-regular">
 					Starter <br />Package
 				</h3>
 				<p class="mb-4">
@@ -49,7 +49,7 @@
 				role="region"
 				aria-labelledby="growth-package-title"
 			>
-				<h3 id="growth-package-title" class="text-2xl font-semibold mb-4">
+				<h3 id="growth-package-title" class="text-2xl font-regular mb-4">
 					Growth <br />Package
 				</h3>
 				<p class="mb-4">
@@ -81,7 +81,7 @@
 				role="region"
 				aria-labelledby="ecommerce-package-title"
 			>
-				<h3 id="ecommerce-package-title" class="text-2xl font-semibold mb-4">
+				<h3 id="ecommerce-package-title" class="text-2xl font-regular mb-4">
 					E-Commerce <br />Package
 				</h3>
 				<p class="mb-4">
@@ -117,7 +117,7 @@
 				role="region"
 				aria-labelledby="custom-package-title"
 			>
-				<h3 id="custom-package-title" class="text-2xl font-semibold mb-4">
+				<h3 id="custom-package-title" class="text-2xl font-regular mb-4">
 					Custom <br />Package
 				</h3>
 				<p class="mb-4">

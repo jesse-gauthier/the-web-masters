@@ -59,49 +59,6 @@
 				/>
 			</div>
 
-			<!-- Website Domain -->
-			<div class="form-control">
-				<label for="website" class="label">
-					<span class="label-text">Website Domain:</span>
-				</label>
-				<input
-					type="url"
-					id="website"
-					v-model="formData.website"
-					class="input input-bordered w-full"
-				/>
-			</div>
-
-			<!-- Contact Method -->
-			<div class="form-control">
-				<label for="contactMethod" class="label">
-					<span class="label-text">Preferred Contact Method:</span>
-				</label>
-				<div class="flex justify-center gap-4">
-					<div class="flex items-center">
-						<input
-							type="radio"
-							id="contactEmail"
-							value="email"
-							required
-							v-model="formData.contactMethod"
-							class="radio radio-primary"
-						/>
-						<label for="contactEmail" class="ml-2 label-text">Email</label>
-					</div>
-					<div class="flex items-center">
-						<input
-							type="radio"
-							id="contactPhone"
-							value="phone"
-							v-model="formData.contactMethod"
-							class="radio radio-primary"
-						/>
-						<label for="contactPhone" class="ml-2 label-text">Phone</label>
-					</div>
-				</div>
-			</div>
-
 			<!-- Message -->
 			<div class="form-control">
 				<label for="message" class="label">
@@ -116,38 +73,6 @@
 				></textarea>
 				<span v-if="errors.message" class="text-error text-sm">{{
 					errors.message
-				}}</span>
-			</div>
-
-			<!-- Free Website Audit -->
-			<div class="form-control">
-				<label class="cursor-pointer flex items-start">
-					<input
-						id="freeAudit"
-						type="checkbox"
-						v-model="formData.freeAudit"
-						class="checkbox checkbox-primary"
-					/>
-					<span class="label-text ml-2">Request a free SEO audit</span>
-				</label>
-			</div>
-
-			<!-- Accept Terms and Conditions -->
-			<div class="form-control">
-				<label class="cursor-pointer flex items-start">
-					<input
-						id="acceptTerms"
-						type="checkbox"
-						v-model="formData.acceptTerms"
-						required
-						checked
-						aria-required="true"
-						class="checkbox checkbox-primary"
-					/>
-					<span class="label-text ml-2">I consent to be contacted</span>
-				</label>
-				<span v-if="errors.acceptTerms" class="text-error text-sm">{{
-					errors.acceptTerms
 				}}</span>
 			</div>
 
@@ -173,13 +98,7 @@ const formData = reactive({
 	name: '',
 	email: '',
 	phone: '',
-	website: '',
-	service: '',
-	contactMethod: '',
-	bestTime: '',
 	message: '',
-	freeAudit: false,
-	acceptTerms: false,
 })
 
 const errors = reactive({})
@@ -193,13 +112,7 @@ const formStarted = ref(false)
 
 // Watcher to detect when the user starts typing
 watch(
-	() => [
-		formData.name,
-		formData.email,
-		formData.phone,
-		formData.website,
-		formData.message,
-	],
+	() => [formData.name, formData.email, formData.phone, formData.message],
 	(newValues) => {
 		if (!formStarted.value && newValues.some((value) => value !== '')) {
 			// Google Analytics event tracking
@@ -220,9 +133,6 @@ const validateForm = () => {
 	errors.email = formData.email ? '' : 'Email is required.'
 	errors.email = validEmail(formData.email) ? '' : 'Valid email is required.'
 	errors.message = formData.message ? '' : 'Message is required.'
-	errors.acceptTerms = formData.acceptTerms
-		? ''
-		: 'You must accept the terms and conditions.'
 
 	return !Object.values(errors).some((error) => error)
 }
@@ -279,13 +189,7 @@ const resetForm = () => {
 	formData.name = ''
 	formData.email = ''
 	formData.phone = ''
-	formData.website = ''
-	formData.service = ''
-	formData.contactMethod = ''
-	formData.bestTime = ''
 	formData.message = ''
-	formData.freeAudit = false
-	formData.acceptTerms = false
 	Object.keys(errors).forEach((key) => (errors[key] = ''))
 	// Reset the formStarted tracker for a new submission
 	formStarted.value = false
