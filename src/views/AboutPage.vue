@@ -9,7 +9,10 @@
 			<div class="hero-overlay bg-opacity-60"></div>
 			<div class="hero-content text-neutral-content text-center">
 				<div class="max-w-md">
-					<h1 id="about-us-heading" class="mb-5 text-5xl md:text-8xl font-bold">
+					<h1
+						id="about-us-heading"
+						class="text-5xl font-bold text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl"
+					>
 						About Us
 					</h1>
 				</div>

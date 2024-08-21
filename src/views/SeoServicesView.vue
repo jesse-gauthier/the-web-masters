@@ -28,6 +28,7 @@
 			</div>
 		</div>
 		<div class="max-w-4xl mx-auto flex flex-col gap-y-8 p-4">
+			<SeoChecklistForm />
 			<!-- Starting Content -->
 			<div data-aos="fade-up">
 				<div class="inner-wrapper py-4 flex flex-col gap-5">
@@ -430,6 +431,8 @@
 import { useHead } from '@unhead/vue'
 import { onMounted, ref } from 'vue'
 import AOS from 'aos'
+
+import SeoChecklistForm from '@/components/emailSignups/SeoChecklistForm.vue'
 
 onMounted(() => {
 	AOS.init({

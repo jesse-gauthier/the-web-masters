@@ -4,7 +4,9 @@
 			class="hero min-h-screen"
 			style="background-image: url('../assets/workspace.jpg')"
 		>
-			<h1 class="hero-content text-8xl font-bold text-center my-10 text-white">
+			<h1
+				class="text-5xl font-bold text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl"
+			>
 				Our Work
 			</h1>
 		</div>
