@@ -1,10 +1,10 @@
 <template>
 	<div class="bg-white p-8 rounded-lg shadow-lg">
 		<div class="text-center">
-			<h2 class="text-3xl font-extrabold">
+			<h2 class="text-3xl font-extrabold leading-relaxed">
 				<span class="">Get Your </span>
-				<span class="bg-[#E89E1D] px-5 text-white rounded">Free 40</span> item
-				SEO Checklist
+				<span class="bg-[#E89E1D] px-5 text-white rounded">Free 40</span>
+				item SEO Checklist
 			</h2>
 			<p class="mt-2 text-sm text-gray-600">
 				Enter your email below to receive a free copy of our 40 item SEO

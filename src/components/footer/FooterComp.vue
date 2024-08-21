@@ -14,6 +14,7 @@
 				<a href="mailto:Jesse@ottawawebmasters.ca">Jesse@ottawawebmasters.ca</a>
 			</div>
 		</div>
+		<!-- Services -->
 		<nav aria-label="Services" data-aos="fade-up">
 			<h2 class="footer-title">Services</h2>
 			<ul class="">
@@ -38,12 +39,11 @@
 					>
 				</li>
 				<li>
-					<router-link class="link link-hover" to="/services"
-						>Digital Marketing</router-link
-					>
+					<router-link class="link link-hover" to="/seo">SEO</router-link>
 				</li>
 			</ul>
 		</nav>
+		<!-- Company -->
 		<nav data-aos="fade-up" aria-label="Company">
 			<h2 class="footer-title">Company</h2>
 			<ul>
@@ -61,6 +61,16 @@
 				<li>
 					<router-link class="link link-hover" to="/privacy-policy"
 						>Privacy Policy</router-link
+					>
+				</li>
+				<li>
+					<router-link class="link link-hover" to="/freeseo"
+						>Free SEO Audit</router-link
+					>
+				</li>
+				<li>
+					<router-link class="link link-hover" to="/freeseo"
+						>Free SEO Check List</router-link
 					>
 				</li>
 			</ul>

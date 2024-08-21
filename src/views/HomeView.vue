@@ -9,6 +9,7 @@ import FaqComp from '@/components/faq/FaqComp.vue'
 import TestimonyComp from '@/components/TestimonyComp.vue'
 import Packages from '@/components/serviceComps/Packages.vue'
 import OttawaMap from '@/components/OttawaMap.vue'
+import SeoChecklistForm from '@/components/emailSignups/SeoChecklistForm.vue'
 
 onMounted(() => {
 	AOS.init({
@@ -70,7 +71,15 @@ useHead({
 			<Packages />
 		</section>
 
+		<section
+			class="max-w-xl mx-auto my-4"
+			aria-labelledby="seochecklist-heading"
+		>
+			<SeoChecklistForm />
+		</section>
+
 		<FaqComp />
+
 		<OttawaMap
 			heading="Located in our Nation's Capital
 "
