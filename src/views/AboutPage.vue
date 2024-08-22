@@ -111,7 +111,6 @@
 		</section>
 	</div>
 </template>
-
 <script setup>
 import { useHead } from '@unhead/vue'
 import { onMounted } from 'vue'
@@ -123,6 +122,7 @@ onMounted(() => {
 		duration: 3000,
 	})
 })
+
 useHead({
 	title: 'About Our Team - Ottawa Web Masters',
 	meta: [
@@ -141,6 +141,21 @@ useHead({
 			name: 'keywords',
 			content:
 				'about us, Ottawa Web Masters, web design, web development, small business, Ottawa, digital marketing, web development Ottawa',
+		},
+	],
+	script: [
+		{
+			type: 'application/ld+json',
+			json: {
+				'@context': 'http://schema.org',
+				'@type': 'ProfessionalService',
+				name: 'Ottawa Web Masters',
+				aggregateRating: {
+					'@type': 'AggregateRating',
+					ratingValue: '4.8',
+					reviewCount: '85',
+				},
+			},
 		},
 	],
 })

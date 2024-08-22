@@ -147,8 +147,8 @@ useHead({
 		},
 		{
 			property: 'og:image',
-			content: 'https://yourwebsite.com/path-to-shopify-background-image.jpg',
-		}, // replace with actual image URL
+			content: 'https://yourwebsite.com/path-to-shopify-background-image.jpg', // replace with actual image URL
+		},
 		{
 			property: 'og:url',
 			content: 'https://yourwebsite.com/shopify-solutions',
@@ -157,6 +157,21 @@ useHead({
 			name: 'keywords',
 			content:
 				'Shopify, custom Shopify solutions, Ottawa, Shopify development, eCommerce, web design, SEO, small business',
+		},
+	],
+	script: [
+		{
+			type: 'application/ld+json',
+			json: {
+				'@context': 'http://schema.org',
+				'@type': 'ProfessionalService',
+				name: 'Ottawa Web Masters - Shopify Solutions',
+				aggregateRating: {
+					'@type': 'AggregateRating',
+					ratingValue: '4.9',
+					reviewCount: '60',
+				},
+			},
 		},
 	],
 })

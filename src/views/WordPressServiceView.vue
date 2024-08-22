@@ -207,5 +207,20 @@ useHead({
 			content: 'index, follow',
 		},
 	],
+	script: [
+		{
+			type: 'application/ld+json',
+			json: {
+				'@context': 'http://schema.org',
+				'@type': 'ProfessionalService',
+				name: 'Ottawa Web Masters - WordPress Solutions',
+				aggregateRating: {
+					'@type': 'AggregateRating',
+					ratingValue: '4.8',
+					reviewCount: '85',
+				},
+			},
+		},
+	],
 })
 </script>

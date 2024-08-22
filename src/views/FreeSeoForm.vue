@@ -141,6 +141,21 @@ useHead({
 				'SEO tools, free SEO checklist, SEO audit, website audit, search engine optimization, digital marketing, improve SEO, Ottawa Web Masters',
 		},
 	],
+	script: [
+		{
+			type: 'application/ld+json',
+			json: {
+				'@context': 'http://schema.org',
+				'@type': 'ProfessionalService',
+				name: 'Ottawa Web Masters - SEO Tools',
+				aggregateRating: {
+					'@type': 'AggregateRating',
+					ratingValue: '4.9',
+					reviewCount: '50',
+				},
+			},
+		},
+	],
 })
 
 // Form data for the SEO Audit form

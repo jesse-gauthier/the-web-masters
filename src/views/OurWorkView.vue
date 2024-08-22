@@ -51,6 +51,21 @@ useHead({
 				'portfolio, web development portfolio, Ottawa Web Masters projects, web design examples, WordPress projects, Shopify portfolio, web development case studies',
 		},
 	],
+	script: [
+		{
+			type: 'application/ld+json',
+			json: {
+				'@context': 'http://schema.org',
+				'@type': 'ProfessionalService',
+				name: 'Ottawa Web Masters',
+				aggregateRating: {
+					'@type': 'AggregateRating',
+					ratingValue: '4.8',
+					reviewCount: '100',
+				},
+			},
+		},
+	],
 })
 </script>
 

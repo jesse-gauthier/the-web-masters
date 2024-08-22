@@ -203,6 +203,21 @@ useHead({
 				'Discover Ottawa Web Masters’ range of services: WordPress, Shopify, SEO, UX/UI design, and comprehensive consultation services.',
 		},
 	],
+	script: [
+		{
+			type: 'application/ld+json',
+			json: {
+				'@context': 'http://schema.org',
+				'@type': 'ProfessionalService',
+				name: 'Ottawa Web Masters',
+				aggregateRating: {
+					'@type': 'AggregateRating',
+					ratingValue: '4.8',
+					reviewCount: '95',
+				},
+			},
+		},
+	],
 })
 </script>
 

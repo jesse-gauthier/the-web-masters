@@ -41,6 +41,21 @@ useHead({
 				'Ottawa web development, WordPress development, Shopify solutions, UX/UI design, SEO services, digital marketing, Ottawa digital services',
 		},
 	],
+	script: [
+		{
+			type: 'application/ld+json',
+			json: {
+				'@context': 'http://schema.org',
+				'@type': 'ProfessionalService',
+				name: 'Ottawa Web Masters',
+				aggregateRating: {
+					'@type': 'AggregateRating',
+					ratingValue: '4.8',
+					reviewCount: '120',
+				},
+			},
+		},
+	],
 })
 </script>
 

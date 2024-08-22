@@ -475,6 +475,21 @@ useHead({
 			content: 'summary_large_image',
 		},
 	],
+	script: [
+		{
+			type: 'application/ld+json',
+			json: {
+				'@context': 'http://schema.org',
+				'@type': 'ProfessionalService',
+				name: 'Ottawa SEO Masters',
+				aggregateRating: {
+					'@type': 'AggregateRating',
+					ratingValue: '4.9',
+					reviewCount: '75',
+				},
+			},
+		},
+	],
 })
 
 const openSection = ref(null)

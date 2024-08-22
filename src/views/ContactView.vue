@@ -54,6 +54,21 @@ useHead({
 				'contact, Ottawa Web Masters, web development, digital marketing, web design, get in touch, Ottawa web services',
 		},
 	],
+	script: [
+		{
+			type: 'application/ld+json',
+			json: {
+				'@context': 'http://schema.org',
+				'@type': 'ProfessionalService',
+				name: 'Ottawa Web Masters',
+				aggregateRating: {
+					'@type': 'AggregateRating',
+					ratingValue: '4.8',
+					reviewCount: '85',
+				},
+			},
+		},
+	],
 })
 </script>
 
