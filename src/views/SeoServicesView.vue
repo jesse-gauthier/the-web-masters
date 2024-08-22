@@ -431,7 +431,6 @@
 import { useHead } from '@unhead/vue'
 import { onMounted, ref } from 'vue'
 import AOS from 'aos'
-
 import SeoChecklistForm from '@/components/emailSignups/SeoChecklistForm.vue'
 
 onMounted(() => {

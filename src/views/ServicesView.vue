@@ -10,7 +10,7 @@
 				id="services-heading"
 				class="text-5xl font-bold text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl"
 			>
-				Our Services
+				Our Professional Web Services
 			</h1>
 		</div>
 
@@ -28,13 +28,13 @@
 							id="wordpress-development"
 							class="text-2xl font-semibold mb-4 text-gray-900"
 						>
-							WordPress Development
+							Expert WordPress Development Services
 						</h2>
 						<p class="text-gray-700">
-							Our WordPress services empower your digital presence with
-							flexibility and power. As the leading content management system,
-							WordPress offers unmatched usability and customization, ideal for
-							everything from vibrant blogs to robust e-commerce sites.
+							Boost your online presence with our customized WordPress
+							solutions. From dynamic blogs to robust e-commerce sites, our
+							WordPress development services deliver flexibility, power, and
+							unmatched usability tailored to your needs.
 						</p>
 						<RouterLink
 							to="/wordpress"
@@ -57,13 +57,13 @@
 							id="shopify-development"
 							class="text-2xl font-semibold mb-4 text-gray-900"
 						>
-							Shopify Development
+							Shopify Development Solutions
 						</h2>
 						<p class="text-gray-700">
-							We specialize in Shopify, offering bespoke e-commerce solutions
-							that drive sales and enhance the online shopping experience. Our
-							custom theme development and seamless app integration ensure your
-							store stands out and operates flawlessly.
+							Transform your e-commerce business with our specialized Shopify
+							development services. We create bespoke themes, integrate powerful
+							apps, and ensure your online store stands out and functions
+							smoothly, driving sales and customer satisfaction.
 						</p>
 						<RouterLink
 							to="/shopify"
@@ -86,13 +86,13 @@
 							id="seo-services"
 							class="text-2xl font-semibold mb-4 text-gray-900"
 						>
-							SEO
+							Professional SEO Services
 						</h2>
 						<p class="text-gray-700">
-							Elevate your site’s visibility on search engines with our
-							comprehensive SEO services. We use the latest strategies in
-							keyword research, content optimization, and link building to boost
-							your rankings and attract high-quality traffic.
+							Improve your website’s visibility and attract quality traffic with
+							our advanced SEO strategies. We specialize in keyword research,
+							on-page optimization, and link building to help your site rank
+							higher in search engine results.
 						</p>
 						<RouterLink
 							to="/seo"
@@ -115,14 +115,13 @@
 							id="ux-ui-design"
 							class="text-2xl font-semibold mb-4 text-gray-900"
 						>
-							UX/UI Design
+							UX/UI Design Expertise
 						</h2>
 						<p class="text-gray-700">
-							Our UX/UI design services create digital products that are not
-							only aesthetically pleasing but also highly functional and
-							user-friendly. We focus on crafting engaging experiences that
-							drive user satisfaction and conversions through thorough research,
-							testing, and iterative design.
+							Enhance user satisfaction and drive conversions with our expert
+							UX/UI design services. We craft intuitive and visually stunning
+							designs that focus on user experience, ensuring that your digital
+							products are both functional and engaging.
 						</p>
 					</div>
 				</div>
@@ -138,14 +137,13 @@
 							id="website-optimization"
 							class="text-2xl font-semibold mb-4 text-gray-900"
 						>
-							Website Optimization
+							Advanced Website Optimization
 						</h2>
 						<p class="text-gray-700">
-							Improve your website’s performance and user experience with our
-							optimization services. We enhance site speed, navigation, and
-							responsiveness, ensuring your website operates smoothly across all
-							devices, which is essential for providing a seamless user
-							experience.
+							Maximize your website's performance with our comprehensive
+							optimization services. We focus on enhancing speed,
+							responsiveness, and user experience across all devices to ensure
+							seamless and efficient website operation.
 						</p>
 					</div>
 				</div>
@@ -161,14 +159,13 @@
 							id="consultation-services"
 							class="text-2xl font-semibold mb-4 text-gray-900"
 						>
-							Consultation Services
+							Expert Consultation Services
 						</h2>
 						<p class="text-gray-700">
-							Our consultation services guide you through the complexities of
-							the digital landscape. Whether starting a new project or enhancing
-							an existing website, our expert consultants provide personalized
-							guidance and strategic insights to help you achieve your business
-							goals.
+							Navigate the complexities of the digital world with our expert
+							consultation services. From starting new projects to optimizing
+							existing ones, our consultants provide strategic insights and
+							personalized guidance to help you meet your business goals.
 						</p>
 					</div>
 				</div>
@@ -189,24 +186,22 @@ onMounted(() => {
 	})
 })
 useHead({
-	title: 'Services We Offer - Ottawa Web Masters',
+	title: 'Professional Web Services in Ottawa - Ottawa Web Masters',
 	meta: [
 		{
 			name: 'description',
 			content:
-				'Professional services offered by Ottawa Web Masters. WordPress, Shopify, SEO, and more.',
+				'Explore professional web services offered by Ottawa Web Masters, including WordPress development, Shopify development, SEO, UX/UI design, and more.',
 		},
-		{ property: 'og:title', content: 'Our Services - Ottawa Web Masters' },
+		{
+			property: 'og:title',
+			content: 'Professional Web Services in Ottawa - Ottawa Web Masters',
+		},
 		{
 			property: 'og:description',
 			content:
-				'Explore our range of services including WordPress development, Shopify development, UX/UI design, and more.',
+				'Discover Ottawa Web Masters’ range of services: WordPress, Shopify, SEO, UX/UI design, and comprehensive consultation services.',
 		},
-		{
-			property: 'og:image',
-			content: 'https://yourwebsite.com/path-to-image.jpg',
-		},
-		{ property: 'og:url', content: 'https://yourwebsite.com/services' },
 	],
 })
 </script>

@@ -2,18 +2,19 @@
 	<div
 		id="contact_banner"
 		class="min-h-[80vh] flex justify-center items-center bg-fixed text-center"
+		aria-labelledby="contact-heading"
 	>
 		<h1
+			id="contact-heading"
 			data-aos="fade-up"
 			class="text-5xl font-bold text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl"
 		>
 			We Would Love To Work With You
 		</h1>
 	</div>
-	<OttawaMap
-		heading="Located in our Nation's Capital
-"
-	/>
+	<section aria-labelledby="location-heading">
+		<OttawaMap heading="Located in Our Nation's Capital" />
+	</section>
 </template>
 
 <script setup>
@@ -29,23 +30,28 @@ onMounted(() => {
 })
 
 useHead({
-	title: 'Contact Us - Fill displayed form - Ottawa Web Masters',
+	title: 'Contact Ottawa Web Masters - Get in Touch for Expert Web Development',
 	meta: [
 		{
 			name: 'description',
 			content:
-				'Get in touch with Ottawa Web Masters. We are excited to collaborate with you on your next web project.',
+				'Contact Ottawa Web Masters to discuss your web development and digital marketing needs. Our team is ready to collaborate on your next project.',
 		},
 		{ property: 'og:title', content: 'Contact Us - Ottawa Web Masters' },
 		{
 			property: 'og:description',
 			content:
-				'Reach out to Ottawa Web Masters for expert web development and digital marketing services. We look forward to working with you.',
+				'Reach out to Ottawa Web Masters for professional web development services. Let’s work together to bring your digital vision to life.',
 		},
+		{
+			property: 'og:image',
+			content: 'https://yourwebsite.com/path-to-contact-image.jpg', // Replace with actual image URL
+		},
+		{ property: 'og:url', content: 'https://yourwebsite.com/contact' },
 		{
 			name: 'keywords',
 			content:
-				'contact, Ottawa Web Masters, web development, digital marketing, web design',
+				'contact, Ottawa Web Masters, web development, digital marketing, web design, get in touch, Ottawa web services',
 		},
 	],
 })

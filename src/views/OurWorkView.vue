@@ -1,16 +1,24 @@
 <template>
 	<div>
+		<!-- Hero Section -->
 		<div
 			class="hero min-h-screen"
 			style="background-image: url('../assets/workspace.jpg')"
+			aria-labelledby="portfolio-heading"
 		>
-			<h1
-				class="text-5xl font-bold text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl"
-			>
-				Our Work
-			</h1>
+			<div class="hero-overlay bg-opacity-60"></div>
+			<div class="hero-content text-neutral-content text-center">
+				<h1
+					id="portfolio-heading"
+					class="text-5xl font-bold text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl"
+				>
+					Our Portfolio
+				</h1>
+			</div>
 		</div>
-		<section aria-labelledby="portfolio-heading">
+
+		<!-- Projects Section -->
+		<section aria-labelledby="projects-heading">
 			<ProjectsComp />
 		</section>
 	</div>
@@ -21,31 +29,26 @@ import ProjectsComp from '@/components/ProjectsComp.vue'
 import { useHead } from '@unhead/vue'
 
 useHead({
-	title: 'Take A Peek At Our Work | Ottawa Web Masters',
+	title: 'Explore Our Portfolio | Ottawa Web Masters',
 	meta: [
 		{
 			name: 'description',
 			content:
-				'Explore the portfolio of Ottawa Web Masters. Get inspired and envision your next project with us.',
+				'Explore the portfolio of Ottawa Web Masters, showcasing our expertise in web development and design. Discover projects that highlight our skills in WordPress, Shopify, and more.',
 		},
 		{
 			property: 'og:title',
-			content: 'Our Work - Portfolio | Ottawa Web Masters',
+			content: 'Our Portfolio - Web Development Projects | Ottawa Web Masters',
 		},
 		{
 			property: 'og:description',
 			content:
-				'Discover the work of Ottawa Web Masters through our portfolio. From WordPress sites to Shopify stores, see the projects that showcase our expertise.',
+				'Browse through our portfolio at Ottawa Web Masters to see examples of our work. From WordPress to Shopify, our projects demonstrate our ability to deliver exceptional web solutions.',
 		},
-		{
-			property: 'og:image',
-			content: 'https://yourwebsite.com/path-to-portfolio-image.jpg',
-		}, // replace with actual image URL
-		{ property: 'og:url', content: 'https://yourwebsite.com/portfolio' },
 		{
 			name: 'keywords',
 			content:
-				'portfolio, web development, Ottawa Web Masters, web design, projects, case studies',
+				'portfolio, web development portfolio, Ottawa Web Masters projects, web design examples, WordPress projects, Shopify portfolio, web development case studies',
 		},
 	],
 })

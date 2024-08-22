@@ -13,7 +13,7 @@
 						id="about-us-heading"
 						class="text-5xl font-bold text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl"
 					>
-						About Us
+						About Ottawa Web Masters
 					</h1>
 				</div>
 			</div>
@@ -24,7 +24,7 @@
 			<h2 class="text-center text-4xl capitalize mb-14">
 				"We Love What We Do & We Do What We Love"
 				<span class="block self-end text-2xl w-full py-2">
-					- Ottawa Web Masters
+					- Ottawa Web Masters Team
 				</span>
 			</h2>
 
@@ -41,11 +41,11 @@
 						Who We Are
 					</h3>
 					<p class="px-1 text-justify">
-						We are a passionate team of web design specialists based in Ottawa,
-						dedicated to creating exceptional websites. Our mission is
-						straightforward: small businesses need quality sites, and we love
-						crafting them. This guiding principle defines us and influences
-						every service we provide.
+						We are a dedicated team of web design and development specialists
+						based in Ottawa, passionate about creating exceptional websites for
+						small businesses. Our mission is simple: empower small businesses
+						with quality digital solutions. This guiding principle shapes every
+						service we offer.
 					</p>
 					<div class="flex justify-center my-3">
 						<router-link to="/freeseo" class="btn btn-outline"
@@ -66,11 +66,10 @@
 						What We Do
 					</h3>
 					<p class="px-1 text-justify">
-						We serve startups, e-commerce ventures, and small businesses in
-						Ottawa and throughout Canada. Our expertise spans across leading
-						platforms and languages, including WordPress, Shopify, Joomla, and
-						Magento. Whatever your vision, we have the skills to bring it to
-						life.
+						We serve startups, e-commerce ventures, and small businesses across
+						Ottawa and Canada. Our expertise spans leading platforms like
+						WordPress, Shopify, Joomla, and Magento. Whatever your digital
+						vision, we have the expertise to bring it to life.
 					</p>
 					<div class="flex justify-center my-3">
 						<router-link to="/freeseo" class="btn btn-outline"
@@ -91,11 +90,11 @@
 						Why We Do It
 					</h3>
 					<p class="px-1 text-justify">
-						We understand the common challenges businesses face, including ours.
-						Building your empire while saving time and money, and avoiding
-						stress, is a universal struggle. We empathize and specialize in
-						meeting the needs of small businesses, speaking your language, and
-						helping you design a website that fulfills all your requirements.
+						We understand the challenges businesses face—balancing time, money,
+						and growth. We empathize with these struggles because we've been
+						there too. That's why we specialize in creating websites that not
+						only meet your needs but also help you overcome these challenges
+						effectively.
 					</p>
 					<div class="flex justify-center my-3">
 						<router-link to="/freeseo" class="btn btn-outline"
@@ -107,16 +106,15 @@
 		</section>
 
 		<!-- Location Section -->
-		<OttawaMap
-			heading="Located in our Nation's Capital
-"
-		/>
+		<section id="location" aria-labelledby="location-heading">
+			<OttawaMap heading="Located in Our Nation's Capital" />
+		</section>
 	</div>
 </template>
 
 <script setup>
 import { useHead } from '@unhead/vue'
-import { onMounted, ref } from 'vue'
+import { onMounted } from 'vue'
 import AOS from 'aos'
 import OttawaMap from '../components/OttawaMap.vue'
 
@@ -131,18 +129,18 @@ useHead({
 		{
 			name: 'description',
 			content:
-				'A passionate team of web design specialists dedicated to helping small businesses in Ottawa succeed. Discover who we are, what we do, and why we do it.',
+				'Meet the passionate team behind Ottawa Web Masters. We specialize in web design and development for small businesses in Ottawa and beyond. Discover our mission and values.',
 		},
 		{ property: 'og:title', content: 'About Us - Ottawa Web Masters' },
 		{
 			property: 'og:description',
 			content:
-				'Meet the Ottawa Web Masters team. We are dedicated to crafting quality websites for small businesses in Ottawa and beyond.',
+				'Learn more about the Ottawa Web Masters team. We are committed to helping small businesses succeed online with quality web development services.',
 		},
 		{
 			name: 'keywords',
 			content:
-				'about us, Ottawa Web Masters, web design, small business, Ottawa, web development, digital marketing',
+				'about us, Ottawa Web Masters, web design, web development, small business, Ottawa, digital marketing, web development Ottawa',
 		},
 	],
 })

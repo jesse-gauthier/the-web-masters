@@ -18,12 +18,12 @@ onMounted(() => {
 })
 
 useHead({
-	title: 'Ottawa Web Masters - Leading Web Development Services in Ottawa',
+	title: 'Ottawa Web Masters - Premier Web Development Services in Ottawa',
 	meta: [
 		{
 			name: 'description',
 			content:
-				'Ottawa Web Masters offers professional web development services in Ottawa. We specialize in WordPress, Shopify, UX/UI design, SEO, and more',
+				'Explore premier web development services in Ottawa with Ottawa Web Masters. Specializing in WordPress, Shopify, UX/UI design, SEO, and digital marketing.',
 		},
 		{
 			property: 'og:title',
@@ -33,17 +33,12 @@ useHead({
 		{
 			property: 'og:description',
 			content:
-				'Discover top-notch web development and digital services with Ottawa Web Masters. Let us help you build your online presence.',
+				'Top Ottawa web development services specializing in WordPress, Shopify, UX/UI design, SEO, and more. Build your digital presence with Ottawa Web Masters.',
 		},
-		{
-			property: 'og:image',
-			content: 'https://yourwebsite.com/path-to-hero-image.jpg',
-		}, // replace with actual image URL
-		{ property: 'og:url', content: 'https://yourwebsite.com/' },
 		{
 			name: 'keywords',
 			content:
-				'web development, Ottawa, WordPress, Shopify, UX/UI design, SEO, digital marketing',
+				'Ottawa web development, WordPress development, Shopify solutions, UX/UI design, SEO services, digital marketing, Ottawa digital services',
 		},
 	],
 })
@@ -71,6 +66,7 @@ useHead({
 			<Packages />
 		</section>
 
+		<!-- SEO Checklist Form Section -->
 		<section
 			class="max-w-xl mx-auto my-4"
 			aria-labelledby="seochecklist-heading"
@@ -78,12 +74,14 @@ useHead({
 			<SeoChecklistForm />
 		</section>
 
-		<FaqComp />
+		<!-- FAQ Section -->
 
-		<OttawaMap
-			heading="Located in our Nation's Capital
-"
-		/>
+		<FaqComp aria-labelledby="faq-heading" />
+
+		<!-- Ottawa Map Section -->
+		<section id="location" aria-labelledby="location-heading">
+			<OttawaMap heading="Located in Our Nation's Capital" />
+		</section>
 	</main>
 </template>
 

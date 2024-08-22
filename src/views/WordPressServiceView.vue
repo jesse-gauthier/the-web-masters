@@ -11,7 +11,7 @@
 					<h1
 						class="text-3xl text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl font-medium"
 					>
-						Custom WordPress Websites
+						Custom WordPress Websites in Ottawa
 					</h1>
 					<div class="flex justify-center space-x-4">
 						<router-link
@@ -40,7 +40,7 @@
 			<section
 				class="inner-wrapper px-3 py-4 min-h-[50dvh] flex flex-col justify-center"
 			>
-				<h3 class="text-4xl">Let us build your WordPress website</h3>
+				<h3 class="text-4xl">WordPress Design Services in Ottawa</h3>
 				<hr class="my-6 bg-[#2b3d4f] h-[3px]" />
 				<p class="text-lg self-center text-gray-600">
 					We specialize in creating stunning WordPress websites tailored
