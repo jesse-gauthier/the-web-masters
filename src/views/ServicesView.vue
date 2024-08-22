@@ -185,6 +185,7 @@ import AOS from 'aos'
 onMounted(() => {
 	AOS.init({
 		duration: 3000,
+		once: true,
 	})
 })
 useHead({
