@@ -51,7 +51,7 @@ useHead({
 		{
 			name: 'keywords',
 			content:
-				'contact, Ottawa Web Masters, web development, digital marketing, web design, get in touch, Ottawa web services',
+				'contact, Ottawa Web Masters, web development, digital marketing, web design, get in touch, Ottawa web services, professional web development, collaboration, Ottawa business solutions',
 		},
 	],
 	script: [

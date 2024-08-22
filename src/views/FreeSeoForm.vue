@@ -138,7 +138,7 @@ useHead({
 		{
 			name: 'keywords',
 			content:
-				'SEO tools, free SEO checklist, SEO audit, website audit, search engine optimization, digital marketing, improve SEO, Ottawa Web Masters',
+				'SEO tools, free SEO checklist, SEO audit, website audit, search engine optimization, digital marketing, improve SEO, Ottawa Web Masters, SEO services, website optimization',
 		},
 	],
 	script: [

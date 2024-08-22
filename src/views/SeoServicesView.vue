@@ -451,7 +451,7 @@ useHead({
 		{
 			name: 'keywords',
 			content:
-				'SEO, Ottawa SEO, SEO Services, Search Engine Optimization, Ottawa, Web Masters, SEO Audit',
+				'SEO, Ottawa SEO, SEO Services, Search Engine Optimization, Ottawa, Web Masters, SEO Audit, local SEO, e-commerce SEO, technical SEO, on-page optimization, off-page optimization, SEO expert Ottawa, SEO consulting Ottawa',
 		},
 		{
 			property: 'og:title',

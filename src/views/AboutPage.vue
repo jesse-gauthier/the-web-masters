@@ -140,7 +140,7 @@ useHead({
 		{
 			name: 'keywords',
 			content:
-				'about us, Ottawa Web Masters, web design, web development, small business, Ottawa, digital marketing, web development Ottawa',
+				'about us, Ottawa Web Masters, web design, web development, small business, Ottawa, digital marketing, web development Ottawa, team values, web design Ottawa, digital solutions',
 		},
 	],
 	script: [

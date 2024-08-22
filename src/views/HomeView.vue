@@ -38,7 +38,7 @@ useHead({
 		{
 			name: 'keywords',
 			content:
-				'Ottawa web development, WordPress development, Shopify solutions, UX/UI design, SEO services, digital marketing, Ottawa digital services',
+				'Ottawa web development, WordPress development, Shopify solutions, UX/UI design, SEO services, digital marketing, Ottawa digital services, web design Ottawa, professional web development Ottawa, ecommerce solutions Ottawa',
 		},
 	],
 	script: [

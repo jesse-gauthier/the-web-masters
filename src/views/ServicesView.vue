@@ -194,6 +194,11 @@ useHead({
 				'Explore professional web services offered by Ottawa Web Masters, including WordPress development, Shopify development, SEO, UX/UI design, and more.',
 		},
 		{
+			name: 'keywords',
+			content:
+				'web services Ottawa, WordPress development, Shopify development, SEO services, UX/UI design, website optimization, digital consultation, Ottawa Web Masters, web development Ottawa',
+		},
+		{
 			property: 'og:title',
 			content: 'Professional Web Services in Ottawa - Ottawa Web Masters',
 		},

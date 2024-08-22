@@ -134,7 +134,12 @@ useHead({
 		{
 			name: 'description',
 			content:
-				'Ottawa Web Masters specializes in custom Shopify solutions for small businesses in Ottawa, ON.',
+				'Ottawa Web Masters specializes in custom Shopify solutions for small businesses in Ottawa, ON. Elevate your eCommerce presence with tailored Shopify development, SEO optimization, and more.',
+		},
+		{
+			name: 'keywords',
+			content:
+				'Shopify, custom Shopify solutions, Ottawa, Shopify development, eCommerce, web design, SEO, small business, Shopify Ottawa, Shopify themes, Shopify SEO',
 		},
 		{
 			property: 'og:title',
@@ -147,16 +152,11 @@ useHead({
 		},
 		{
 			property: 'og:image',
-			content: 'https://yourwebsite.com/path-to-shopify-background-image.jpg', // replace with actual image URL
+			content: 'https://yourwebsite.com/path-to-shopify-background-image.jpg', // Replace with actual image URL
 		},
 		{
 			property: 'og:url',
 			content: 'https://yourwebsite.com/shopify-solutions',
-		},
-		{
-			name: 'keywords',
-			content:
-				'Shopify, custom Shopify solutions, Ottawa, Shopify development, eCommerce, web design, SEO, small business',
 		},
 	],
 	script: [
@@ -178,14 +178,12 @@ useHead({
 </script>
 
 <style scoped>
-/* Ensure good contrast and readability */
 .hero-content h1 {
 	background: rgba(0, 0, 0, 0.7);
 	padding: 1rem;
 	border-radius: 0.5rem;
 }
 
-/* Responsive and visual improvements */
 @media (max-width: 768px) {
 	.hero-content h1 {
 		font-size: 2.5rem;

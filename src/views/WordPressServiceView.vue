@@ -195,16 +195,43 @@ import Packages from '@/components/serviceComps/Packages.vue'
 
 // Set the SEO meta tags using useHead
 useHead({
-	title: 'Custom WordPress Solutions - Tailored for Your Business',
+	title: 'Custom WordPress Solutions in Ottawa - Tailored for Your Business',
 	meta: [
 		{
 			name: 'description',
 			content:
-				'We create stunning, custom WordPress websites for small businesses. Enhance your online presence with our responsive designs, SEO optimization, and more.',
+				'We create stunning, custom WordPress websites for small businesses in Ottawa. Enhance your online presence with responsive designs, SEO optimization, eCommerce solutions, and more.',
+		},
+		{
+			name: 'keywords',
+			content:
+				'Custom WordPress websites, Ottawa WordPress design, small business web development, SEO optimization, responsive WordPress design, eCommerce WordPress solutions, Ottawa web development, plugin customization, WordPress theme development, WooCommerce integration, Ottawa WordPress experts',
 		},
 		{
 			name: 'robots',
 			content: 'index, follow',
+		},
+		{
+			property: 'og:title',
+			content:
+				'Custom WordPress Solutions in Ottawa - Tailored for Your Business',
+		},
+		{
+			property: 'og:description',
+			content:
+				'Partner with Ottawa Web Masters for custom WordPress websites that elevate your business. Specializing in responsive designs, SEO, and eCommerce integrations.',
+		},
+		{
+			property: 'og:image',
+			content: 'https://yourwebsite.com/path-to-wordpress-background-image.jpg', // Replace with actual image URL
+		},
+		{
+			property: 'og:url',
+			content: 'https://yourwebsite.com/wordpress-solutions',
+		},
+		{
+			name: 'twitter:card',
+			content: 'summary_large_image',
 		},
 	],
 	script: [
