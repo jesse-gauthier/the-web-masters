@@ -4,11 +4,14 @@
 			<!-- Hero -->
 			<section
 				class="hero min-h-screen bg-fixed"
-				style="background-image: url('./assets/wordpress.jpg')"
+				style="background-image: url('./assets/wordpress2.jpg')"
 			>
-				<div class="hero-content flex-col *:text-white max-w-[55dvw]">
-					<h1 class="md:text-4xl text-5xl font-bold text-gray-800">
-						Custom WordPress Solutions
+				<div class="hero-overlay bg-opacity-60"></div>
+				<div class="hero-content flex-col max-w-[55dvw]">
+					<h1
+						class="text-3xl text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl font-medium"
+					>
+						Custom WordPress Websites
 					</h1>
 					<div class="flex justify-center space-x-4">
 						<router-link
@@ -150,7 +153,12 @@
 				</svg>
 			</section>
 
-			<ProjectsComp />
+			<!-- Packages Section -->
+			<section aria-labelledby="packages-heading">
+				<Packages />
+			</section>
+			<!-- <ProjectsComp /> -->
+
 			<!-- Services -->
 			<section
 				class="flex flex-col text-center max-w-[80dvw] mx-auto my-5 gap-4"
@@ -182,7 +190,8 @@
 
 <script setup>
 import { useHead } from '@unhead/vue'
-import ProjectsComp from '@/components/ProjectsComp.vue'
+// import ProjectsComp from '@/components/ProjectsComp.vue'
+import Packages from '@/components/serviceComps/Packages.vue'
 
 // Set the SEO meta tags using useHead
 useHead({

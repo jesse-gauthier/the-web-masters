@@ -7,12 +7,13 @@
 				:style="{ backgroundImage: `url(${backgroundImage})` }"
 				aria-labelledby="hero-heading"
 			>
+				<div class="hero-overlay bg-opacity-60"></div>
 				<div class="hero-content flex-col text-white max-w-[55dvw] text-center">
 					<h1
 						id="hero-heading"
-						class="md:text-8xl text-6xl font-bold bg-black bg-opacity-70 py-8"
+						class="text-3xl text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl font-medium"
 					>
-						Custom Shopify Solutions in Ottawa, ON
+						Custom Shopify Websites in Ottawa, ON
 					</h1>
 					<div class="flex justify-center space-x-4 mt-6">
 						<router-link
@@ -31,7 +32,7 @@
 			<section
 				class="inner-wrapper px-3 py-12 min-h-[50dvh] flex flex-col justify-center"
 			>
-				<h2 class="text-4xl text-center font-bold text-gray-800">
+				<h2 class="text-4xl text-center font-medium text-gray-800">
 					Elevate Your Shopify Store with Expert Development in Ottawa, ON
 				</h2>
 				<hr class="my-6 bg-[#2b3d4f] h-[3px]" />
@@ -51,7 +52,7 @@
 
 			<!-- Technology and Partner Logos Section -->
 			<section class="inner-wrapper py-8">
-				<h2 class="text-4xl text-center font-bold text-gray-800">
+				<h2 class="text-4xl text-center font-medium text-gray-800">
 					We Only Work With The Best
 				</h2>
 				<hr class="my-6 bg-[#2b3d4f] h-[3px]" />
@@ -84,14 +85,14 @@
 				</div>
 			</section>
 
-			<!-- Projects Component -->
-			<ProjectsComp />
+			<!-- Projects Component
+			<ProjectsComp /> -->
 
 			<!-- Services Section -->
 			<section
 				class="flex flex-col text-center max-w-[80dvw] mx-auto my-12 gap-4"
 			>
-				<h2 class="text-2xl font-bold text-gray-800">Our Services</h2>
+				<h2 class="text-4xl font-medium text-gray-800">Our Services</h2>
 				<hr class="my-6 bg-[#2b3d4f] h-[3px]" />
 				<ul
 					class="list-disc list-inside mx-auto text-gray-600 grid md:grid-cols-2 gap-5"

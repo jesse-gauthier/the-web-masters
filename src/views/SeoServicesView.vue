@@ -34,7 +34,7 @@
 				<div class="inner-wrapper py-4 flex flex-col gap-5">
 					<!-- Why Choose -->
 					<div class="flex flex-col justify-start">
-						<h3 class="text-3xl font-bold text-center">
+						<h3 class="text-3xl font-medium text-center">
 							Why Choose OttawaWebMasters.ca for Your SEO Needs?
 						</h3>
 						<div class="bg-[#e89e1d] h-[2.5px] mt-2 mb-4 w-1/3 mx-auto"></div>
@@ -72,13 +72,13 @@
 					</div>
 					<!-- Our Process -->
 					<div class="mt-5">
-						<h3 class="text-3xl font-bold">Our 6 Step SEO Process</h3>
+						<h3 class="text-3xl font-medium">Our 6 Step SEO Process</h3>
 						<ul class="grid grid-cols-1 md:grid-cols-3 gap-5">
 							<li
 								class="border-4 border-[#e89e1d] rounded-md py-4 px-2 text-center"
 							>
 								<h4
-									class="cursor-pointer font-bold"
+									class="cursor-pointer font-medium"
 									@click="toggleDetails('audit')"
 								>
 									SEO Audit & Analysis
@@ -98,7 +98,7 @@
 								class="border-4 border-[#e89e1d] rounded-md py-4 px-2 text-center"
 							>
 								<h4
-									class="cursor-pointer font-bold"
+									class="cursor-pointer font-medium"
 									@click="toggleDetails('keyword')"
 								>
 									Keyword Research & Strategy
@@ -118,7 +118,7 @@
 								class="border-4 border-[#e89e1d] rounded-md py-4 px-2 text-center"
 							>
 								<h4
-									class="cursor-pointer font-bold"
+									class="cursor-pointer font-medium"
 									@click="toggleDetails('onPage')"
 								>
 									On-Page Optimization
@@ -137,7 +137,7 @@
 								class="border-4 border-[#e89e1d] rounded-md py-4 px-2 text-center"
 							>
 								<h4
-									class="cursor-pointer font-bold"
+									class="cursor-pointer font-medium"
 									@click="toggleDetails('offPage')"
 								>
 									Off-Page Optimization
@@ -157,7 +157,7 @@
 								class="border-4 border-[#e89e1d] rounded-md py-4 px-2 text-center"
 							>
 								<h4
-									class="cursor-pointer font-bold"
+									class="cursor-pointer font-medium"
 									@click="toggleDetails('reporting')"
 								>
 									Reporting & Monitoring
@@ -177,7 +177,7 @@
 								class="border-4 border-[#e89e1d] rounded-md py-4 px-2 text-center"
 							>
 								<h4
-									class="cursor-pointer font-bold"
+									class="cursor-pointer font-medium"
 									@click="toggleDetails('repeat')"
 								>
 									Repeat
@@ -196,7 +196,7 @@
 			</div>
 			<!-- Our Seo Services -->
 			<div data-aos="fade-up">
-				<h3 class="text-3xl font-bold">Our Seo Services</h3>
+				<h3 class="text-3xl font-medium">Our Seo Services</h3>
 				<ul
 					class="list-disc list-inside marker:text-[#e89e1d] marker:text-3xl text-lg grid grid-cols-1 md:grid-cols-2"
 				>
@@ -213,13 +213,13 @@
 			</div>
 			<!-- Packages -->
 			<div data-aos="fade-up">
-				<h3 class="text-3xl font-bold">Our Packages</h3>
+				<h3 class="text-3xl font-medium">Our Packages</h3>
 				<ul
 					class="flex justify-evenly flex-wrap lg:flex-nowrap *:border-[4px] *:border-[#e89e1d] gap-3"
 				>
 					<li class="flex flex-col w-3/4 md:w-1/3 rounded-lg">
 						<div class="orange-bg px-1 py-5 text-center shadow-xl">
-							<h3 class="font-bold text-2xl my-0">Essential Package</h3>
+							<h3 class="font-medium text-2xl my-0">Essential Package</h3>
 							<p class="italic text-lg my-1">$1500 Per Month</p>
 							<p class="font-medium my-0">Results In 2-3 months</p>
 						</div>
@@ -244,7 +244,7 @@
 						class="flex flex-col w-3/4 md:w-1/3 rounded-lg shadow-lg shadow-[#e89e1d]"
 					>
 						<div class="orange-bg px-1 py-5 text-center shadow-xl">
-							<h3 class="font-bold text-2xl my-0">Premium Package</h3>
+							<h3 class="font-medium text-2xl my-0">Premium Package</h3>
 							<p class="italic text-lg my-1">$2500 Per Month</p>
 							<p class="font-medium my-0">Results In 1-2 months</p>
 						</div>
@@ -267,7 +267,7 @@
 					</li>
 					<li class="flex flex-col w-3/4 md:w-1/3 rounded-lg">
 						<div class="orange-bg px-1 py-5 text-center shadow-xl">
-							<h3 class="font-bold text-2xl my-0">Ecommerce Package</h3>
+							<h3 class="font-medium text-2xl my-0">Ecommerce Package</h3>
 							<p class="italic text-lg my-1">$5500 Per Month</p>
 							<p class="font-medium my-0">Results In 1 month</p>
 						</div>
@@ -293,14 +293,14 @@
 				</ul>
 			</div>
 			<div data-aos="fade-up">
-				<h3 class="text-3xl font-bold">Looking for something more custom?</h3>
+				<h3 class="text-3xl font-medium">Looking for something more custom?</h3>
 			</div>
 			<div data-aos="fade-up">
 				<ul
 					class="grid grid-cols-1 md:grid-cols-2 gap-5 *:border-4 *:border-[#e89e1d] *:p-3"
 				>
 					<li class="flex flex-col gap-3 gradient_bg rounded-lg">
-						<h3 class="text-2xl font-bold">Keyword Research & Strategy</h3>
+						<h3 class="text-2xl font-medium">Keyword Research & Strategy</h3>
 						<p class="text-lg">
 							Improve your rankings with targeted keyword research and strategic
 							planning, constantly monitored for performance and refinement.
@@ -312,7 +312,7 @@
 						>
 					</li>
 					<li class="flex flex-col gap-3 gradient_bg rounded-lg">
-						<h3 class="text-2xl font-bold">Content Writing</h3>
+						<h3 class="text-2xl font-medium">Content Writing</h3>
 						<p class="text-lg">
 							Engage your audience and boost rankings with high-quality,
 							SEO-friendly content designed to improve conversions and reduce
@@ -325,7 +325,7 @@
 						>
 					</li>
 					<li class="flex flex-col gap-3 gradient_bg rounded-lg">
-						<h3 class="text-2xl font-bold">Link Building</h3>
+						<h3 class="text-2xl font-medium">Link Building</h3>
 						<p class="text-lg">
 							Increase authority and performance through expert link-building
 							strategies and compelling, optimized content.
@@ -337,7 +337,7 @@
 						>
 					</li>
 					<li class="flex flex-col gap-3 gradient_bg rounded-lg">
-						<h3 class="text-2xl font-bold">Technical SEO</h3>
+						<h3 class="text-2xl font-medium">Technical SEO</h3>
 						<p class="text-lg">
 							Optimize your site’s backend for speed and efficiency with
 							thorough technical SEO, including server and code improvements.
@@ -349,7 +349,7 @@
 						>
 					</li>
 					<li class="flex flex-col gap-3 gradient_bg rounded-lg">
-						<h3 class="text-2xl font-bold">On-Page SEO</h3>
+						<h3 class="text-2xl font-medium">On-Page SEO</h3>
 						<p class="text-lg">
 							Optimize your site’s content and structure for higher rankings and
 							seamless integration with search engines.
@@ -361,7 +361,7 @@
 						>
 					</li>
 					<li class="flex flex-col gap-3 gradient_bg rounded-lg">
-						<h3 class="text-2xl font-bold">Off-Page SEO</h3>
+						<h3 class="text-2xl font-medium">Off-Page SEO</h3>
 						<p class="text-lg">
 							Expand your online presence with strategies designed to enhance
 							visibility and reputation across the web.
@@ -373,7 +373,7 @@
 						>
 					</li>
 					<li class="flex flex-col gap-3 gradient_bg rounded-lg">
-						<h3 class="text-2xl font-bold">Local SEO</h3>
+						<h3 class="text-2xl font-medium">Local SEO</h3>
 						<p class="text-lg">
 							Dominate local search results with tailored strategies to increase
 							visibility and attract more local customers.
@@ -385,7 +385,7 @@
 						>
 					</li>
 					<li class="flex flex-col gap-3 gradient_bg rounded-lg">
-						<h3 class="text-2xl font-bold">Ecommerce SEO</h3>
+						<h3 class="text-2xl font-medium">Ecommerce SEO</h3>
 						<p class="text-lg">
 							Boost product visibility and drive sales with specialized SEO
 							techniques, including backlinks, social media, and influencer
@@ -398,7 +398,7 @@
 						>
 					</li>
 					<li class="flex flex-col gap-3 gradient_bg rounded-lg">
-						<h3 class="text-2xl font-bold">Shopify SEO</h3>
+						<h3 class="text-2xl font-medium">Shopify SEO</h3>
 						<p class="text-lg">
 							Enhance your Shopify platform with targeted SEO, including keyword
 							optimization, site structure improvements, and better product
