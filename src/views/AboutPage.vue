@@ -3,7 +3,7 @@
 		<!-- Hero Section -->
 		<section
 			class="hero min-h-screen"
-			style="background-image: url('/assets/about_bg.jpg')"
+			style="background-image: url('/assets/about_bg.webp')"
 			aria-labelledby="about-us-heading"
 		>
 			<div class="hero-overlay bg-opacity-60"></div>
