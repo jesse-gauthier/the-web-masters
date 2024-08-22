@@ -30,6 +30,7 @@ if (process.env.NODE_ENV === 'production') {
 		},
 		router, // Automatically track pageviews
 	})
+	console.log('Page Loaded')
 } else {
 	console.log('Google Analytics are off')
 }

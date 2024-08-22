@@ -172,7 +172,8 @@ h6 {
 	font-style: normal;
 }
 
-p {
+p,
+span {
 	font-family: var(--font-text);
 }
 

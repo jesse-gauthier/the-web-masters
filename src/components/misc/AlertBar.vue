@@ -13,7 +13,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const isSticky = ref(false)
 
 const handleScroll = () => {
-	isSticky.value = window.scrollY > 0
+	isSticky.value = window.scrollY > 50
 }
 
 onMounted(() => {

@@ -9,7 +9,11 @@
 			role="region"
 			aria-labelledby="testimonials-heading"
 		>
-			<div v-for="item in testimony" :key="item.name" class="hero">
+			<div
+				v-for="item in testimony"
+				:key="item.name"
+				class="hero max-w-3xl mx-auto"
+			>
 				<div class="flex flex-col lg:flex-row-reverse justify-evenly">
 					<img
 						:src="item.image"

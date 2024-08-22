@@ -77,7 +77,7 @@ const router = createRouter({
 			path: '/:pathMatch(.*)*',
 			name: 'NotFound',
 			component: NotFound,
-			meta: { robots: 'noindex, nofollow' },
+			meta: { robots: 'index, follow' }, // Allowing indexing
 		},
 		{
 			path: '/about',
