@@ -583,9 +583,9 @@
 				</linearGradient>
 			</defs>
 		</svg>
-		<h1 class="brand-font text-nowrap self-center text-3xl md:text-4xl">
+		<h2 class="brand-font text-nowrap self-center text-3xl md:text-4xl">
 			Web Masters
-		</h1>
+		</h2>
 	</div>
 </template>
 

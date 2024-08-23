@@ -124,7 +124,7 @@ onMounted(() => {
 })
 
 useHead({
-	title: 'About Our Team - Ottawa Web Masters',
+	title: 'About Our Team - Ottawa, ON Web Masters',
 	meta: [
 		{
 			name: 'description',
