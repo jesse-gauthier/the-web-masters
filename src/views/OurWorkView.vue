@@ -25,8 +25,13 @@
 </template>
 
 <script setup>
-import ProjectsComp from '@/components/ProjectsComp.vue'
+import { defineAsyncComponent } from 'vue'
 import { useHead } from '@unhead/vue'
+
+// Dynamic import for ProjectsComp component
+const ProjectsComp = defineAsyncComponent(
+	() => import('@/components/ProjectsComp.vue')
+)
 
 useHead({
 	title: 'Explore Our Portfolio | Ottawa Web Masters',

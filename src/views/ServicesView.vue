@@ -175,7 +175,7 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, defineAsyncComponent } from 'vue'
 import { useHead } from '@unhead/vue'
 import AOS from 'aos'
 
@@ -185,6 +185,7 @@ onMounted(() => {
 		once: true,
 	})
 })
+
 useHead({
 	title: 'Professional Web Services in Ottawa - Ottawa Web Masters',
 	meta: [

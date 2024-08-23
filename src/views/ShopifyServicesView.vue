@@ -119,14 +119,21 @@
 </template>
 
 <script setup>
-import ProjectsComp from '@/components/ProjectsComp.vue'
+import { defineAsyncComponent } from 'vue'
+import { useHead } from '@unhead/vue'
+
+// Dynamic import for ProjectsComp component
+const ProjectsComp = defineAsyncComponent(
+	() => import('@/components/ProjectsComp.vue')
+)
+
+// Importing assets
 import pageflylogo from '@/assets/pageflylogo.png'
 import shopifylogo from '@/assets/shopifylogo.svg'
 import klaviyo_logo from '@/assets/klaviyo_logo.webp'
 import qb_logo from '@/assets/qb-logo.svg'
 import shipstationlogo from '@/assets/shipstation_logo.webp'
 import backgroundImage from '@/assets/shopify-background.webp'
-import { useHead } from '@unhead/vue'
 
 useHead({
 	title: 'Custom Shopify Solutions in Ottawa, ON | Ottawa Web Masters',

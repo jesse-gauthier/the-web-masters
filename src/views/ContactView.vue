@@ -18,10 +18,14 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, defineAsyncComponent } from 'vue'
 import { useHead } from '@unhead/vue'
-import OttawaMap from '@/components/OttawaMap.vue'
 import AOS from 'aos'
+
+// Dynamic import for OttawaMap component
+const OttawaMap = defineAsyncComponent(
+	() => import('@/components/OttawaMap.vue')
+)
 
 onMounted(() => {
 	AOS.init({

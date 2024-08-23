@@ -112,10 +112,14 @@
 	</div>
 </template>
 <script setup>
+import { onMounted, defineAsyncComponent } from 'vue'
 import { useHead } from '@unhead/vue'
-import { onMounted } from 'vue'
 import AOS from 'aos'
-import OttawaMap from '../components/OttawaMap.vue'
+
+// Dynamic import for OttawaMap component
+const OttawaMap = defineAsyncComponent(
+	() => import('../components/OttawaMap.vue')
+)
 
 onMounted(() => {
 	AOS.init({

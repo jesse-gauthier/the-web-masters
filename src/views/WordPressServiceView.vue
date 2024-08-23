@@ -187,11 +187,14 @@
 		</div>
 	</section>
 </template>
-
 <script setup>
+import { defineAsyncComponent } from 'vue'
 import { useHead } from '@unhead/vue'
-// import ProjectsComp from '@/components/ProjectsComp.vue'
-import Packages from '@/components/serviceComps/Packages.vue'
+
+// Dynamic import for Packages component
+const Packages = defineAsyncComponent(
+	() => import('@/components/serviceComps/Packages.vue')
+)
 
 // Set the SEO meta tags using useHead
 useHead({

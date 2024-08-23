@@ -137,8 +137,11 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-import LogoComponent from './branding/LogoComponent.vue'
+import { ref, onMounted, onUnmounted, defineAsyncComponent } from 'vue'
+// Dynamic import for LogoComponent
+const LogoComponent = defineAsyncComponent(
+	() => import('./branding/LogoComponent.vue')
+)
 
 const isOpen = ref(false)
 const showDropdown = ref(null)
