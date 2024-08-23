@@ -292,6 +292,7 @@
 					</li>
 				</ul>
 			</div>
+			<!-- Custom Indicator -->
 			<div data-aos="fade-up">
 				<h3 class="text-3xl font-medium">Looking for something more custom?</h3>
 			</div>

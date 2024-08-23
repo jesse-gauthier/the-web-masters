@@ -25,8 +25,6 @@
 
 <script setup>
 import { onMounted } from 'vue'
-import L from 'leaflet'
-import 'leaflet/dist/leaflet.css'
 
 // Define props using defineProps
 const props = defineProps({
@@ -39,23 +37,41 @@ const props = defineProps({
 // Destructure the text prop
 const { heading } = props
 
-// Initialize the map once the component is mounted
+// Initialize the map only when the section is in view
 onMounted(() => {
-	const map = L.map('my-map-canvas').setView([45.4215, -75.6972], 13)
+	const loadMap = () => {
+		import('leaflet').then((L) => {
+			import('leaflet/dist/leaflet.css')
+			const map = L.map('my-map-canvas').setView([45.4215, -75.6972], 13)
 
-	L.tileLayer(
-		'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
-		{
-			attribution:
-				'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-			maxZoom: 18,
-		}
-	).addTo(map)
+			L.tileLayer(
+				'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+				{
+					attribution:
+						'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+					maxZoom: 18,
+				}
+			).addTo(map)
 
-	L.marker([45.4215, -75.6972])
-		.addTo(map)
-		.bindPopup('Ottawa, Ontario')
-		.openPopup()
+			L.marker([45.4215, -75.6972])
+				.addTo(map)
+				.bindPopup('Ottawa, Ontario')
+				.openPopup()
+		})
+	}
+
+	// Use IntersectionObserver to lazy load the map
+	const observer = new IntersectionObserver(
+		(entries) => {
+			if (entries[0].isIntersecting) {
+				loadMap()
+				observer.disconnect()
+			}
+		},
+		{ threshold: 0.1 }
+	)
+
+	observer.observe(document.getElementById('my-map-canvas'))
 })
 </script>
 

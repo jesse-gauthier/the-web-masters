@@ -42,6 +42,11 @@
 					<li>
 						<router-link class="link link-hover" to="/seo">SEO</router-link>
 					</li>
+					<li>
+						<router-link class="link link-hover" to="/ottawa-seo"
+							>Ottawa Seo</router-link
+						>
+					</li>
 				</ul>
 			</nav>
 			<!-- Company -->

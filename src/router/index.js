@@ -14,7 +14,7 @@ import FreeSeoForm from '@/views/FreeSeoForm.vue'
 import SeoServicesView from '@/views/SeoServicesView.vue'
 
 // Blogs
-import OttawaWordpress from '@/landingpages/OttawaWordpress.vue'
+import OttawaSeo from '@/landingpages/OttawaSeo.vue'
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
@@ -86,9 +86,9 @@ const router = createRouter({
 			meta: { robots: 'index, follow' },
 		},
 		{
-			path: '/OttawaWordPress',
-			name: 'Ottawa Wordpress',
-			component: OttawaWordpress,
+			path: '/ottawa-seo',
+			name: 'Ottawa Seo',
+			component: OttawaSeo,
 			meta: { robots: 'index, follow' },
 		},
 	],

@@ -24,15 +24,30 @@ app.use(head)
 
 // Conditionally use VueGtag only in production
 if (process.env.NODE_ENV === 'production') {
+	console.log('Initializing Google Analytics...')
+
 	app.use(VueGtag, {
 		property: {
 			id: 'G-58RRPDKZYB',
 		},
 		router, // Automatically track pageviews
+		onReady: () => {
+			console.log('Google Analytics initialized successfully.')
+		},
+		onError: (error) => {
+			console.error('Google Analytics failed to initialize:', error)
+		},
+		onBeforeTrack: (to, from) => {
+			console.log(`Tracking pageview: from ${from.fullPath} to ${to.fullPath}`)
+		},
+		onAfterTrack: () => {
+			console.log('Pageview tracked successfully.')
+		},
 	})
-	console.log('Page Loaded')
+
+	console.log('Page Loaded, Google Analytics setup complete.')
 } else {
-	console.log('Google Analytics are off')
+	console.log('Google Analytics is off in non-production environments.')
 }
 
 // Mount the app to the DOM
