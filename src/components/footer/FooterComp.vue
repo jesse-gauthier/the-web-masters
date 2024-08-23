@@ -47,6 +47,11 @@
 							>Ottawa Seo</router-link
 						>
 					</li>
+					<li>
+						<router-link class="link link-hover" to="/ottawa-wordpress"
+							>Ottawa WordPress</router-link
+						>
+					</li>
 				</ul>
 			</nav>
 			<!-- Company -->

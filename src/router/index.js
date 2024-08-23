@@ -12,6 +12,7 @@ import AboutPage from '@/views/AboutPage.vue'
 import ShopifyServicesView from '@/views/ShopifyServicesView.vue'
 import FreeSeoForm from '@/views/FreeSeoForm.vue'
 import SeoServicesView from '@/views/SeoServicesView.vue'
+import OttawaWordpress from '@/landingpages/OttawaWordpress.vue'
 
 // Blogs
 import OttawaSeo from '@/landingpages/OttawaSeo.vue'
@@ -89,6 +90,12 @@ const router = createRouter({
 			path: '/ottawa-seo',
 			name: 'Ottawa Seo',
 			component: OttawaSeo,
+			meta: { robots: 'index, follow' },
+		},
+		{
+			path: '/ottawa-wordpress',
+			name: 'Ottawa Wordpress',
+			component: OttawaWordpress,
 			meta: { robots: 'index, follow' },
 		},
 	],
