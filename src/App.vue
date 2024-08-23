@@ -14,6 +14,14 @@ onMounted(() => {
 		duration: 3000,
 		once: true,
 	})
+
+	// Ensure the script only loads after the entire page is fully loaded
+	window.onload = function () {
+		const script = document.createElement('script')
+		script.src = 'https://cdn.userway.org/widget.js'
+		script.setAttribute('data-account', 'O0oZnXNYGh')
+		document.body.appendChild(script)
+	}
 })
 </script>
 
