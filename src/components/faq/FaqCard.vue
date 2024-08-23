@@ -1,8 +1,7 @@
 <template>
-	<div>
+	<div class="h-[100%]" @click="toggleExpand">
 		<div
 			v-if="faq"
-			@click="toggleExpand"
 			class="px-3 flex gap-3 align-middle py-2"
 			role="button"
 			:aria-expanded="isExpanded"
