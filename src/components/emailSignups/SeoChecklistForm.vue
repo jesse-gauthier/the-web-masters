@@ -78,6 +78,15 @@ const submitChecklistForm = async () => {
 		link.download = 'seo_checklist.pdf'
 		link.click()
 
+		// Custom Google Analytics Event
+		if (window.gtag) {
+			window.gtag('event', 'download', {
+				event_category: 'Checklist',
+				event_label: 'SEO Checklist Download',
+				value: 1,
+			})
+		}
+
 		// Reset form
 		checklistForm.email = ''
 	} catch (error) {
