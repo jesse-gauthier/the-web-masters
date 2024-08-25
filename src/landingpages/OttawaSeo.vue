@@ -281,8 +281,7 @@
 
 <script setup>
 import { useHead } from '@unhead/vue'
-import { onMounted } from 'vue'
-import OttawaMap from '@/components/OttawaMap.vue'
+import { onMounted, defineAsyncComponent } from 'vue'
 import AOS from 'aos'
 
 onMounted(() => {
@@ -290,6 +289,11 @@ onMounted(() => {
 		duration: 3000,
 	})
 })
+
+// Dynamically import the OttawaMap component
+const OttawaMap = defineAsyncComponent(
+	() => import('@/components/OttawaMap.vue')
+)
 
 // Set the SEO meta tags using useHead
 useHead({
@@ -324,7 +328,7 @@ const schema = {
 	'@type': 'WebPage',
 	name: 'SEO Services in Ottawa, Ontario - Boost Your Online Presence',
 	description:
-		'We offer expert SEO services in Ottawa, Ontario. Our team helps local businesses improve search engine rankings, increase visibility, and drive traffic to their websites.',
+		'We offer expert SEO services in Ottawa, Ontario. Our team helps local businesses improve their online visibility and attract more customers.',
 	url: window.location.href,
 	mainEntity: {
 		'@type': 'ProfessionalService',
@@ -342,17 +346,6 @@ const schema = {
 		],
 		description:
 			'Our SEO services are designed to help Ottawa-based businesses improve their online visibility and attract more customers.',
-		provider: {
-			'@type': 'Organization',
-			name: 'Your Company Name',
-			url: 'https://yourcompanywebsite.com',
-			logo: 'https://yourcompanywebsite.com/logo.png',
-			sameAs: [
-				'https://www.facebook.com/yourcompany',
-				'https://www.linkedin.com/company/yourcompany',
-				'https://twitter.com/yourcompany',
-			],
-		},
 	},
 }
 

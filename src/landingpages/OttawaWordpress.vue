@@ -7,7 +7,7 @@
 				style="background-image: url('./assets/wordpress2.jpg')"
 			>
 				<div class="hero-overlay bg-opacity-60"></div>
-				<div class="hero-content flex-col max-w-[55dvw]">
+				<div data-aos="fade-up" class="hero-content flex-col max-w-[55dvw]">
 					<h1
 						class="text-3xl text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl font-medium"
 					>
@@ -48,6 +48,7 @@
 
 			<!-- Information Text -->
 			<section
+				data-aos="fade-up"
 				class="inner-wrapper px-3 py-4 min-h-[50dvh] flex flex-col justify-center"
 			>
 				<h3 class="text-4xl">WordPress Design Services in Ottawa</h3>
@@ -76,6 +77,7 @@
 			</section>
 			<!-- Services -->
 			<section
+				data-aos="fade-up"
 				class="flex flex-col text-center max-w-[80dvw] mx-auto my-5 gap-4"
 			>
 				<h2 class="text-2xl font-bold text-gray-800">Our Services</h2>
@@ -99,7 +101,7 @@
 					</li>
 				</ul>
 			</section>
-			<section class="flex justify-center flex-col">
+			<section data-aos="fade-up" class="flex justify-center flex-col">
 				<h4 class="text-center text-2xl">
 					We Also Offer WordPress SEO Packages:
 				</h4>
@@ -117,12 +119,26 @@
 import { defineAsyncComponent } from 'vue'
 import { useHead } from '@unhead/vue'
 
-import SeoCheckListForm from '@/components/emailSignups/SeoChecklistForm.vue'
+// Define async components with basic error handling and loading state
+const SeoCheckListForm = defineAsyncComponent({
+	loader: () => import('@/components/emailSignups/SeoChecklistForm.vue'),
+	loadingComponent: {
+		template: '<p>Loading...</p>',
+	},
+	errorComponent: {
+		template: '<p>Error loading component.</p>',
+	},
+})
 
-// Dynamic import for Packages component
-const Packages = defineAsyncComponent(
-	() => import('@/components/serviceComps/Packages.vue')
-)
+const Packages = defineAsyncComponent({
+	loader: () => import('@/components/serviceComps/Packages.vue'),
+	loadingComponent: {
+		template: '<p>Loading...</p>',
+	},
+	errorComponent: {
+		template: '<p>Error loading component.</p>',
+	},
+})
 
 useHead({
 	title: 'Custom WordPress Solutions in Ottawa - Tailored for Your Business',

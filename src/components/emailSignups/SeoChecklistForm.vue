@@ -14,6 +14,7 @@
 			</p>
 		</div>
 		<form
+			v-if="!formSubmitted"
 			@submit.prevent="submitChecklistForm"
 			class="mt-8 space-y-6 max-w-md mx-auto"
 		>
@@ -40,16 +41,25 @@
 				</button>
 			</div>
 		</form>
+		<div v-else class="mt-8 text-center text-green-600">
+			<p>Check your email for the download link!</p>
+		</div>
 	</div>
 </template>
 
 <script setup>
-import { reactive } from 'vue'
+import { reactive, ref, getCurrentInstance } from 'vue'
 
 // Form data for the SEO Checklist form
 const checklistForm = reactive({
 	email: '',
 })
+
+// State to track form submission
+const formSubmitted = ref(false)
+
+// Get the current instance to access global properties
+const { proxy } = getCurrentInstance()
 
 // Function to handle the SEO Checklist form submission
 const submitChecklistForm = async () => {
@@ -70,25 +80,27 @@ const submitChecklistForm = async () => {
 		}
 
 		const result = await response.json()
-		alert(result.message)
 
-		// Trigger file download
-		const link = document.createElement('a')
-		link.href = '/seo_checklist.pdf'
-		link.download = 'seo_checklist.pdf'
-		link.click()
+		// Display the success message
+		formSubmitted.value = true
+
+		// Log the event using the global $logEvent function
+		proxy.$logEvent('Email Submit', { email: checklistForm.email })
 
 		// Custom Google Analytics Event
 		if (window.gtag) {
-			window.gtag('event', 'download', {
+			window.gtag('event', 'email_submit', {
 				event_category: 'Checklist',
-				event_label: 'SEO Checklist Download',
+				event_label: 'SEO Checklist Email Submission',
 				value: 1,
 			})
 		}
 
-		// Reset form
-		checklistForm.email = ''
+		// Reset form after showing the message (optional)
+		setTimeout(() => {
+			formSubmitted.value = false
+			checklistForm.email = ''
+		}, 5000) // Reset after 5 seconds
 	} catch (error) {
 		alert('There was an error submitting the form. Please try again.')
 		console.error('Error:', error)
