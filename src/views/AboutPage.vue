@@ -11,7 +11,7 @@
 				<div class="max-w-md">
 					<h1
 						id="about-us-heading"
-						class="text-5xl font-bold text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl"
+						class="text-5xl font-medium text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl"
 					>
 						About Ottawa Web Masters
 					</h1>
@@ -36,7 +36,7 @@
 				>
 					<h3
 						id="who-we-are-heading"
-						class="text-2xl font-bold text-center py-2"
+						class="text-2xl font-medium text-center py-2"
 					>
 						Who We Are
 					</h3>
@@ -61,7 +61,7 @@
 				>
 					<h3
 						id="what-we-do-heading"
-						class="text-2xl font-bold text-center py-2"
+						class="text-2xl font-medium text-center py-2"
 					>
 						What We Do
 					</h3>
@@ -85,7 +85,7 @@
 				>
 					<h3
 						id="why-we-do-it-heading"
-						class="text-2xl font-bold text-center py-2"
+						class="text-2xl font-medium text-center py-2"
 					>
 						Why We Do It
 					</h3>
