@@ -281,19 +281,16 @@
 
 <script setup>
 import { useHead } from '@unhead/vue'
-import { onMounted, defineAsyncComponent } from 'vue'
+import { onMounted } from 'vue'
 import AOS from 'aos'
+
+import OttawaMap from '@/components/OttawaMap.vue'
 
 onMounted(() => {
 	AOS.init({
 		duration: 3000,
 	})
 })
-
-// Dynamically import the OttawaMap component
-const OttawaMap = defineAsyncComponent(
-	() => import('@/components/OttawaMap.vue')
-)
 
 // Set the SEO meta tags using useHead
 useHead({

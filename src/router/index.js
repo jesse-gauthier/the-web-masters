@@ -13,6 +13,9 @@ import ShopifyServicesView from '@/views/ShopifyServicesView.vue'
 import FreeSeoForm from '@/views/FreeSeoForm.vue'
 import SeoServicesView from '@/views/SeoServicesView.vue'
 import OttawaWordpress from '@/landingpages/OttawaWordpress.vue'
+import WebsiteOptimization from '@/views/WebsiteOptimization.vue'
+import DesignExpertise from '@/views/DesignExpertise.vue'
+import ConsultationServices from '@/views/ConsultationServices.vue'
 
 // Blogs
 import OttawaSeo from '@/landingpages/OttawaSeo.vue'
@@ -96,6 +99,24 @@ const router = createRouter({
 			path: '/ottawa-wordpress',
 			name: 'Ottawa Wordpress',
 			component: OttawaWordpress,
+			meta: { robots: 'index, follow' },
+		},
+		{
+			path: '/websiteoptimization',
+			name: 'Website Optimization',
+			component: WebsiteOptimization,
+			meta: { robots: 'index, follow' },
+		},
+		{
+			path: '/uxdesign',
+			name: 'UX/UI Design Expertise',
+			component: DesignExpertise,
+			meta: { robots: 'index, follow' },
+		},
+		{
+			path: '/consultation-services',
+			name: 'Consultation Services',
+			component: ConsultationServices,
 			meta: { robots: 'index, follow' },
 		},
 	],

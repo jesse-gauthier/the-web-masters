@@ -6,7 +6,6 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 import VueGtag from 'vue-gtag-next'
-// import { capturePageLoad } from './capture.js'
 
 const app = createApp(App)
 
@@ -42,8 +41,5 @@ if (process.env.NODE_ENV === 'production') {
 } else {
 	console.log('Google Analytics is off in non-production environments.')
 }
-
-// Capture the initial page load when the app is mounted
-// capturePageLoad()
 
 app.mount('#app')

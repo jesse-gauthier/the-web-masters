@@ -1,7 +1,7 @@
 <template>
 	<section
 		data-aos="fade-up"
-		class="w-[95dvw] mx-auto min-h-[50dvh] p-8"
+		class="max-w-[95dvw] mx-auto min-h-[50dvh] p-8"
 		aria-labelledby="solutions-title"
 	>
 		<h2

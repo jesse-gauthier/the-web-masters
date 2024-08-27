@@ -1,3 +1,104 @@
+<script setup>
+import { useHead } from '@unhead/vue'
+import { reactive, ref } from 'vue'
+import SeoChecklistForm from '@/components/emailSignups/SeoChecklistForm.vue'
+
+// Metadata for the page
+useHead({
+	title: 'SEO Tools - Free Checklist and Audit',
+	meta: [
+		{
+			name: 'description',
+			content:
+				'Download a free SEO checklist and request a free SEO audit for your website. Improve your search engine rankings with our expert advice.',
+		},
+		{
+			property: 'og:title',
+			content: 'SEO Tools - Free Checklist and Audit',
+		},
+		{
+			property: 'og:description',
+			content:
+				'Request a free SEO audit and download a comprehensive SEO checklist to optimize your website.',
+		},
+		{
+			property: 'og:image',
+			content: 'https://yourwebsite.com/path-to-seo-tools-image.jpg', // Replace with actual image URL
+		},
+		{ property: 'og:url', content: 'https://yourwebsite.com/seo-tools' },
+		{
+			name: 'keywords',
+			content:
+				'SEO tools, free SEO checklist, SEO audit, website audit, search engine optimization, digital marketing, improve SEO, Ottawa Web Masters, SEO services, website optimization',
+		},
+	],
+	script: [
+		{
+			type: 'application/ld+json',
+			json: {
+				'@context': 'http://schema.org',
+				'@type': 'ProfessionalService',
+				name: 'Ottawa Web Masters - SEO Tools',
+				aggregateRating: {
+					'@type': 'AggregateRating',
+					ratingValue: '4.9',
+					reviewCount: '50',
+				},
+			},
+		},
+	],
+})
+
+// Form data for the SEO Audit form
+const auditForm = reactive({
+	name: '',
+	email: '',
+	website: '',
+	message: '',
+	newsletter: false,
+})
+
+// State for form submission messages
+const formMessage = ref(null)
+const formMessageType = ref('')
+
+// Function to handle the SEO Audit form submission
+const submitAuditForm = async () => {
+	try {
+		const response = await fetch('https://ottawawebmasters.ca/seoform.php', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(auditForm),
+		})
+
+		if (!response.ok) {
+			throw new Error('Network response was not ok')
+		}
+
+		const result = await response.json()
+
+		// Display success message below the form
+		formMessage.value = result.message
+		formMessageType.value = 'success'
+
+		// Reset form
+		auditForm.name = ''
+		auditForm.email = ''
+		auditForm.website = ''
+		auditForm.message = ''
+		auditForm.newsletter = false
+	} catch (error) {
+		// Display error message below the form
+		formMessage.value =
+			'There was an error submitting the form. Please try again.'
+		formMessageType.value = 'error'
+		console.error('Error:', error)
+	}
+}
+</script>
+
 <template>
 	<div class="min-h-screen bg-[#2b3d4f] py-12 px-4 sm:px-6 lg:px-8">
 		<div class="max-w-4xl mx-auto space-y-16">
@@ -128,6 +229,18 @@
 						</button>
 					</div>
 				</form>
+
+				<!-- Display form submission message below the form -->
+				<div
+					v-if="formMessage"
+					:class="{
+						'text-green-600': formMessageType === 'success',
+						'text-red-600': formMessageType === 'error',
+					}"
+					class="mt-4 text-center"
+				>
+					{{ formMessage }}
+				</div>
 			</div>
 
 			<!-- Section 4: Why SEO is Essential for Long-Term Success -->
@@ -213,97 +326,3 @@
 		</div>
 	</div>
 </template>
-
-<script setup>
-import { useHead } from '@unhead/vue'
-import { reactive } from 'vue'
-
-import SeoChecklistForm from '@/components/emailSignups/SeoChecklistForm.vue'
-
-// Metadata for the page
-useHead({
-	title: 'SEO Tools - Free Checklist and Audit',
-	meta: [
-		{
-			name: 'description',
-			content:
-				'Download a free SEO checklist and request a free SEO audit for your website. Improve your search engine rankings with our expert advice.',
-		},
-		{
-			property: 'og:title',
-			content: 'SEO Tools - Free Checklist and Audit',
-		},
-		{
-			property: 'og:description',
-			content:
-				'Request a free SEO audit and download a comprehensive SEO checklist to optimize your website.',
-		},
-		{
-			property: 'og:image',
-			content: 'https://yourwebsite.com/path-to-seo-tools-image.jpg', // Replace with actual image URL
-		},
-		{ property: 'og:url', content: 'https://yourwebsite.com/seo-tools' },
-		{
-			name: 'keywords',
-			content:
-				'SEO tools, free SEO checklist, SEO audit, website audit, search engine optimization, digital marketing, improve SEO, Ottawa Web Masters, SEO services, website optimization',
-		},
-	],
-	script: [
-		{
-			type: 'application/ld+json',
-			json: {
-				'@context': 'http://schema.org',
-				'@type': 'ProfessionalService',
-				name: 'Ottawa Web Masters - SEO Tools',
-				aggregateRating: {
-					'@type': 'AggregateRating',
-					ratingValue: '4.9',
-					reviewCount: '50',
-				},
-			},
-		},
-	],
-})
-
-// Form data for the SEO Audit form
-const auditForm = reactive({
-	name: '',
-	email: '',
-	website: '',
-	message: '',
-	newsletter: false,
-})
-
-// Function to handle the SEO Audit form submission
-const submitAuditForm = async () => {
-	try {
-		const response = await fetch('https://ottawawebmasters.ca/seoform.php', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify(auditForm),
-		})
-
-		if (!response.ok) {
-			throw new Error('Network response was not ok')
-		}
-
-		const result = await response.json()
-		alert(result.message)
-
-		// Reset form
-		auditForm.name = ''
-		auditForm.email = ''
-		auditForm.website = ''
-		auditForm.message = ''
-		auditForm.newsletter = false
-	} catch (error) {
-		alert('There was an error submitting the form. Please try again.')
-		console.error('Error:', error)
-	}
-}
-</script>
-
-<style scoped></style>

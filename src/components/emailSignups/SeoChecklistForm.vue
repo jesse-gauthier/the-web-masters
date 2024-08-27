@@ -48,7 +48,7 @@
 </template>
 
 <script setup>
-import { reactive, ref, getCurrentInstance } from 'vue'
+import { reactive, ref } from 'vue'
 
 // Form data for the SEO Checklist form
 const checklistForm = reactive({
@@ -57,9 +57,6 @@ const checklistForm = reactive({
 
 // State to track form submission
 const formSubmitted = ref(false)
-
-// Get the current instance to access global properties
-const { proxy } = getCurrentInstance()
 
 // Function to handle the SEO Checklist form submission
 const submitChecklistForm = async () => {
@@ -84,9 +81,6 @@ const submitChecklistForm = async () => {
 		// Display the success message
 		formSubmitted.value = true
 
-		// Log the event using the global $logEvent function
-		proxy.$logEvent('Email Submit', { email: checklistForm.email })
-
 		// Custom Google Analytics Event
 		if (window.gtag) {
 			window.gtag('event', 'email_submit', {
@@ -102,7 +96,6 @@ const submitChecklistForm = async () => {
 			checklistForm.email = ''
 		}, 5000) // Reset after 5 seconds
 	} catch (error) {
-		alert('There was an error submitting the form. Please try again.')
 		console.error('Error:', error)
 	}
 }

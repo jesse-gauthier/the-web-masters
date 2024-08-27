@@ -73,7 +73,7 @@
 			</section>
 			<!-- <ProjectsComp /> -->
 			<section class="max-w-md mx-auto">
-				<SeoCheckListForm />
+				<SeoChecklistForm />
 			</section>
 			<!-- Services -->
 			<section
@@ -116,29 +116,10 @@
 </template>
 
 <script setup>
-import { defineAsyncComponent } from 'vue'
 import { useHead } from '@unhead/vue'
 
-// Define async components with basic error handling and loading state
-const SeoCheckListForm = defineAsyncComponent({
-	loader: () => import('@/components/emailSignups/SeoChecklistForm.vue'),
-	loadingComponent: {
-		template: '<p>Loading...</p>',
-	},
-	errorComponent: {
-		template: '<p>Error loading component.</p>',
-	},
-})
-
-const Packages = defineAsyncComponent({
-	loader: () => import('@/components/serviceComps/Packages.vue'),
-	loadingComponent: {
-		template: '<p>Loading...</p>',
-	},
-	errorComponent: {
-		template: '<p>Error loading component.</p>',
-	},
-})
+import SeoChecklistForm from '@/components/emailSignups/SeoChecklistForm.vue'
+import Packages from '@/components/serviceComps/Packages.vue'
 
 useHead({
 	title: 'Custom WordPress Solutions in Ottawa - Tailored for Your Business',
