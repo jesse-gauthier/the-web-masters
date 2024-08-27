@@ -120,6 +120,17 @@ router.afterEach((to) => {
 			},
 		],
 	})
+
+	// Immediately trigger Google Analytics page view tracking
+	if (window.gtag) {
+		window.gtag('config', 'G-58RRPDKZYB', {
+			page_path: to.fullPath,
+			page_title: to.name,
+		})
+		console.log(`Google Analytics pageview tracked: ${to.fullPath}`)
+	} else {
+		console.warn('Google Analytics not initialized yet.')
+	}
 })
 
 export default router

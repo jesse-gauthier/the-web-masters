@@ -1,28 +1,16 @@
 <script setup>
-import { onMounted, defineAsyncComponent } from 'vue'
+import { onMounted } from 'vue'
 import { useHead } from '@unhead/vue'
 import AOS from 'aos'
 
-// Dynamic imports for components
-const HeroComp = defineAsyncComponent(() => import('@/components/HeroComp.vue'))
-const AboutComp = defineAsyncComponent(
-	() => import('@/components/about/AboutComp.vue')
-)
-const FaqComp = defineAsyncComponent(
-	() => import('@/components/faq/FaqComp.vue')
-)
-const TestimonyComp = defineAsyncComponent(
-	() => import('@/components/TestimonyComp.vue')
-)
-const Packages = defineAsyncComponent(
-	() => import('@/components/serviceComps/Packages.vue')
-)
-const OttawaMap = defineAsyncComponent(
-	() => import('@/components/OttawaMap.vue')
-)
-const SeoChecklistForm = defineAsyncComponent(
-	() => import('@/components/emailSignups/SeoChecklistForm.vue')
-)
+// Static imports for components
+import HeroComp from '@/components/HeroComp.vue'
+import AboutComp from '@/components/about/AboutComp.vue'
+import FaqComp from '@/components/faq/FaqComp.vue'
+import TestimonyComp from '@/components/TestimonyComp.vue'
+import Packages from '@/components/serviceComps/Packages.vue'
+import OttawaMap from '@/components/OttawaMap.vue'
+import SeoChecklistForm from '@/components/emailSignups/SeoChecklistForm.vue'
 
 onMounted(() => {
 	AOS.init({

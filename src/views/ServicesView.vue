@@ -175,7 +175,7 @@
 </template>
 
 <script setup>
-import { onMounted, defineAsyncComponent } from 'vue'
+import { onMounted } from 'vue'
 import { useHead } from '@unhead/vue'
 import AOS from 'aos'
 

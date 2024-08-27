@@ -119,13 +119,8 @@
 </template>
 
 <script setup>
-import { defineAsyncComponent } from 'vue'
 import { useHead } from '@unhead/vue'
-
-// Dynamic import for ProjectsComp component
-const ProjectsComp = defineAsyncComponent(
-	() => import('@/components/ProjectsComp.vue')
-)
+import ProjectsComp from '@/components/ProjectsComp.vue'
 
 // Importing assets
 import pageflylogo from '@/assets/pageflylogo.png'

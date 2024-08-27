@@ -13,12 +13,10 @@
 </template>
 
 <script setup>
-import { defineAsyncComponent } from 'vue'
 import { useHead } from '@unhead/vue'
 // Dynamic import for LogoComponent
-const LogoComponent = defineAsyncComponent(
-	() => import('@/components/branding/LogoComponent.vue')
-)
+
+import LogoComponent from '@/components/branding/LogoComponent.vue'
 
 useHead({
 	title: 'Page Not Found - My Website',

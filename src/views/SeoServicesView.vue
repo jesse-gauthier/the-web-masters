@@ -430,13 +430,10 @@
 </template>
 <script setup>
 import { useHead } from '@unhead/vue'
-import { onMounted, ref, defineAsyncComponent } from 'vue'
+import { onMounted, ref } from 'vue'
 import AOS from 'aos'
 
-// Dynamic import for SeoChecklistForm component
-const SeoChecklistForm = defineAsyncComponent(
-	() => import('@/components/emailSignups/SeoChecklistForm.vue')
-)
+import SeoChecklistForm from '@/components/emailSignups/SeoChecklistForm.vue'
 
 onMounted(() => {
 	AOS.init({

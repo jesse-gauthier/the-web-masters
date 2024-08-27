@@ -23,7 +23,7 @@ function logAction(actionType, actionDetails = {}) {
 		timestamp: new Date().toISOString(),
 	}
 
-	fetch('http://localhost:5000/api/log', {
+	fetch('https://www.gauthierstudios.ca:5000/api/log', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',

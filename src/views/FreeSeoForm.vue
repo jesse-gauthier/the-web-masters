@@ -216,12 +216,9 @@
 
 <script setup>
 import { useHead } from '@unhead/vue'
-import { reactive, defineAsyncComponent } from 'vue'
+import { reactive } from 'vue'
 
-// Dynamic import for SeoChecklistForm component
-const SeoChecklistForm = defineAsyncComponent(
-	() => import('@/components/emailSignups/SeoChecklistForm.vue')
-)
+import SeoChecklistForm from '@/components/emailSignups/SeoChecklistForm.vue'
 
 // Metadata for the page
 useHead({
