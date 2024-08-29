@@ -8,7 +8,7 @@
 		>
 			<h1
 				id="services-heading"
-				class="text-5xl font-bold text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl"
+				class="text-5xl font-medium text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl"
 			>
 				Our Professional Web Services
 			</h1>

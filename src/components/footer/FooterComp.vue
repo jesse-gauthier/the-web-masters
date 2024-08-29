@@ -35,7 +35,7 @@
 						>
 					</li>
 					<li>
-						<router-link class="link link-hover" to="/services"
+						<router-link class="link link-hover" to="/uxdesign"
 							>UX Design</router-link
 						>
 					</li>

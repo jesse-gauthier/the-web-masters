@@ -1,196 +1,297 @@
 <template>
-	<section class="">
-		<div class="">
-			<!-- Hero -->
+	<section>
+		<div>
+			<!-- Hero Section -->
 			<section
 				class="hero min-h-screen bg-fixed"
 				style="background-image: url('./assets/wordpress2.jpg')"
 			>
 				<div class="hero-overlay bg-opacity-60"></div>
-				<div class="hero-content flex-col max-w-[55dvw]">
+				<div class="hero-content flex-col md:max-w-[55dvw]">
 					<h1
-						class="text-3xl text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl font-medium"
+						class="text-center text-3xl md:text-5xl text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl font-medium"
 					>
 						Custom WordPress Websites in Ottawa
 					</h1>
-					<div class="flex justify-center space-x-4">
+					<div class="flex justify-center space-x-4 mt-6">
 						<router-link
 							to="/contact"
-							class="flex btn w-fit bg-white border-1 border-[#2b3c4f] hover:bg-[#2b3d4f] hover:text-white"
+							class="flex btn w-fit bg-white border border-[#2b3c4f] hover:bg-[#2b3d4f] hover:text-white"
 							role="button"
 							aria-label="Start your project with us"
 						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 512 512"
-								class="fill-[#efaa1d]"
-								width="25"
-							>
-								<path
-									d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
-								/>
-							</svg>
-							Get Started</router-link
-						>
+							Get Started
+						</router-link>
 					</div>
 				</div>
 			</section>
-
-			<!-- Information Text -->
-			<section
-				class="inner-wrapper px-3 py-4 min-h-[50dvh] flex flex-col justify-center"
-			>
-				<h3 class="text-4xl">WordPress Design Services in Ottawa</h3>
-				<hr class="my-6 bg-[#2b3d4f] h-[3px]" />
-				<p class="text-lg self-center text-gray-600">
-					We specialize in creating stunning WordPress websites tailored
-					specifically for small businesses. Our experienced team is dedicated
-					to ensuring your online presence is not only strong and effective but
-					also visually appealing and engaging. We understand the unique needs
-					of small businesses and work closely with you to design a website that
-					reflects your brand, attracts customers, and drives growth. From
-					responsive design and seamless user experience to robust functionality
-					and SEO optimization, we take care of every detail to help your
-					business succeed online. Partner with us to elevate your digital
-					presence and make a lasting impression on your audience.
-				</p>
-			</section>
-
-			<!-- Icons for wordpress, elementor, and wooComerce -->
-			<section
-				class="grid grid-cols-1 md:grid-cols-3 gap-4 p-6 justify-items-center"
-			>
-				<!-- <h3 class="col-span-3 text-3xl">We love using</h3> -->
-				<svg
-					class=""
-					fill="#2b3d4f"
-					version="1.1"
-					id="Capa_1"
-					xmlns="http://www.w3.org/2000/svg"
-					xmlns:xlink="http://www.w3.org/1999/xlink"
-					width="100"
-					height="100"
-					viewBox="-6.84 -6.84 111.43 111.43"
-					xml:space="preserve"
-					stroke="#2b3d4f"
+			<main class="inner-wrapper px-2">
+				<!-- Information Text Section -->
+				<section
+					class="inner-wrapper px-3 py-12 min-h-[50dvh] flex flex-col justify-center mx-auto w-fit"
 				>
-					<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-					<g
-						id="SVGRepo_tracerCarrier"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					></g>
-					<g id="SVGRepo_iconCarrier">
-						<g>
-							<g>
-								<path
-									d="M69.682,47.319c0-3.81-1.367-6.447-2.539-8.501c-1.563-2.539-3.029-4.688-3.029-7.228c0-2.834,2.15-5.471,5.178-5.471 c0.136,0,0.268,0.017,0.398,0.024c-5.483-5.023-12.789-8.091-20.812-8.091c-10.769,0-20.241,5.524-25.753,13.893 c0.723,0.021,1.405,0.037,1.984,0.037c3.224,0,8.214-0.392,8.214-0.392c1.661-0.099,1.857,2.343,0.198,2.539 c0,0-1.67,0.196-3.527,0.293l11.222,33.389l6.746-20.229l-4.803-13.157c-1.659-0.097-3.232-0.293-3.232-0.293 c-1.66-0.098-1.466-2.637,0.195-2.539c0,0,5.09,0.391,8.117,0.391c3.224,0,8.216-0.391,8.216-0.391 c1.663-0.098,1.856,2.342,0.196,2.539c0,0-1.674,0.196-3.527,0.293l11.139,33.133l3.074-10.272 C68.669,53.02,69.682,49.957,69.682,47.319z"
-								></path>
-								<path
-									d="M18.054,48.874c0,12.2,7.091,22.743,17.372,27.739L20.722,36.331C19.012,40.163,18.054,44.406,18.054,48.874z"
-								></path>
-								<path
-									d="M49.417,51.57l-9.249,26.871c2.762,0.812,5.682,1.257,8.708,1.257c3.589,0,7.031-0.621,10.235-1.748 c-0.084-0.132-0.158-0.271-0.221-0.425L49.417,51.57z"
-								></path>
-								<path
-									d="M64.37,75.516c9.164-5.343,15.327-15.271,15.327-26.641c0.001-5.359-1.368-10.397-3.776-14.788 c0.134,0.981,0.208,2.036,0.208,3.169c0,3.128-0.583,6.644-2.344,11.04L64.37,75.516z"
-								></path>
-								<path
-									d="M48.875,0C21.882,0,0,21.882,0,48.875S21.882,97.75,48.875,97.75S97.75,75.868,97.75,48.875S75.868,0,48.875,0z M48.876,83.156c-18.902,0-34.281-15.379-34.281-34.282c0-18.902,15.378-34.28,34.281-34.28c18.901,0,34.278,15.378,34.278,34.28 C83.154,67.777,67.777,83.156,48.876,83.156z"
-								></path>
-							</g>
-						</g>
-					</g>
-				</svg>
+					<h3 class="text-4xl font-medium text-gray-800">
+						WordPress Design Services in Ottawa
+					</h3>
+					<hr class="my-6 bg-[#2b3d4f] h-[3px]" />
+					<p class="text-lg text-gray-600 max-w-3xl">
+						We specialize in creating stunning WordPress websites tailored
+						specifically for small businesses. Our experienced team is dedicated
+						to ensuring your online presence is not only strong and effective
+						but also visually appealing and engaging. We understand the unique
+						needs of small businesses and work closely with you to design a
+						website that reflects your brand, attracts customers, and drives
+						growth. From responsive design and seamless user experience to
+						robust functionality and SEO optimization, we take care of every
+						detail to help your business succeed online. Partner with us to
+						elevate your digital presence and make a lasting impression on your
+						audience.
+					</p>
+				</section>
 
-				<svg
-					width="100"
-					fill="#2b3d4f"
-					viewBox="0 0 32 32"
-					xmlns="http://www.w3.org/2000/svg"
-					stroke="#2b3d4f"
+				<!-- New Content Section -->
+				<section
+					class="md:max-w-[75vw] mx-auto p-8 bg-white bg-opacity-90 rounded-lg mt-8"
 				>
-					<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-					<g
-						id="SVGRepo_tracerCarrier"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					></g>
-					<g id="SVGRepo_iconCarrier">
-						<path
-							d="M 5 5 L 5 27 L 27 27 L 27 5 L 5 5 z M 7 7 L 25 7 L 25 25 L 7 25 L 7 7 z M 11 11 L 11 21 L 13 21 L 13 11 L 11 11 z M 15 11 L 15 13 L 21 13 L 21 11 L 15 11 z M 15 15 L 15 17 L 21 17 L 21 15 L 15 15 z M 15 19 L 15 21 L 21 21 L 21 19 L 15 19 z"
-						></path>
-					</g>
-				</svg>
+					<h2
+						id="wordpress-development"
+						class="text-center text-4xl font-medium text-gray-800"
+					>
+						Elevate Your Digital Presence with Expert WordPress Development
+					</h2>
+					<p class="mt-4">
+						Our WordPress development services are focused on creating
+						intuitive, user-centered websites that not only look stunning but
+						also drive user engagement and satisfaction. We blend aesthetics
+						with functionality to deliver designs that enhance usability and
+						accessibility across all devices.
+					</p>
+					<p>
+						Whether you're building a new website from scratch or refining an
+						existing one, our team in Ottawa, Ontario is equipped to deliver
+						exceptional WordPress development that meets your business
+						objectives.
+					</p>
+					<ul class="list-disc list-inside mt-6">
+						<li>Custom WordPress theme development and design</li>
+						<li>Plugin development and customization</li>
+						<li>Responsive and adaptive design for all screen sizes</li>
+						<li>SEO optimization and performance enhancements</li>
+						<li>eCommerce solutions and WooCommerce integration</li>
+					</ul>
+					<p class="mt-6">
+						Let us help you create a WordPress site that not only looks great
+						but also performs exceptionally. Contact us today to learn more
+						about our WordPress development services.
+					</p>
+				</section>
 
-				<svg
-					width="100"
-					viewBox="0 -204 512 512"
-					version="1.1"
-					xmlns="http://www.w3.org/2000/svg"
-					xmlns:xlink="http://www.w3.org/1999/xlink"
-					preserveAspectRatio="xMidYMid"
-					fill="#000000"
+				<!-- Icons Section -->
+				<section
+					class="grid grid-cols-1 md:grid-cols-3 gap-4 p-6 justify-items-center"
 				>
-					<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-					<g
-						id="SVGRepo_tracerCarrier"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					></g>
-					<g id="SVGRepo_iconCarrier">
-						<g fill-rule="evenodd">
-							<path
-								d="M157.26652,0 L16.0962942,0 C7.16234734,0 -0.0698778538,7.30311363 0.000509457557,16.1661508 L0.000509457557,70.0533805 C0.000509457557,78.9871009 7.23325707,86.2194407 16.167204,86.2194407 L83.0296918,86.2194407 L113.589748,103.236418 L106.641048,86.2194407 L157.26652,86.2194407 C166.200694,86.2194407 173.43258,78.9871009 173.43258,70.0533805 L173.43258,16.1661508 C173.43258,7.23220389 166.200694,0 157.26652,0 Z M13.1186291,12.4791165 C11.1332925,12.6209359 9.64427866,13.329988 8.651633,14.677137 C7.65898734,15.9534216 7.30448397,17.5842096 7.51716787,19.4277267 C11.700525,46.0170195 15.6002433,63.9555965 19.2163679,73.244092 C20.6344719,76.6473062 22.2652599,78.2784566 24.1796868,78.1366372 C27.1576238,77.9236814 30.7028387,73.8113699 34.8861958,65.7992496 C37.0842164,61.2610265 40.4876571,54.4545982 45.0964273,45.3786053 C48.9250546,58.7794124 54.1719218,68.8481416 60.7663006,75.5838867 C62.6099537,77.498223 64.52429,78.3491398 66.36749,78.2073204 C67.9986404,78.0655009 69.2745626,77.2145841 70.1254794,75.6545699 C70.8345767,74.3075115 71.1182157,72.7474973 70.9763962,70.9749805 C70.5509378,64.5228743 71.1893519,55.5180177 72.9618688,43.9605919 C74.8050688,32.048708 77.0741803,23.4692644 79.8394334,18.3641713 C80.4067112,17.3006159 80.6192139,16.2370152 80.5485307,14.9607759 C80.4067112,13.3299427 79.6976139,11.9827936 78.3505555,10.9192382 C77.0034971,9.85568283 75.5141661,9.35936 73.8834688,9.50113416 C71.827313,9.64295363 70.2672988,10.6355993 69.2038794,12.6209359 C64.8079289,20.6331016 61.6879006,33.6085862 59.8447006,51.6182088 C57.1501307,44.8114634 54.8810192,36.7992524 53.1085024,27.3689827 C52.3287218,23.1856708 50.4143856,21.2003342 47.2943572,21.4130634 C45.1672918,21.5548375 43.3947296,22.9729416 41.9766256,25.667285 L26.4486171,55.2343788 C23.8960479,44.9532375 21.4852981,32.4032113 19.2872776,17.5842096 C18.7909548,13.8972205 16.7347084,12.1954775 13.1186291,12.4791165 Z M149.750994,17.5844361 C154.785359,18.6480368 158.543348,21.3423802 161.095646,25.809331 C163.364757,29.6381848 164.49886,34.246955 164.49886,39.7774612 C164.49886,47.0804389 162.65566,53.7455009 158.968354,59.843285 C154.714223,66.9338053 149.183717,70.4788389 142.306152,70.4788389 C141.100913,70.4788389 139.824538,70.3370195 138.477026,70.0533805 C133.443115,68.9899611 129.685125,66.2958442 127.132375,61.8287575 C124.863717,57.9289487 123.729161,53.2493593 123.729161,47.7895363 C123.729161,40.4865133 125.572814,33.8214966 129.259667,27.7946676 C133.584934,20.7042379 139.11544,17.159023 145.922322,17.159023 C147.127561,17.159023 148.403936,17.3008425 149.750994,17.5844361 Z M146.773239,55.9434761 C149.396672,53.6036814 151.169189,50.129331 152.161925,45.4497416 C152.445564,43.8189989 152.658067,42.0463915 152.658067,40.2028743 C152.658067,38.1466733 152.232609,35.9486527 151.381692,33.7505869 C150.318272,30.9853338 148.900078,29.4963653 147.198244,29.1418166 C144.645947,28.6454938 142.164332,30.0635979 139.824538,33.537903 C137.910201,36.2322464 136.704509,39.0684092 136.066548,41.9754818 C135.711773,43.606315 135.569954,45.3790584 135.569954,47.1515752 C135.569954,49.207731 135.995412,51.4057062 136.846329,53.6036814 C137.910201,56.3689345 139.327943,57.8578124 141.029777,58.2125876 C142.802294,58.5669097 144.71663,57.7871292 146.773239,55.9434761 Z M116.63864,25.809331 C114.08589,21.3423802 110.257217,18.6480368 105.293989,17.5844361 C103.946478,17.3008425 102.670555,17.159023 101.464863,17.159023 C94.6584351,17.159023 89.1279289,20.7042379 84.8026617,27.7946676 C81.1153555,33.8214966 79.2721555,40.4865133 79.2721555,47.7895363 C79.2721555,53.2493593 80.4067112,57.9289487 82.6753696,61.8287575 C85.2281201,66.2958442 88.9861095,68.9899611 94.020021,70.0533805 C95.3670794,70.3370195 96.6434546,70.4788389 97.8491466,70.4788389 C104.726711,70.4788389 110.257217,66.9338053 114.511348,59.843285 C118.198655,53.7455009 120.041855,47.0804389 120.041855,39.7774612 C120.041855,34.246955 118.907299,29.6381848 116.63864,25.809331 Z M107.704467,45.4497416 C106.712184,50.129331 104.939214,53.6036814 102.31578,55.9434761 C100.259625,57.7871292 98.3452882,58.5669097 96.5727714,58.2125876 C94.8709378,57.8578124 93.4527431,56.3689345 92.3893236,53.6036814 C91.5384068,51.4057062 91.1129484,49.207731 91.1129484,47.1515752 C91.1129484,45.3790584 91.2547679,43.606315 91.6095431,41.9754818 C92.2475041,39.0684092 93.4527431,36.2322464 95.3670794,33.537903 C97.7073272,30.0635979 100.188941,28.6454938 102.741239,29.1418166 C104.443072,29.4963653 105.861267,30.9853338 106.924686,33.7505869 C107.775603,35.9486527 108.201062,38.1466733 108.201062,40.2028743 C108.201062,42.0463915 108.059242,43.8189989 107.704467,45.4497416 Z"
-								fill="#7F54B3"
-							></path>
-							<path
-								d="M191.37161,25.1708262 C186.620885,29.8505062 184.28109,35.8064255 184.28109,43.0386747 C184.28109,50.767292 186.620885,57.0775788 191.300927,61.8283044 C195.980517,66.5790301 202.078301,68.989508 209.664963,68.989508 C211.862938,68.989508 214.344552,68.6351858 217.039122,67.8549522 L217.039122,56.3684814 C214.557508,57.0775788 212.430216,57.432354 210.586563,57.432354 C206.828573,57.432354 203.850817,56.1559788 201.581706,53.6743646 C199.313048,51.1216142 198.178492,47.7184 198.178492,43.3931781 C198.178492,39.3516404 199.313048,36.0191547 201.511023,33.4665855 C203.779681,30.8431519 206.544934,29.5668673 209.948601,29.5668673 C212.146577,29.5668673 214.486371,29.9213706 217.039122,30.6304227 L217.039122,19.1439519 C214.699327,18.5058096 212.075894,18.2221706 209.310187,18.2221706 C202.078301,18.1512609 196.122336,20.4911462 191.37161,25.1708262 Z M240.579341,18.1512609 C234.056099,18.1512609 228.951051,20.3493267 225.263745,24.6744581 C221.576892,28.9996347 219.804375,35.0974188 219.804375,42.8968552 C219.804375,51.3345699 221.647575,57.7866761 225.263745,62.2537628 C228.879915,66.7208496 234.197918,68.989508 241.146619,68.989508 C247.882364,68.989508 253.058095,66.7208496 256.674265,62.2537628 C260.290435,57.7866761 262.134088,51.4763894 262.134088,43.3931781 C262.134088,35.3101027 260.290435,29.0705444 256.603582,24.6744581 C252.845593,20.3493267 247.527589,18.1512609 240.579341,18.1512609 Z M246.180531,55.021423 C244.904155,57.0068956 242.989819,57.9996319 240.579341,57.9996319 C238.31023,57.9996319 236.608396,57.0068956 235.403157,55.021423 C234.197918,53.0359504 233.63064,49.0654584 233.63064,43.0386747 C233.63064,33.7502244 235.970435,29.1414088 240.721161,29.1414088 C245.684389,29.1414088 248.236686,33.8211342 248.236686,43.2514039 C248.166003,49.0654584 247.456906,53.0359504 246.180531,55.021423 Z M297.160778,19.4984552 L294.608028,30.346829 C293.970067,33.1120821 293.332106,35.948245 292.764828,38.8553175 L291.346633,46.3713416 C289.999575,38.8553175 288.155922,29.9213706 285.816127,19.4984552 L269.366428,19.4984552 L263.197508,67.784269 L275.534895,67.784269 L278.867426,34.5301409 L287.305005,67.784269 L296.097359,67.784269 L304.180163,34.6010506 L307.654513,67.784269 L320.559178,67.784269 L314.035936,19.4984552 L297.160778,19.4984552 Z M356.22383,19.4984552 L353.671532,30.346829 C353.033118,33.1120821 352.395157,35.948245 351.827879,38.8553175 L350.409685,46.3713416 C349.062626,38.8553175 347.218973,29.9213706 344.879178,19.4984552 L328.429479,19.4984552 L322.261012,67.784269 L334.597947,67.784269 L337.930478,34.5301409 L346.368056,67.784269 L355.16041,67.784269 L363.172531,34.6010506 L366.646881,67.784269 L379.551547,67.784269 L373.028304,19.4984552 L356.22383,19.4984552 Z M396.355568,48.7111363 L407.913175,48.7111363 L407.913175,38.7134981 L396.355568,38.7134981 L396.355568,29.8504609 L409.685692,29.8504609 L409.685692,19.569365 L383.309536,19.569365 L383.309536,67.8549522 L409.756828,67.8549522 L409.756828,57.5741735 L396.355568,57.5741735 L396.355568,48.7111363 Z M446.484899,41.0533381 C447.83241,38.8553175 448.541055,36.5863873 448.541055,34.2465473 C448.541055,29.7086867 446.768538,26.0925621 443.223504,23.4690832 C439.678017,20.8456496 434.785925,19.4984552 428.688141,19.4984552 L413.514364,19.4984552 L413.514364,67.784269 L426.560849,67.784269 L426.560849,45.8040637 L426.773805,45.8040637 L437.338223,67.784269 L451.093805,67.784269 L440.670754,46.0165664 C443.152368,44.8821919 445.13784,43.2513586 446.484899,41.0533381 Z M426.490166,40.2733763 L426.490166,28.7869055 C429.609741,28.8578152 431.807717,29.3541381 433.155228,30.346829 C434.502286,31.3394747 435.140248,32.8993529 435.140248,35.1682832 C435.140248,38.5007688 432.233175,40.2025119 426.490166,40.2733763 Z M456.19704,25.1708262 C451.448127,29.8505062 449.108332,35.8064255 449.108332,43.0386747 C449.108332,50.767292 451.448127,57.0775788 456.129076,61.8283044 C460.809571,66.5790301 466.903731,68.989508 474.493111,68.989508 C476.690633,68.989508 479.173607,68.6351858 481.865005,67.8549522 L481.865005,56.3684814 C479.386563,57.0775788 477.257005,57.432354 475.412899,57.432354 C471.656722,57.432354 468.679872,56.1559788 466.409855,53.6743646 C464.139837,51.1216142 463.007094,47.7184 463.007094,43.3931781 C463.007094,39.3516404 464.139837,36.0191547 466.337359,33.4665855 C468.607377,30.8431519 471.371271,29.5668673 474.774032,29.5668673 C476.971554,29.5668673 479.314067,29.9213706 481.865005,30.6304227 L481.865005,19.1439519 C479.527023,18.5058096 476.903589,18.2221706 474.139695,18.2221706 C466.976226,18.1512609 460.950032,20.4911462 456.19704,25.1708262 Z M498.529925,57.432354 L498.529925,48.64 L510.083908,48.64 L510.083908,38.6425883 L498.529925,38.6425883 L498.529925,29.7795965 L511.928014,29.7795965 L511.928014,19.4984552 L485.553217,19.4984552 L485.553217,67.784269 L512.000509,67.784269 L512.000509,57.5030372 L498.529925,57.5030372 L498.529925,57.432354 Z"
-								fill="#000000"
-							></path>
-						</g>
-					</g>
-				</svg>
-			</section>
+					<!-- WordPress Logo -->
+					<img
+						src="@/assets/svgs/wordpress.svg"
+						alt="WordPress Logo"
+						class="w-24 h-24"
+					/>
 
-			<!-- Packages Section -->
-			<section aria-labelledby="packages-heading">
-				<Packages />
-			</section>
-			<!-- <ProjectsComp /> -->
+					<!-- Elementor Logo -->
+					<img
+						src="@/assets/svgs/elementor.svg"
+						alt="Elementor Logo"
+						class="w-24 h-24"
+					/>
 
-			<!-- Services -->
-			<section
-				class="flex flex-col text-center max-w-[80dvw] mx-auto my-5 gap-4"
-			>
-				<h2 class="text-2xl font-bold text-gray-800">Our Services</h2>
-				<ul
-					class="list-disc list-inside mx-auto text-gray-600 grid md:grid-cols-8 *:capitalize gap-5"
+					<!-- WooCommerce Logo -->
+					<img
+						src="@/assets/svgs/woo.svg"
+						alt="WooCommerce Logo"
+						class="w-24 h-24"
+					/>
+				</section>
+
+				<!-- Services Section -->
+				<section
+					class="flex flex-col text-center max-w-[80dvw] mx-auto my-12 gap-4"
 				>
-					<li class="p-3 rounded-md border-2 border-[#2b3c4f] col-span-4">
-						Custom WordPress theme development
-					</li>
-					<li class="p-3 rounded-md border-2 border-[#2b3c4f] col-span-4">
-						Plugin development and customization
-					</li>
-					<li class="p-3 rounded-md border-2 border-[#2b3c4f] col-span-4">
-						Responsive design for mobile and tablet
-					</li>
-					<li class="p-3 rounded-md border-2 border-[#2b3c4f] col-span-4">
-						SEO optimization and performance enhancements
-					</li>
-					<li class="p-3 rounded-md border-2 border-[#2b3c4f] col-span-4">
-						eCommerce solutions and integrations
-					</li>
-				</ul>
-			</section>
+					<h2 class="text-4xl font-medium text-gray-800">Our Services</h2>
+					<hr class="my-6 bg-[#2b3d4f] h-[3px]" />
+					<ul
+						class="list-disc list-inside mx-auto text-gray-600 grid md:grid-cols-2 gap-5"
+					>
+						<li class="p-3 rounded-md border-2 border-[#2b3c4f]">
+							Custom WordPress theme development
+						</li>
+						<li class="p-3 rounded-md border-2 border-[#2b3c4f]">
+							Plugin development and customization
+						</li>
+						<li class="p-3 rounded-md border-2 border-[#2b3c4f]">
+							Responsive design for mobile and tablet
+						</li>
+						<li class="p-3 rounded-md border-2 border-[#2b3c4f]">
+							SEO optimization and performance enhancements
+						</li>
+						<li class="p-3 rounded-md border-2 border-[#2b3c4f]">
+							eCommerce solutions and WooCommerce integration
+						</li>
+					</ul>
+				</section>
+
+				<!-- Client Testimonials Section -->
+				<section class="mt-16" aria-labelledby="client-testimonials">
+					<h2
+						id="client-testimonials"
+						class="text-center text-3xl font-medium text-gray-800"
+					>
+						What Our Clients Say
+					</h2>
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+						<div class="p-4 bg-gray-100 rounded-lg shadow">
+							<p class="text-lg">
+								"The WordPress site they developed for us is exactly what we
+								needed. It's user-friendly, SEO-optimized, and has boosted our
+								online visibility significantly."
+							</p>
+							<p class="mt-4 text-sm text-right font-bold">
+								- Emily R., Business Owner
+							</p>
+						</div>
+						<div class="p-4 bg-gray-100 rounded-lg shadow">
+							<p class="text-lg">
+								"Their attention to detail and understanding of our brand helped
+								us create a WordPress site that truly stands out."
+							</p>
+							<p class="mt-4 text-sm text-right font-bold">
+								- Michael S., Marketing Director
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- Design Process Section -->
+				<section class="mt-16" aria-labelledby="design-process">
+					<h2
+						id="design-process"
+						class="text-center text-3xl font-medium text-gray-800"
+					>
+						Our WordPress Design Process
+					</h2>
+					<div class="mt-8 space-y-4 text-gray-600">
+						<p><strong>Step 1:</strong> In-depth Market Research</p>
+						<p><strong>Step 2:</strong> Theme Selection and Customization</p>
+						<p><strong>Step 3:</strong> Development and Integration</p>
+						<p><strong>Step 4:</strong> Usability Testing and Optimization</p>
+						<p><strong>Step 5:</strong> Launch and Ongoing Support</p>
+					</div>
+				</section>
+
+				<!-- FAQ Section -->
+				<section class="mt-16" aria-labelledby="faqs">
+					<h2 id="faqs" class="text-center text-3xl font-medium text-gray-800">
+						Frequently Asked Questions
+					</h2>
+					<div class="mt-8">
+						<div
+							class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
+						>
+							<input type="checkbox" class="peer" />
+							<div class="collapse-title text-xl font-medium">
+								What does your WordPress design process involve?
+							</div>
+							<div class="collapse-content">
+								<p>
+									Our process includes market research, theme customization,
+									development, and thorough testing to ensure your WordPress
+									site is optimized for both usability and conversions.
+								</p>
+							</div>
+						</div>
+						<div
+							class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
+						>
+							<input type="checkbox" class="peer" />
+							<div class="collapse-title text-xl font-medium">
+								How do you ensure the WordPress site meets our business needs?
+							</div>
+							<div class="collapse-content">
+								<p>
+									We collaborate closely with your team to understand your
+									business goals and tailor the WordPress site to align with
+									your brand and objectives.
+								</p>
+							</div>
+						</div>
+						<div
+							class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
+						>
+							<input type="checkbox" class="peer" />
+							<div class="collapse-title text-xl font-medium">
+								Can you help with SEO for our WordPress site?
+							</div>
+							<div class="collapse-content">
+								<p>
+									Absolutely! We optimize your WordPress site for search engines
+									to improve visibility and attract more organic traffic.
+								</p>
+							</div>
+						</div>
+						<div
+							class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
+						>
+							<input type="checkbox" class="peer" />
+							<div class="collapse-title text-xl font-medium">
+								How long does it take to build a custom WordPress site?
+							</div>
+							<div class="collapse-content">
+								<p>
+									The timeline depends on the project's complexity, but most
+									WordPress sites can be designed and launched within 4 to 6
+									weeks.
+								</p>
+							</div>
+						</div>
+						<div
+							class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
+						>
+							<input type="checkbox" class="peer" />
+							<div class="collapse-title text-xl font-medium">
+								Do you offer post-launch support for WordPress sites?
+							</div>
+							<div class="collapse-content">
+								<p>
+									Yes, we provide ongoing support and maintenance to ensure your
+									WordPress site continues to perform at its best.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Contact CTA Section -->
+				<section class="mt-16 text-center" aria-labelledby="contact-cta">
+					<h2 id="contact-cta" class="text-3xl font-medium text-gray-800">
+						Ready to Elevate Your WordPress Site?
+					</h2>
+					<p class="mt-4">
+						Contact us today for a consultation and discover how our WordPress
+						expertise can transform your online presence.
+					</p>
+					<router-link
+						to="/contact"
+						class="inline-block mt-8 px-6 py-3 bg-orange-500 text-white rounded-lg shadow hover:bg-orange-600"
+					>
+						Request a Quote
+					</router-link>
+				</section>
+			</main>
 		</div>
 	</section>
 </template>
+
 <script setup>
 import { useHead } from '@unhead/vue'
-
-import Packages from '@/components/serviceComps/Packages.vue'
 
 // Set the SEO meta tags using useHead
 useHead({
