@@ -25,6 +25,7 @@
 					</div>
 				</div>
 			</section>
+
 			<main class="inner-wrapper px-2">
 				<!-- Information Text Section -->
 				<section
@@ -114,27 +115,69 @@
 
 				<!-- Services Section -->
 				<section
-					class="flex flex-col text-center max-w-[80dvw] mx-auto my-12 gap-4"
+					class="flex flex-col text-center max-w-[80vw] mx-auto my-12 gap-8"
 				>
-					<h2 class="text-4xl font-medium text-gray-800">Our Services</h2>
-					<hr class="my-6 bg-[#2b3d4f] h-[3px]" />
-					<ul
-						class="list-disc list-inside mx-auto text-gray-600 grid md:grid-cols-2 gap-5"
-					>
-						<li class="p-3 rounded-md border-2 border-[#2b3c4f]">
-							Custom WordPress theme development
+					<h2 class="text-4xl font-semibold text-gray-800">Our Services</h2>
+					<p class="text-lg text-gray-600 max-w-2xl mx-auto">
+						Explore our comprehensive range of WordPress services designed to
+						help your business thrive online.
+					</p>
+					<hr class="my-6 border-t-2 border-[#2b3d4f] mx-auto w-24" />
+					<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+						<li
+							class="p-6 rounded-lg shadow-lg bg-white hover:shadow-xl transition-shadow border border-gray-200"
+						>
+							<h3 class="text-xl font-semibold text-[#2b3d4f] mb-2">
+								Custom WordPress Theme Development
+							</h3>
+							<p class="text-gray-600">
+								We create tailored WordPress themes that perfectly align with
+								your brand and business goals.
+							</p>
 						</li>
-						<li class="p-3 rounded-md border-2 border-[#2b3c4f]">
-							Plugin development and customization
+						<li
+							class="p-6 rounded-lg shadow-lg bg-white hover:shadow-xl transition-shadow border border-gray-200"
+						>
+							<h3 class="text-xl font-semibold text-[#2b3d4f] mb-2">
+								Plugin Development and Customization
+							</h3>
+							<p class="text-gray-600">
+								Enhance your site's functionality with custom plugins designed
+								to meet your specific needs.
+							</p>
 						</li>
-						<li class="p-3 rounded-md border-2 border-[#2b3c4f]">
-							Responsive design for mobile and tablet
+						<li
+							class="p-6 rounded-lg shadow-lg bg-white hover:shadow-xl transition-shadow border border-gray-200"
+						>
+							<h3 class="text-xl font-semibold text-[#2b3d4f] mb-2">
+								Responsive Design for Mobile and Tablet
+							</h3>
+							<p class="text-gray-600">
+								Ensure your WordPress site looks great and functions perfectly
+								on all devices.
+							</p>
 						</li>
-						<li class="p-3 rounded-md border-2 border-[#2b3c4f]">
-							SEO optimization and performance enhancements
+						<li
+							class="p-6 rounded-lg shadow-lg bg-white hover:shadow-xl transition-shadow border border-gray-200"
+						>
+							<h3 class="text-xl font-semibold text-[#2b3d4f] mb-2">
+								SEO Optimization and Performance Enhancements
+							</h3>
+							<p class="text-gray-600">
+								Boost your site's visibility and speed with our expert SEO and
+								performance services.
+							</p>
 						</li>
-						<li class="p-3 rounded-md border-2 border-[#2b3c4f]">
-							eCommerce solutions and WooCommerce integration
+						<li
+							class="p-6 rounded-lg shadow-lg bg-white hover:shadow-xl transition-shadow border border-gray-200"
+						>
+							<h3 class="text-xl font-semibold text-[#2b3d4f] mb-2">
+								eCommerce Solutions and WooCommerce Integration
+							</h3>
+							<p class="text-gray-600">
+								Set up and optimize your online store with our WooCommerce
+								solutions.
+							</p>
 						</li>
 					</ul>
 				</section>
@@ -170,37 +213,93 @@
 					</div>
 				</section>
 
-				<!-- Design Process Section -->
+				<!-- WordPress Design Process Section -->
 				<section class="mt-16" aria-labelledby="design-process">
 					<h2
 						id="design-process"
-						class="text-center text-3xl font-medium text-gray-800"
+						class="text-center text-4xl font-semibold text-gray-800"
 					>
 						Our WordPress Design Process
 					</h2>
-					<div class="mt-8 space-y-4 text-gray-600">
-						<p><strong>Step 1:</strong> In-depth Market Research</p>
-						<p><strong>Step 2:</strong> Theme Selection and Customization</p>
-						<p><strong>Step 3:</strong> Development and Integration</p>
-						<p><strong>Step 4:</strong> Usability Testing and Optimization</p>
-						<p><strong>Step 5:</strong> Launch and Ongoing Support</p>
+					<div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+						<div
+							class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500"
+						>
+							<h3 class="text-2xl font-bold text-[#2b3d4f] mb-2">
+								Step 1: In-depth Market Research
+							</h3>
+							<p class="text-gray-600">
+								We start by thoroughly researching your market to understand
+								your audience, competitors, and unique business needs.
+							</p>
+						</div>
+						<div
+							class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500"
+						>
+							<h3 class="text-2xl font-bold text-[#2b3d4f] mb-2">
+								Step 2: Theme Selection and Customization
+							</h3>
+							<p class="text-gray-600">
+								Next, we select or create a WordPress theme that reflects your
+								brand identity and customize it to meet your specifications.
+							</p>
+						</div>
+						<div
+							class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500"
+						>
+							<h3 class="text-2xl font-bold text-[#2b3d4f] mb-2">
+								Step 3: Development and Integration
+							</h3>
+							<p class="text-gray-600">
+								Our development team builds your site, integrating all necessary
+								features, plugins, and third-party tools.
+							</p>
+						</div>
+						<div
+							class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500"
+						>
+							<h3 class="text-2xl font-bold text-[#2b3d4f] mb-2">
+								Step 4: Usability Testing and Optimization
+							</h3>
+							<p class="text-gray-600">
+								We rigorously test the site for usability, performance, and SEO,
+								making optimizations to ensure everything runs smoothly.
+							</p>
+						</div>
+						<div
+							class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500"
+						>
+							<h3 class="text-2xl font-bold text-[#2b3d4f] mb-2">
+								Step 5: Launch and Ongoing Support
+							</h3>
+							<p class="text-gray-600">
+								Finally, we launch your site and provide ongoing support to help
+								you maintain and update your WordPress site as needed.
+							</p>
+						</div>
 					</div>
 				</section>
 
 				<!-- FAQ Section -->
 				<section class="mt-16" aria-labelledby="faqs">
-					<h2 id="faqs" class="text-center text-3xl font-medium text-gray-800">
+					<h2
+						id="faqs"
+						class="text-center text-4xl font-semibold text-gray-800"
+					>
 						Frequently Asked Questions
 					</h2>
-					<div class="mt-8">
+					<div class="mt-12 space-y-4">
 						<div
-							class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
+							class="border border-gray-300 rounded-lg overflow-hidden shadow-sm transition-shadow hover:shadow-md"
 						>
-							<input type="checkbox" class="peer" />
-							<div class="collapse-title text-xl font-medium">
+							<input type="checkbox" class="peer hidden" id="faq1" />
+							<label
+								for="faq1"
+								class="block p-4 bg-gray-100 cursor-pointer text-xl font-medium text-gray-800"
+							>
 								What does your WordPress design process involve?
-							</div>
-							<div class="collapse-content">
+							</label>
+							<div class="p-4 bg-white peer-checked:block hidden">
 								<p>
 									Our process includes market research, theme customization,
 									development, and thorough testing to ensure your WordPress
@@ -209,13 +308,16 @@
 							</div>
 						</div>
 						<div
-							class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
+							class="border border-gray-300 rounded-lg overflow-hidden shadow-sm transition-shadow hover:shadow-md"
 						>
-							<input type="checkbox" class="peer" />
-							<div class="collapse-title text-xl font-medium">
+							<input type="checkbox" class="peer hidden" id="faq2" />
+							<label
+								for="faq2"
+								class="block p-4 bg-gray-100 cursor-pointer text-xl font-medium text-gray-800"
+							>
 								How do you ensure the WordPress site meets our business needs?
-							</div>
-							<div class="collapse-content">
+							</label>
+							<div class="p-4 bg-white peer-checked:block hidden">
 								<p>
 									We collaborate closely with your team to understand your
 									business goals and tailor the WordPress site to align with
@@ -224,13 +326,16 @@
 							</div>
 						</div>
 						<div
-							class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
+							class="border border-gray-300 rounded-lg overflow-hidden shadow-sm transition-shadow hover:shadow-md"
 						>
-							<input type="checkbox" class="peer" />
-							<div class="collapse-title text-xl font-medium">
+							<input type="checkbox" class="peer hidden" id="faq3" />
+							<label
+								for="faq3"
+								class="block p-4 bg-gray-100 cursor-pointer text-xl font-medium text-gray-800"
+							>
 								Can you help with SEO for our WordPress site?
-							</div>
-							<div class="collapse-content">
+							</label>
+							<div class="p-4 bg-white peer-checked:block hidden">
 								<p>
 									Absolutely! We optimize your WordPress site for search engines
 									to improve visibility and attract more organic traffic.
@@ -238,13 +343,16 @@
 							</div>
 						</div>
 						<div
-							class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
+							class="border border-gray-300 rounded-lg overflow-hidden shadow-sm transition-shadow hover:shadow-md"
 						>
-							<input type="checkbox" class="peer" />
-							<div class="collapse-title text-xl font-medium">
+							<input type="checkbox" class="peer hidden" id="faq4" />
+							<label
+								for="faq4"
+								class="block p-4 bg-gray-100 cursor-pointer text-xl font-medium text-gray-800"
+							>
 								How long does it take to build a custom WordPress site?
-							</div>
-							<div class="collapse-content">
+							</label>
+							<div class="p-4 bg-white peer-checked:block hidden">
 								<p>
 									The timeline depends on the project's complexity, but most
 									WordPress sites can be designed and launched within 4 to 6
@@ -253,13 +361,16 @@
 							</div>
 						</div>
 						<div
-							class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
+							class="border border-gray-300 rounded-lg overflow-hidden shadow-sm transition-shadow hover:shadow-md"
 						>
-							<input type="checkbox" class="peer" />
-							<div class="collapse-title text-xl font-medium">
+							<input type="checkbox" class="peer hidden" id="faq5" />
+							<label
+								for="faq5"
+								class="block p-4 bg-gray-100 cursor-pointer text-xl font-medium text-gray-800"
+							>
 								Do you offer post-launch support for WordPress sites?
-							</div>
-							<div class="collapse-content">
+							</label>
+							<div class="p-4 bg-white peer-checked:block hidden">
 								<p>
 									Yes, we provide ongoing support and maintenance to ensure your
 									WordPress site continues to perform at its best.
