@@ -1,26 +1,31 @@
 <template>
-	<div
-		class="max-w-3xl mx-auto p-6 bg-white border text-black border-gray-300 rounded-lg shadow-md"
-	>
-		<div class="">
-			<p class="text-2xl">
-				Thank you for your interest, please fill out the form, we will be in
-				contact with your quote within 2 business days.
+	<div class="">
+		<div
+			id="onboard_banner"
+			class="hero min-h-screen bg-cover bg-center bg-fixed"
+		>
+			<p
+				class="max-w-xl text-2xl font-medium text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl"
+			>
+				Thanks so much for your interest! Just fill out the form, and we’ll get
+				back to you with a quote within two business days.
 			</p>
+		</div>
+		<div class="max-w-3xl mx-auto pt-5">
 			<!-- Form Section -->
 			<div class="w-full mt-8 md:mt-0">
 				<form @submit.prevent="submitForm">
 					<!-- Project Name -->
 					<div class="form-control w-full mb-4">
 						<label class="label" for="projectName">
-							<span class="label-text">What is the name of your project?</span>
+							<span class="label-text">What is the name of your business</span>
 						</label>
 						<input
 							type="text"
 							id="projectName"
 							v-model="formData.projectName"
 							class="input input-bordered w-full"
-							placeholder="Enter project name"
+							placeholder="Enter business name"
 							required
 						/>
 					</div>
@@ -155,7 +160,9 @@
 
 					<!-- Submit Button -->
 					<div class="form-control w-full">
-						<button type="submit" class="btn btn-primary w-full">Submit</button>
+						<button type="submit" class="btn btn-outline w-full text-lg">
+							Submit
+						</button>
 					</div>
 				</form>
 			</div>
@@ -256,5 +263,12 @@ const submitForm = async () => {
 }
 .alert-error {
 	background-color: #f44336;
+}
+
+#onboard_banner {
+	background-image: url('../assets/branding/contact-image.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 </style>

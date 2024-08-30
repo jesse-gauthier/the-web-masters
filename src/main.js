@@ -24,18 +24,6 @@ if (process.env.NODE_ENV === 'production') {
 			id: 'G-58RRPDKZYB',
 		},
 		router,
-		onReady: () => {
-			console.log('Google Analytics initialized successfully.')
-		},
-		onError: (error) => {
-			console.error('Google Analytics failed to initialize:', error)
-		},
-		onBeforeTrack: (to, from) => {
-			console.log(`Tracking pageview: from ${from.fullPath} to ${to.fullPath}`)
-		},
-		onAfterTrack: () => {
-			console.log('Pageview tracked successfully.')
-		},
 	})
 	console.log('Google Analytics setup complete.')
 } else {

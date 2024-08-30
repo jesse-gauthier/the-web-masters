@@ -18,38 +18,38 @@
 			<!-- Services -->
 			<nav aria-label="Services" data-aos="fade-up">
 				<h4 class="text-2xl">Services</h4>
-				<ul class="">
+				<ul>
 					<li>
-						<router-link class="link link-hover" to="/services"
-							>Web Development</router-link
+						<RouterLink class="link link-hover" to="/services"
+							>Web Development</RouterLink
 						>
 					</li>
 					<li>
-						<router-link class="link link-hover" to="/shopify"
-							>Shopify</router-link
+						<RouterLink class="link link-hover" to="/shopify"
+							>Shopify</RouterLink
 						>
 					</li>
 					<li>
-						<router-link class="link link-hover" to="/wordpress"
-							>WordPress</router-link
+						<RouterLink class="link link-hover" to="/wordpress"
+							>WordPress</RouterLink
 						>
 					</li>
 					<li>
-						<router-link class="link link-hover" to="/uxdesign"
-							>UX Design</router-link
+						<RouterLink class="link link-hover" to="/uxdesign"
+							>UX Design</RouterLink
 						>
 					</li>
 					<li>
-						<router-link class="link link-hover" to="/seo">SEO</router-link>
+						<RouterLink class="link link-hover" to="/seo">SEO</RouterLink>
 					</li>
 					<li>
-						<router-link class="link link-hover" to="/ottawa-seo"
-							>Ottawa Seo</router-link
+						<RouterLink class="link link-hover" to="/ottawa-seo"
+							>Ottawa SEO</RouterLink
 						>
 					</li>
 					<li>
-						<router-link class="link link-hover" to="/ottawa-wordpress"
-							>Ottawa WordPress</router-link
+						<RouterLink class="link link-hover" to="/ottawa-wordpress"
+							>Ottawa WordPress</RouterLink
 						>
 					</li>
 				</ul>
@@ -58,30 +58,34 @@
 			<nav data-aos="fade-up" aria-label="Company">
 				<h4 class="text-2xl">Company</h4>
 				<ul>
-					<li><a href="/about-us" class="link link-hover">About us</a></li>
 					<li>
-						<router-link class="link link-hover" to="/contact"
-							>Contact</router-link
+						<RouterLink class="link link-hover" to="/about-us"
+							>About Us</RouterLink
 						>
 					</li>
 					<li>
-						<router-link class="link link-hover" to="/ourwork"
-							>Portfolio</router-link
+						<RouterLink class="link link-hover" to="/contact"
+							>Contact</RouterLink
 						>
 					</li>
 					<li>
-						<router-link class="link link-hover" to="/privacy-policy"
-							>Privacy Policy</router-link
+						<RouterLink class="link link-hover" to="/ourwork"
+							>Portfolio</RouterLink
 						>
 					</li>
 					<li>
-						<router-link class="link link-hover" to="/freeseo"
-							>Free SEO Audit</router-link
+						<RouterLink class="link link-hover" to="/privacy-policy"
+							>Privacy Policy</RouterLink
 						>
 					</li>
 					<li>
-						<router-link class="link link-hover" to="/freeseo"
-							>Free SEO Check List</router-link
+						<RouterLink class="link link-hover" to="/freeseo"
+							>Free SEO Audit</RouterLink
+						>
+					</li>
+					<li>
+						<RouterLink class="link link-hover" to="/freeseo"
+							>Free SEO Check List</RouterLink
 						>
 					</li>
 				</ul>
@@ -94,6 +98,7 @@
 import { onMounted } from 'vue'
 import { RouterLink } from 'vue-router'
 import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 onMounted(() => {
 	AOS.init({
