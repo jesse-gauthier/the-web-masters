@@ -86,24 +86,7 @@
 				<!-- Technologies Section -->
 				<section
 					class="grid grid-cols-1 md:grid-cols-3 gap-4 p-6 justify-items-center"
-				>
-					<!-- HTML5 Logo -->
-					<img
-						src="@/assets/svgs/html5.svg"
-						alt="HTML5 Logo"
-						class="w-24 h-24"
-					/>
-
-					<!-- CSS3 Logo -->
-					<img src="@/assets/svgs/css3.svg" alt="CSS3 Logo" class="w-24 h-24" />
-
-					<!-- JavaScript Logo -->
-					<img
-						src="@/assets/svgs/javascript.svg"
-						alt="JavaScript Logo"
-						class="w-24 h-24"
-					/>
-				</section>
+				></section>
 
 				<!-- Services Section -->
 				<section

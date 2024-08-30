@@ -7,7 +7,7 @@
 		:style="{ padding: isSticky ? '0.5rem 1rem' : '1rem 1.25rem' }"
 		role="banner"
 	>
-		<div class="navbar inner-wrapper brand-font">
+		<div class="navbar brand-font">
 			<!-- Mobile -->
 			<div class="flex justify-between w-full lg:navbar-start">
 				<div class="flex justify-between align-middle w-screen">
@@ -155,6 +155,7 @@ const links = [
 	},
 	{ name: 'Our Work', path: '/ourwork' },
 	{ name: 'Contact', path: '/contact' },
+	{ name: 'Free SEO Audit', path: '/freeseo' },
 ]
 
 const toggleDropdown = (index) => {

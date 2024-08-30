@@ -6,99 +6,111 @@
 			style="background-image: url('/assets/about_bg.webp')"
 			aria-labelledby="about-us-heading"
 		>
-			<div class="hero-overlay bg-opacity-60"></div>
+			<div class="hero-overlay bg-opacity-70"></div>
 			<div class="hero-content text-neutral-content text-center">
-				<div class="max-w-md">
+				<div class="max-w-lg mx-auto">
 					<h1
 						id="about-us-heading"
-						class="text-5xl font-medium text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl"
+						class="text-5xl font-semibold text-orange-500 p-8 bg-white bg-opacity-95 rounded-xl"
 					>
 						About Ottawa Web Masters
 					</h1>
+					<p
+						class="text-xl mt-4 bg-white bg-opacity-80 p-4 rounded-md text-black"
+					>
+						Passionate About Empowering Small Businesses with Quality Digital
+						Solutions
+					</p>
 				</div>
 			</div>
 		</section>
 
 		<!-- Core Values Section -->
 		<section data-aos="fade-up" class="w-[95dvw] md:w-[75dvw] mx-auto mt-14">
-			<h2 class="text-center text-4xl capitalize mb-14">
+			<h2 class="text-center text-4xl font-bold capitalize mb-14">
 				"We Love What We Do & We Do What We Love"
-				<span class="block self-end text-2xl w-full py-2">
-					- Ottawa Web Masters Team
+				<span class="block self-end text-2xl font-medium w-full py-2">
+					- The Ottawa Web Masters Team
 				</span>
 			</h2>
 
-			<div class="flex flex-wrap lg:flex-nowrap justify-center gap-3">
+			<div class="flex flex-wrap lg:flex-nowrap justify-center gap-6">
 				<!-- Who We Are -->
 				<article
-					class="lg:w-[33%] border-4 p-3 rounded-md"
+					class="lg:w-[30%] border-4 p-6 rounded-md shadow-lg bg-white flex flex-col"
 					aria-labelledby="who-we-are-heading"
 				>
 					<h3
 						id="who-we-are-heading"
-						class="text-2xl font-medium text-center py-2"
+						class="text-2xl font-semibold text-center py-2"
 					>
 						Who We Are
 					</h3>
-					<p class="px-1 text-justify">
+					<p class="px-2 text-justify text-gray-700">
 						We are a dedicated team of web design and development specialists
 						based in Ottawa, passionate about creating exceptional websites for
 						small businesses. Our mission is simple: empower small businesses
 						with quality digital solutions. This guiding principle shapes every
 						service we offer.
 					</p>
-					<div class="flex justify-center my-3">
-						<router-link to="/freeseo" class="btn btn-outline"
-							>Get A Free SEO Audit</router-link
+					<div class="flex flex-col justify-end grow">
+						<router-link
+							to="/freeseo"
+							class="btn bg-orange-500 text-white hover:bg-orange-600"
+							>Get Your Free SEO Audit</router-link
 						>
 					</div>
 				</article>
 
 				<!-- What We Do -->
 				<article
-					class="lg:w-[33%] border-4 p-3 rounded-md"
+					class="lg:w-[30%] border-4 p-6 rounded-md shadow-lg bg-white flex flex-col"
 					aria-labelledby="what-we-do-heading"
 				>
 					<h3
 						id="what-we-do-heading"
-						class="text-2xl font-medium text-center py-2"
+						class="text-2xl font-semibold text-center py-2"
 					>
 						What We Do
 					</h3>
-					<p class="px-1 text-justify">
+					<p class="px-2 text-justify text-gray-700">
 						We serve startups, e-commerce ventures, and small businesses across
 						Ottawa and Canada. Our expertise spans leading platforms like
 						WordPress, Shopify, Joomla, and Magento. Whatever your digital
 						vision, we have the expertise to bring it to life.
 					</p>
-					<div class="flex justify-center my-3">
-						<router-link to="/freeseo" class="btn btn-outline"
-							>Get A Free SEO Audit</router-link
+					<div class="flex flex-col justify-end grow">
+						<router-link
+							to="/freeseo"
+							class="bg-orange-500 text-white hover:bg-orange-600 mt-auto btn"
+							>Get Your Free SEO Audit</router-link
 						>
 					</div>
 				</article>
 
 				<!-- Why We Do It -->
 				<article
-					class="lg:w-[33%] border-4 p-3 rounded-md"
+					class="lg:w-[30%] border-4 p-6 rounded-md shadow-lg bg-white flex flex-col"
 					aria-labelledby="why-we-do-it-heading"
 				>
 					<h3
 						id="why-we-do-it-heading"
-						class="text-2xl font-medium text-center py-2"
+						class="text-2xl font-semibold text-center py-2"
 					>
 						Why We Do It
 					</h3>
-					<p class="px-1 text-justify">
+					<p class="px-2 text-justify text-gray-700">
 						We understand the challenges businesses face—balancing time, money,
 						and growth. We empathize with these struggles because we've been
 						there too. That's why we specialize in creating websites that not
 						only meet your needs but also help you overcome these challenges
 						effectively.
 					</p>
-					<div class="flex justify-center my-3">
-						<router-link to="/freeseo" class="btn btn-outline"
-							>Get A Free SEO Audit</router-link
+					<div class="flex flex-col justify-end grow mt-5">
+						<router-link
+							to="/freeseo"
+							class="bg-orange-500 text-white hover:bg-orange-600 mt-auto btn"
+							>Get Your Free SEO Audit</router-link
 						>
 					</div>
 				</article>
@@ -106,11 +118,24 @@
 		</section>
 
 		<!-- Location Section -->
-		<section id="location" aria-labelledby="location-heading">
+		<section id="location" aria-labelledby="location-heading" class="mt-20">
 			<OttawaMap heading="Located in Our Nation's Capital" />
+			<div class="text-center mt-6">
+				<p class="text-lg text-gray-700">
+					Visit us in Ottawa, or reach out to discover how we can help your
+					business grow.
+				</p>
+				<router-link
+					to="/contact"
+					class="btn bg-orange-500 text-white hover:bg-orange-600 mt-4"
+				>
+					Contact Us
+				</router-link>
+			</div>
 		</section>
 	</div>
 </template>
+
 <script setup>
 import { onMounted } from 'vue'
 import { useHead } from '@unhead/vue'

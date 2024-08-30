@@ -42,7 +42,15 @@ onMounted(() => {
 	const loadMap = () => {
 		import('leaflet').then((L) => {
 			import('leaflet/dist/leaflet.css')
-			const map = L.map('my-map-canvas').setView([45.4215, -75.6972], 13)
+			const map = L.map('my-map-canvas', {
+				center: [45.4215, -75.6972],
+				zoom: 13,
+				zoomControl: false, // Disable zoom control buttons
+				scrollWheelZoom: false, // Disable zooming with scroll wheel
+				doubleClickZoom: false, // Disable zooming with double click
+				tap: false, // Disable zooming with tap on touch devices
+				dragging: false, // Disable map dragging to prevent panning
+			})
 
 			L.tileLayer(
 				'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
@@ -52,11 +60,6 @@ onMounted(() => {
 					maxZoom: 18,
 				}
 			).addTo(map)
-
-			L.marker([45.4215, -75.6972])
-				.addTo(map)
-				.bindPopup('Ottawa, Ontario')
-				.openPopup()
 		})
 	}
 

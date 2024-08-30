@@ -16,7 +16,8 @@ import OttawaWordpress from '@/landingpages/OttawaWordpress.vue'
 import WebsiteOptimization from '@/views/WebsiteOptimization.vue'
 import DesignExpertise from '@/views/DesignExpertise.vue'
 import ConsultationServices from '@/views/ConsultationServices.vue'
-
+import WebDevelopment from '@/views/WebDevelopment.vue'
+import OnboardingForm from '@/views/OnboardingForm.vue'
 // Blogs
 import OttawaSeo from '@/landingpages/OttawaSeo.vue'
 
@@ -117,6 +118,19 @@ const router = createRouter({
 			path: '/consultation-services',
 			name: 'Consultation Services',
 			component: ConsultationServices,
+			meta: { robots: 'index, follow' },
+		},
+
+		// {
+		// 	path: ' /custom-web-development',
+		// 	name: 'Custom Web Development',
+		// 	component: WebDevelopment,
+		// 	meta: { robots: 'index, follow' },
+		// },
+		{
+			path: '/onboarding',
+			name: 'Onboarding Form',
+			component: OnboardingForm,
 			meta: { robots: 'index, follow' },
 		},
 	],
