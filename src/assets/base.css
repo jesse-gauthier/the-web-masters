@@ -11,7 +11,6 @@
 	--color-lightgreen: #1abc9c;
 	--color-black: #000000;
 	--color-white: #ffffff;
-
 	--font-heading: 'Baloo', sans-serif;
 	--font-subheading: 'Poppins', sans-serif;
 	--font-text: 'Poppins', sans-serif;
@@ -173,7 +172,8 @@ h6 {
 }
 
 p,
-span {
+span,
+a {
 	font-family: var(--font-text);
 }
 

@@ -1,19 +1,27 @@
 <template>
-	<div class="">
+	<div>
 		<div
 			id="onboard_banner"
 			class="hero min-h-screen bg-cover bg-center bg-fixed"
+			role="banner"
+			aria-label="Onboarding Banner"
 		>
 			<p
 				class="max-w-xl text-2xl font-medium text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl"
+				role="heading"
+				aria-level="1"
 			>
 				Thank you for your interest! Please complete the form, and we’ll provide
 				you with a quote within two business days.
 			</p>
 		</div>
-		<div class="max-w-3xl mx-auto pt-5">
+		<div
+			class="md:max-w-3xl mx-auto pt-5"
+			role="main"
+			aria-label="Onboarding Form"
+		>
 			<!-- Form Section -->
-			<div class="w-full mt-8 md:mt-0">
+			<div class="px-3 w-full mt-8 md:mt-0">
 				<form @submit.prevent="submitForm">
 					<!-- Contact Information -->
 					<div class="form-control w-full mb-4">
@@ -27,6 +35,8 @@
 							class="input input-bordered w-full"
 							placeholder="Enter your name"
 							required
+							aria-required="true"
+							aria-label="Enter your full name"
 						/>
 					</div>
 
@@ -41,6 +51,8 @@
 							class="input input-bordered w-full"
 							placeholder="Enter your email address"
 							required
+							aria-required="true"
+							aria-label="Enter your email address"
 						/>
 					</div>
 
@@ -54,13 +66,14 @@
 							v-model="formData.phone"
 							class="input input-bordered w-full"
 							placeholder="Enter your phone number"
+							aria-label="Enter your phone number"
 						/>
 					</div>
 
 					<!-- Project Name -->
 					<div class="form-control w-full mb-4">
 						<label class="label" for="projectName">
-							<span class="label-text">What is the name of your business</span>
+							<span class="label-text">What is the name of your business?</span>
 						</label>
 						<input
 							type="text"
@@ -69,6 +82,8 @@
 							class="input input-bordered w-full"
 							placeholder="Enter business name"
 							required
+							aria-required="true"
+							aria-label="Enter your business name"
 						/>
 					</div>
 
@@ -82,6 +97,8 @@
 							v-model="formData.businessType"
 							class="select select-bordered w-full"
 							required
+							aria-required="true"
+							aria-label="Select your business type"
 						>
 							<option disabled value="">Select business type</option>
 							<option v-for="type in businessTypes" :key="type" :value="type">
@@ -100,6 +117,7 @@
 							v-model="formData.projectDescription"
 							class="textarea textarea-bordered w-full"
 							placeholder="Provide a brief description of the project"
+							aria-label="Provide a brief description of your project"
 						></textarea>
 					</div>
 
@@ -115,6 +133,8 @@
 							class="input input-bordered w-full"
 							placeholder="Enter target audience"
 							required
+							aria-required="true"
+							aria-label="Enter your target audience"
 						/>
 					</div>
 
@@ -128,6 +148,7 @@
 							v-model="formData.competitors"
 							class="textarea textarea-bordered w-full"
 							placeholder="Provide URLs of competitors or websites you like"
+							aria-label="Provide URLs of competitors or websites you like"
 						></textarea>
 					</div>
 
@@ -141,6 +162,7 @@
 							v-model="formData.designPreferences"
 							class="textarea textarea-bordered w-full"
 							placeholder="Describe your design style preferences"
+							aria-label="Describe your design style preferences"
 						></textarea>
 					</div>
 
@@ -158,6 +180,8 @@
 							class="input input-bordered w-full"
 							placeholder="Enter budget in CAD"
 							required
+							aria-required="true"
+							aria-label="Enter your project budget"
 						/>
 					</div>
 
@@ -173,6 +197,8 @@
 							class="input input-bordered w-full"
 							placeholder="Enter timeline (e.g., 3 months)"
 							required
+							aria-required="true"
+							aria-label="Enter your expected timeline"
 						/>
 					</div>
 
@@ -186,6 +212,8 @@
 							v-model="formData.hosting"
 							class="select select-bordered w-full"
 							required
+							aria-required="true"
+							aria-label="Do you need hosting?"
 						>
 							<option disabled value="">Select an option</option>
 							<option value="Yes">Yes</option>
@@ -203,6 +231,8 @@
 							v-model="formData.domain"
 							class="select select-bordered w-full"
 							required
+							aria-required="true"
+							aria-label="Do you need a domain name?"
 						>
 							<option disabled value="">Select an option</option>
 							<option value="Yes">Yes</option>
@@ -227,6 +257,7 @@
 								v-model="formData.services"
 								@change="handleOtherServiceChange"
 								class="checkbox checkbox-orange"
+								aria-labelledby="service"
 							/>
 							<label :for="service" class="ml-2">{{ service }}</label>
 						</div>
@@ -237,8 +268,33 @@
 								v-model="formData.otherServiceDetails"
 								class="input input-bordered w-full"
 								placeholder="Please specify other services"
+								aria-label="Please specify other services"
 							/>
 						</div>
+					</div>
+
+					<!-- How did you find us? -->
+					<div class="form-control w-full mb-4">
+						<label class="label" for="foundUsFrom">
+							<span class="label-text">How did you find us?</span>
+						</label>
+						<select
+							id="foundUsFrom"
+							v-model="formData.foundUsFrom"
+							class="select select-bordered w-full"
+							required
+							aria-required="true"
+							aria-label="How did you find us?"
+						>
+							<option disabled value="">Select an option</option>
+							<option
+								v-for="option in foundUsOptions"
+								:key="option"
+								:value="option"
+							>
+								{{ option }}
+							</option>
+						</select>
 					</div>
 
 					<!-- Additional Information -->
@@ -253,8 +309,12 @@
 							v-model="formData.additionalInfo"
 							class="textarea textarea-bordered w-full"
 							placeholder="Provide additional details"
+							aria-label="Provide additional details"
 						></textarea>
 					</div>
+
+					<!-- Hidden IP Address Field -->
+					<input type="hidden" v-model="formData.ipAddress" />
 
 					<!-- Submit Button -->
 					<div class="form-control w-full">
@@ -282,8 +342,20 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import DOMPurify from 'dompurify'
+
+// Helper function to fetch the user's IP address
+const fetchIpAddress = async () => {
+	try {
+		const response = await fetch('https://api.ipify.org?format=json')
+		const data = await response.json()
+		return data.ip
+	} catch (error) {
+		console.error('Error fetching IP address:', error)
+		return ''
+	}
+}
 
 const sanitizeInput = (input) => {
 	return DOMPurify.sanitize(input)
@@ -307,7 +379,9 @@ const sanitizeFormData = (data) => {
 		domain: sanitizeInput(data.domain),
 		services: data.services.map(sanitizeInput),
 		otherServiceDetails: sanitizeInput(data.otherServiceDetails),
+		foundUsFrom: sanitizeInput(data.foundUsFrom),
 		additionalInfo: sanitizeInput(data.additionalInfo),
+		ipAddress: sanitizeInput(data.ipAddress), // Include IP address in form data
 	}
 }
 
@@ -327,7 +401,9 @@ const initialFormData = () => ({
 	domain: '',
 	services: [], // Array to hold multiple services
 	otherServiceDetails: '', // To hold the value if "Other" is selected
+	foundUsFrom: '', // New field for how they found you
 	additionalInfo: '',
+	ipAddress: '', // Hidden IP address field
 })
 
 const formData = ref(initialFormData())
@@ -350,6 +426,15 @@ const servicesList = [
 	'Digital Marketing',
 	'Consultation',
 	'Maintenance & Support',
+	'Other',
+]
+
+// Dropdown options for how the customer found you
+const foundUsOptions = [
+	'Google Search',
+	'Social Media',
+	'Referral',
+	'Advertisement',
 	'Other',
 ]
 
@@ -395,6 +480,12 @@ const submitForm = async () => {
 		}, 3000)
 	}
 }
+
+// Fetch IP address when the component is mounted
+onMounted(async () => {
+	const ipAddress = await fetchIpAddress()
+	formData.value.ipAddress = ipAddress
+})
 </script>
 
 <style scoped>

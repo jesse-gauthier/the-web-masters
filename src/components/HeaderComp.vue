@@ -94,7 +94,7 @@
 							<ul class="text-right text-xl *:my-2 mt-12" role="menu">
 								<li v-for="(link, index) in links" :key="link.path" role="none">
 									<router-link
-										class="btn w-[200px]"
+										class="poppins-regular btn w-[200px] font-medium"
 										:to="link.path"
 										@click="isOpen = false"
 										:aria-label="link.name"
@@ -122,7 +122,7 @@
 					>
 						<router-link
 							:to="link.path"
-							class="text-xl state-focus hover:underline underline-offset-4"
+							class="text-xl state-focus hover:underline underline-offset-4 font-medium"
 							:aria-label="link.name"
 							role="menuitem"
 							active-class="active"
