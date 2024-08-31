@@ -17,7 +17,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const isSticky = ref(false)
-const isVisible = ref(true) // State to control the visibility of the alert bar
+const isVisible = ref(true)
 
 const handleScroll = () => {
 	isSticky.value = window.scrollY > 50

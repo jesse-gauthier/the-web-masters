@@ -7,14 +7,56 @@
 			<p
 				class="max-w-xl text-2xl font-medium text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl"
 			>
-				Thanks so much for your interest! Just fill out the form, and we’ll get
-				back to you with a quote within two business days.
+				Thank you for your interest! Please complete the form, and we’ll provide
+				you with a quote within two business days.
 			</p>
 		</div>
 		<div class="max-w-3xl mx-auto pt-5">
 			<!-- Form Section -->
 			<div class="w-full mt-8 md:mt-0">
 				<form @submit.prevent="submitForm">
+					<!-- Contact Information -->
+					<div class="form-control w-full mb-4">
+						<label class="label" for="name">
+							<span class="label-text">Your Name</span>
+						</label>
+						<input
+							type="text"
+							id="name"
+							v-model="formData.name"
+							class="input input-bordered w-full"
+							placeholder="Enter your name"
+							required
+						/>
+					</div>
+
+					<div class="form-control w-full mb-4">
+						<label class="label" for="email">
+							<span class="label-text">Email Address</span>
+						</label>
+						<input
+							type="email"
+							id="email"
+							v-model="formData.email"
+							class="input input-bordered w-full"
+							placeholder="Enter your email address"
+							required
+						/>
+					</div>
+
+					<div class="form-control w-full mb-4">
+						<label class="label" for="phone">
+							<span class="label-text">Phone Number</span>
+						</label>
+						<input
+							type="tel"
+							id="phone"
+							v-model="formData.phone"
+							class="input input-bordered w-full"
+							placeholder="Enter your phone number"
+						/>
+					</div>
+
 					<!-- Project Name -->
 					<div class="form-control w-full mb-4">
 						<label class="label" for="projectName">
@@ -48,6 +90,19 @@
 						</select>
 					</div>
 
+					<!-- Project Description -->
+					<div class="form-control w-full mb-4">
+						<label class="label" for="projectDescription">
+							<span class="label-text">Project Description</span>
+						</label>
+						<textarea
+							id="projectDescription"
+							v-model="formData.projectDescription"
+							class="textarea textarea-bordered w-full"
+							placeholder="Provide a brief description of the project"
+						></textarea>
+					</div>
+
 					<!-- Target Audience -->
 					<div class="form-control w-full mb-4">
 						<label class="label" for="targetAudience">
@@ -61,6 +116,32 @@
 							placeholder="Enter target audience"
 							required
 						/>
+					</div>
+
+					<!-- Competitors or Inspiration URLs -->
+					<div class="form-control w-full mb-4">
+						<label class="label" for="competitors">
+							<span class="label-text">Competitors or Inspiration URLs</span>
+						</label>
+						<textarea
+							id="competitors"
+							v-model="formData.competitors"
+							class="textarea textarea-bordered w-full"
+							placeholder="Provide URLs of competitors or websites you like"
+						></textarea>
+					</div>
+
+					<!-- Design Style Preferences -->
+					<div class="form-control w-full mb-4">
+						<label class="label" for="designPreferences">
+							<span class="label-text">Design Style Preferences</span>
+						</label>
+						<textarea
+							id="designPreferences"
+							v-model="formData.designPreferences"
+							class="textarea textarea-bordered w-full"
+							placeholder="Describe your design style preferences"
+						></textarea>
 					</div>
 
 					<!-- Budget -->
@@ -129,18 +210,35 @@
 						</select>
 					</div>
 
-					<!-- Services Needed -->
+					<!-- Services Needed (Multiple Choice) -->
 					<div class="form-control w-full mb-4">
 						<label class="label" for="services">
 							<span class="label-text">What services do you need?</span>
 						</label>
-						<textarea
-							id="services"
-							v-model="formData.services"
-							class="textarea textarea-bordered w-full"
-							placeholder="Please describe the services you need"
-							required
-						></textarea>
+						<div
+							v-for="service in servicesList"
+							:key="service"
+							class="flex items-center mb-2"
+						>
+							<input
+								type="checkbox"
+								:id="service"
+								:value="service"
+								v-model="formData.services"
+								@change="handleOtherServiceChange"
+								class="checkbox checkbox-orange"
+							/>
+							<label :for="service" class="ml-2">{{ service }}</label>
+						</div>
+						<!-- Other Services Text Box -->
+						<div v-if="formData.services.includes('Other')" class="mt-4">
+							<input
+								type="text"
+								v-model="formData.otherServiceDetails"
+								class="input input-bordered w-full"
+								placeholder="Please specify other services"
+							/>
+						</div>
 					</div>
 
 					<!-- Additional Information -->
@@ -185,16 +283,50 @@
 
 <script setup>
 import { ref } from 'vue'
+import DOMPurify from 'dompurify'
+
+const sanitizeInput = (input) => {
+	return DOMPurify.sanitize(input)
+}
+
+// Sanitize form data before submission
+const sanitizeFormData = (data) => {
+	return {
+		name: sanitizeInput(data.name),
+		email: sanitizeInput(data.email),
+		phone: sanitizeInput(data.phone),
+		projectName: sanitizeInput(data.projectName),
+		businessType: sanitizeInput(data.businessType),
+		projectDescription: sanitizeInput(data.projectDescription),
+		targetAudience: sanitizeInput(data.targetAudience),
+		competitors: sanitizeInput(data.competitors),
+		designPreferences: sanitizeInput(data.designPreferences),
+		budget: sanitizeInput(data.budget),
+		timeline: sanitizeInput(data.timeline),
+		hosting: sanitizeInput(data.hosting),
+		domain: sanitizeInput(data.domain),
+		services: data.services.map(sanitizeInput),
+		otherServiceDetails: sanitizeInput(data.otherServiceDetails),
+		additionalInfo: sanitizeInput(data.additionalInfo),
+	}
+}
 
 const initialFormData = () => ({
+	name: '',
+	email: '',
+	phone: '',
 	projectName: '',
 	businessType: '',
+	projectDescription: '',
 	targetAudience: '',
+	competitors: '',
+	designPreferences: '',
 	budget: null,
 	timeline: '',
 	hosting: '',
 	domain: '',
-	services: '',
+	services: [], // Array to hold multiple services
+	otherServiceDetails: '', // To hold the value if "Other" is selected
 	additionalInfo: '',
 })
 
@@ -210,18 +342,38 @@ const businessTypes = [
 	'Other',
 ]
 
+const servicesList = [
+	'Web Development',
+	'SEO Optimization',
+	'Content Creation',
+	'Graphic Design',
+	'Digital Marketing',
+	'Consultation',
+	'Maintenance & Support',
+	'Other',
+]
+
 const showToast = ref(false)
 const toastMessage = ref('')
 const toastStatus = ref('success')
 
+const handleOtherServiceChange = () => {
+	if (!formData.value.services.includes('Other')) {
+		formData.value.otherServiceDetails = ''
+	}
+}
+
 const submitForm = async () => {
 	try {
+		// Sanitize the form data before sending it to the server
+		const sanitizedData = sanitizeFormData(formData.value)
+
 		const response = await fetch('/onboarding_form.php', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify(formData.value),
+			body: JSON.stringify(sanitizedData),
 		})
 
 		if (response.ok) {
@@ -270,5 +422,14 @@ const submitForm = async () => {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+}
+
+.checkbox-orange:checked {
+	background-color: #f97316;
+	border-color: #f97316;
+	background-image: none;
+}
+.checkbox-orange:checked::before {
+	box-shadow: inset 0 0 0 4px #ffffff;
 }
 </style>

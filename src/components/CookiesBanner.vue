@@ -3,9 +3,9 @@
 		v-if="isVisible"
 		class="fixed bottom-0 w-full bg-gray-800 text-white p-4 text-center"
 	>
-		<div class="flex justify-center w-[80vw] mx-auto gap-4">
+		<div class="flex flex-wrap justify-center w-[80vw] mx-auto gap-4">
 			<p class="self-center">{{ message }}</p>
-			<div class="flex gap-4">
+			<div class="flex flex-wrap gap-4">
 				<button
 					@click="acceptCookies"
 					class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
