@@ -34,41 +34,42 @@ const message = ref(
 const acceptButtonText = ref('Accept')
 const declineButtonText = ref('Decline')
 
-// Accept cookies function
 function acceptCookies() {
 	localStorage.setItem('cookiesAccepted', 'true')
 	isVisible.value = false
-	enableGoogleAnalytics()
+	enableGoogleAnalytics(true)
 }
 
-// Decline cookies function
 function declineCookies() {
 	localStorage.setItem('cookiesAccepted', 'false')
 	isVisible.value = false
+	enableGoogleAnalytics(false)
 }
 
-// Function to enable Google Analytics
-function enableGoogleAnalytics() {
-	// Insert Google Analytics gtag script
-	window.dataLayer = window.dataLayer || []
-	function gtag() {
-		window.dataLayer.push(arguments)
+function enableGoogleAnalytics(enable) {
+	if (enable) {
+		window.gtag('consent', 'update', {
+			ad_storage: 'granted',
+			analytics_storage: 'granted',
+		})
+	} else {
+		window.gtag('consent', 'update', {
+			ad_storage: 'denied',
+			analytics_storage: 'denied',
+		})
 	}
-	gtag('js', new Date())
-
-	// Your Google Analytics Tracking ID
-	gtag('config', 'G-58RRPDKZYB')
 }
 
-// Check user consent on page load
 onMounted(() => {
 	const cookiesAccepted = localStorage.getItem('cookiesAccepted')
 	if (cookiesAccepted === 'true') {
 		isVisible.value = false
-		enableGoogleAnalytics()
+		enableGoogleAnalytics(true)
 	} else if (cookiesAccepted === 'false') {
 		isVisible.value = false
-		// Optionally, disable Google Analytics if it was previously enabled
+		enableGoogleAnalytics(false)
+	} else {
+		enableGoogleAnalytics(false) // Default to non-personalized analytics
 	}
 })
 </script>

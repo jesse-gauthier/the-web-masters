@@ -5,7 +5,7 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
-import VueGtag from 'vue-gtag-next'
+import VueGtag from 'vue-gtag-next' // Import VueGtag
 
 const app = createApp(App)
 
@@ -16,18 +16,16 @@ app.use(createPinia())
 app.use(router)
 app.use(head)
 
-// Initialize Google Analytics as early as possible
-if (process.env.NODE_ENV === 'production') {
-	console.log('Initializing Google Analytics...')
-	app.use(VueGtag, {
-		property: {
-			id: 'G-58RRPDKZYB',
-		},
-		router,
-	})
-	console.log('Google Analytics setup complete.')
-} else {
-	console.log('Google Analytics is off in non-production environments.')
-}
+app.use(VueGtag, {
+	property: {
+		id: 'G-58RRPDKZYB', // Your GA Tracking ID
+	},
+	config: {
+		send_page_view: false, // Disable automatic page views until consent is given
+	},
+	appName: 'Ottawa Web Masters', // Optionally set your application name
+	pageTrackerScreenviewEnabled: true, // Enable screenview tracking if needed
+	router, // Automatically track route changes
+})
 
 app.mount('#app')
