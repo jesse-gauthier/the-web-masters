@@ -657,6 +657,10 @@
 						errors.message
 					}}</span>
 				</div>
+
+				<!-- Hidden IP Address -->
+				<input type="hidden" v-model="formData.ip" />
+
 				<!-- Send -->
 				<button
 					type="submit"
@@ -667,21 +671,46 @@
 				</button>
 			</form>
 		</div>
-		<div v-if="toast.message" :class="`alert alert-${toast.type} mt-4`">
+		<div
+			v-if="toast.message"
+			:class="`alert alert-${toast.type} mt-4 text-white`"
+		>
 			{{ toast.message }}
 		</div>
 	</div>
 </template>
 
 <script setup>
-import { reactive, watch, ref } from 'vue'
-import LogoComponent from '../branding/LogoComponent.vue'
+import { reactive, watch, ref, onMounted } from 'vue'
+
+const fetchIpAddress = async () => {
+	try {
+		const response = await fetch('https://api.ipify.org?format=json')
+		const data = await response.json()
+		return data.ip
+	} catch (error) {
+		console.error('Error fetching IP address:', error)
+		return ''
+	}
+}
+
+// Utility function to sanitize inputs
+const sanitizeInput = (input) => {
+	const tempElement = document.createElement('div')
+	tempElement.innerText = input
+	return tempElement.innerHTML
+}
 
 const formData = reactive({
 	name: '',
 	email: '',
 	phone: '',
 	message: '',
+	ip: '', // New field for IP address
+})
+
+onMounted(async () => {
+	formData.ip = await fetchIpAddress()
 })
 
 const errors = reactive({})
@@ -690,22 +719,19 @@ const toast = reactive({
 	type: '',
 })
 
-// Variable to track if the form start event has been fired
 const formStarted = ref(false)
 
-// Watcher to detect when the user starts typing
 watch(
 	() => [formData.name, formData.email, formData.phone, formData.message],
 	(newValues) => {
 		if (!formStarted.value && newValues.some((value) => value !== '')) {
-			// Google Analytics event tracking
 			if (typeof gtag === 'function') {
 				gtag('event', 'form started', {
 					event_category: 'Contact Form',
 					event_label: 'Form Started',
 				})
 			}
-			formStarted.value = true // Ensure it only fires once
+			formStarted.value = true
 		}
 	},
 	{ immediate: false }
@@ -726,9 +752,17 @@ const validEmail = (email) => {
 	return re.test(email)
 }
 
+const sanitizeFormData = () => {
+	formData.name = sanitizeInput(formData.name)
+	formData.email = sanitizeInput(formData.email)
+	formData.phone = sanitizeInput(formData.phone)
+	formData.message = sanitizeInput(formData.message)
+}
+
 const submitForm = () => {
+	sanitizeFormData()
+
 	if (validateForm()) {
-		// Google Analytics event tracking
 		if (typeof gtag === 'function') {
 			gtag('event', 'submit', {
 				event_category: 'Contact Form',
@@ -736,7 +770,6 @@ const submitForm = () => {
 			})
 		}
 
-		// Handle form submission
 		fetch('https://ottawawebmasters.ca/contact.php', {
 			method: 'POST',
 			headers: {
@@ -773,8 +806,8 @@ const resetForm = () => {
 	formData.email = ''
 	formData.phone = ''
 	formData.message = ''
+	formData.ip = '' // Reset IP field
 	Object.keys(errors).forEach((key) => (errors[key] = ''))
-	// Reset the formStarted tracker for a new submission
 	formStarted.value = false
 }
 </script>

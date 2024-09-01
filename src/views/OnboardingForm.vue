@@ -432,6 +432,7 @@ const servicesList = [
 // Dropdown options for how the customer found you
 const foundUsOptions = [
 	'Google Search',
+	'Bark.com',
 	'Social Media',
 	'Referral',
 	'Advertisement',
