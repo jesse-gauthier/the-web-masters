@@ -9,9 +9,12 @@
 				Our mission is to craft high-quality websites designed to empower
 				businesses with a strong, reliable foundation for growth and success.
 			</p>
-			<div>
+			<div class="flex flex-col">
 				<h4 class="text-2xl">Quick Contact</h4>
-				<a href="mailto:Jesse@ottawawebmasters.ca">Jesse@ottawawebmasters.ca</a>
+				<a href="mailto:Jesse@ottawawebmasters.ca"
+					>Email: Jesse@ottawawebmasters.ca</a
+				>
+				<a href="tel:3439998984">Phone: 343 999-8984 </a>
 			</div>
 		</div>
 		<div class="flex flex-wrap gap-12">

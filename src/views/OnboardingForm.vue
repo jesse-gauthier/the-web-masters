@@ -40,6 +40,7 @@
 						/>
 					</div>
 
+					<!-- Email -->
 					<div class="form-control w-full mb-4">
 						<label class="label" for="email">
 							<span class="label-text">Email Address</span>
@@ -56,6 +57,7 @@
 						/>
 					</div>
 
+					<!-- Phone Number -->
 					<div class="form-control w-full mb-4">
 						<label class="label" for="phone">
 							<span class="label-text">Phone Number</span>
