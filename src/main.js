@@ -17,18 +17,20 @@ app.use(createPinia())
 app.use(router)
 app.use(head)
 
-// Setup VueGtag but disable automatic tracking initially
-app.use(VueGtag, {
-	property: {
-		id: 'G-58RRPDKZYB', // Your GA Tracking ID
-	},
-	config: {
-		send_page_view: false, // Disable automatic page views until consent is given
-	},
-	appName: 'Ottawa Web Masters', // Optionally set your application name
-	pageTrackerScreenviewEnabled: true, // Enable screenview tracking if needed
-	router, // Automatically track route changes once enabled
-})
+// Only initialize Google Analytics if in production mode
+if (process.env.NODE_ENV === 'production') {
+	app.use(VueGtag, {
+		property: {
+			id: 'G-58RRPDKZYB', // Your GA Tracking ID
+		},
+		config: {
+			send_page_view: false, // Disable automatic page views until consent is given
+		},
+		appName: 'Ottawa Web Masters', // Optionally set your application name
+		pageTrackerScreenviewEnabled: true, // Enable screenview tracking if needed
+		router, // Automatically track route changes once enabled
+	})
+}
 
 // Function to fetch the user's IP address
 async function getIpAddress() {
@@ -42,16 +44,20 @@ async function getIpAddress() {
 	}
 }
 
-// Function to log page views to Supabase
+// Function to log page views to Supabase (only in production)
 async function logPageVisit(userId, pageUrl) {
-	const { data, error } = await supabase
-		.from('analytics')
-		.insert([{ user_id: userId, page_url: pageUrl }])
+	if (process.env.NODE_ENV === 'production') {
+		const { data, error } = await supabase
+			.from('analytics')
+			.insert([{ user_id: userId, page_url: pageUrl }])
 
-	if (error) {
-		console.error('Error logging page visit:', error)
+		if (error) {
+			console.error('Error logging page visit:', error)
+		} else {
+			console.log('Page visit logged in Supabase: ', pageUrl)
+		}
 	} else {
-		console.log('Page visit: ', pageUrl)
+		console.log('Development mode: Supabase logging skipped')
 	}
 }
 
@@ -74,15 +80,15 @@ router.afterEach(async (to, from) => {
 		// If cookies are accepted, use the user's IP address as their ID
 		userId = (await getIpAddress()) || getOrCreateRandomUserId() // Fallback to random ID if IP fetch fails
 
-		// Send page view to Google Analytics using window.gtag
-		if (window.gtag) {
+		if (process.env.NODE_ENV === 'production' && window.gtag) {
+			// Send page view to Google Analytics using window.gtag
 			window.gtag('config', 'G-58RRPDKZYB', {
 				page_path: to.fullPath,
 				page_title: document.title,
 			})
 			console.log(`Google Analytics pageview tracked: ${to.fullPath}`)
 		} else {
-			console.warn('Google Analytics not initialized yet.')
+			console.warn('Google Analytics not initialized yet or in dev mode.')
 		}
 	} else {
 		// If cookies are not accepted, use a random ID stored in localStorage

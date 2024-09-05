@@ -34,52 +34,45 @@ const message = ref(
 const acceptButtonText = ref('Accept')
 const declineButtonText = ref('Decline')
 
-// Generate random user ID (or use a real one if available)
-function generateRandomUserId() {
-	return Math.random().toString(36).substr(2, 9) // Simple random user ID
+// Function to fetch the user's IP address
+async function getIpAddress() {
+	try {
+		const response = await fetch('https://api.ipify.org?format=json')
+		const data = await response.json()
+		return data.ip // Return the IP address
+	} catch (error) {
+		console.error('Error fetching IP address:', error)
+		return null // In case of an error, return null
+	}
 }
 
 // Function to handle when the user accepts cookies
-function acceptCookies() {
-	localStorage.setItem('cookiesAccepted', 'true')
-	isVisible.value = false
-	enableGoogleAnalytics(true)
+async function acceptCookies() {
+	localStorage.setItem('cookiesAccepted', 'true') // Store consent in localStorage
+	const ipAddress = await getIpAddress() // Fetch the user's IP address
+	if (ipAddress) {
+		localStorage.setItem('randomUserId', ipAddress) // Store the IP address as randomUserId in localStorage
+	} else {
+		localStorage.setItem(
+			'randomUserId',
+			Math.random().toString(36).substr(2, 9)
+		) // Fallback to random ID if IP fetch fails
+	}
+	isVisible.value = false // Hide the banner
 }
 
 // Function to handle when the user declines cookies
 function declineCookies() {
-	localStorage.setItem('cookiesAccepted', 'false')
-	isVisible.value = false
-	enableGoogleAnalytics(false)
-}
-
-// Function to enable/disable Google Analytics
-function enableGoogleAnalytics(enable) {
-	if (enable) {
-		window.gtag('consent', 'update', {
-			ad_storage: 'granted',
-			analytics_storage: 'granted',
-		})
-	} else {
-		window.gtag('consent', 'update', {
-			ad_storage: 'denied',
-			analytics_storage: 'denied',
-		})
-	}
+	localStorage.setItem('cookiesAccepted', 'false') // Store consent in localStorage
+	localStorage.setItem('randomUserId', Math.random().toString(36).substr(2, 9)) // Store a random ID as randomUserId
+	isVisible.value = false // Hide the banner
 }
 
 // When the component is mounted
 onMounted(() => {
 	const cookiesAccepted = localStorage.getItem('cookiesAccepted')
-
-	if (cookiesAccepted === 'true') {
-		isVisible.value = false
-		enableGoogleAnalytics(true)
-	} else if (cookiesAccepted === 'false') {
-		isVisible.value = false
-		enableGoogleAnalytics(false)
-	} else {
-		enableGoogleAnalytics(false) // Default to non-personalized analytics
+	if (cookiesAccepted === 'true' || cookiesAccepted === 'false') {
+		isVisible.value = false // Hide the banner if consent was already provided
 	}
 })
 </script>
