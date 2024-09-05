@@ -2,6 +2,7 @@
 import { useHead } from '@unhead/vue'
 import { reactive, ref } from 'vue'
 import SeoChecklistForm from '@/components/emailSignups/SeoChecklistForm.vue'
+import { logsCustomEvents } from '@/supabaseClient'
 
 // Metadata for the page
 useHead({
@@ -64,6 +65,10 @@ const formMessageType = ref('')
 
 // Function to handle the SEO Audit form submission
 const submitAuditForm = async () => {
+	const randomUserId = localStorage.getItem('randomUserId') || 'anno'
+	// Send the form data to Supabase
+	await logsCustomEvents('seo_audit_request', randomUserId)
+
 	try {
 		const response = await fetch('https://ottawawebmasters.ca/seoform.php', {
 			method: 'POST',

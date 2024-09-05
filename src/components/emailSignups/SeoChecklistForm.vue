@@ -49,6 +49,7 @@
 
 <script setup>
 import { reactive, ref } from 'vue'
+import { logsCustomEvents } from '@/supabaseClient'
 
 // Form data for the SEO Checklist form
 const checklistForm = reactive({
@@ -60,6 +61,9 @@ const formSubmitted = ref(false)
 
 // Function to handle the SEO Checklist form submission
 const submitChecklistForm = async () => {
+	const randomUserId = localStorage.getItem('randomUserId') || 'anno'
+	// Send the form data to Supabase
+	await logsCustomEvents('seo_checklist_download', randomUserId)
 	try {
 		const response = await fetch(
 			'https://ottawawebmasters.ca/seo_checklist.php',

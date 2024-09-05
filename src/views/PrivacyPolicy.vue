@@ -1,12 +1,11 @@
 <template>
-	<!-- Add the users website use will be recorded by default, but personal information is not stored, and their ip is saved for any form subbmission to prevent spam / fraud -->
 	<div class="privacy-policy p-8 max-w-3xl mx-auto">
 		<h1 class="text-3xl font-bold mb-6">Website Privacy Policy</h1>
-		<p class="mb-4">Effective date: May 26, 2024</p>
+		<p class="mb-4">Effective date: September 5, 2024</p>
 
 		<p class="mb-4">
-			This website (the "Site") is owned and operated by Ottawa Web Masters is
-			the data controller and can be contacted at:
+			This website (the "Site") is owned and operated by Ottawa Web Masters and
+			is the data controller, which can be contacted at:
 		</p>
 		<p class="mb-4">Email: Contact@ottawawebmasters.ca</p>
 
@@ -52,7 +51,7 @@
 			the following information:
 		</p>
 		<ul class="list-disc list-inside mb-4">
-			<li>IP address</li>
+			<li>IP address (stored if cookies are accepted)</li>
 			<li>Location</li>
 			<li>Clicked links</li>
 			<li>Content viewed</li>
@@ -69,6 +68,9 @@
 		</p>
 		<ul class="list-disc list-inside mb-4">
 			<li>Statistics</li>
+			<li>
+				Form submission protection (IP address for preventing spam and fraud)
+			</li>
 		</ul>
 
 		<h2 class="text-2xl font-semibold mb-4">Who We Share Personal Data With</h2>

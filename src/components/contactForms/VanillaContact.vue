@@ -682,6 +682,7 @@
 
 <script setup>
 import { reactive, watch, ref, onMounted } from 'vue'
+import { logsCustomEvents } from '@/supabaseClient'
 
 const fetchIpAddress = async () => {
 	try {
@@ -759,7 +760,11 @@ const sanitizeFormData = () => {
 	formData.message = sanitizeInput(formData.message)
 }
 
-const submitForm = () => {
+async function submitForm() {
+	const randomUserId = localStorage.getItem('randomUserId') || 'anno'
+	// Send the form data to Supabase
+	await logsCustomEvents('contact_form_submit', randomUserId)
+
 	sanitizeFormData()
 
 	if (validateForm()) {
