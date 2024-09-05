@@ -46,15 +46,31 @@ async function getIpAddress() {
 
 // Function to log page views to Supabase (only in production)
 async function logPageVisit(userId, pageUrl) {
+	// Get additional information
+	const timestamp = new Date().toISOString()
+	const userAgent = navigator.userAgent
+	const screenWidth = window.screen.width
+	const screenHeight = window.screen.height
+	const referrer = document.referrer
+
 	if (process.env.NODE_ENV === 'production') {
-		const { data, error } = await supabase
-			.from('analytics')
-			.insert([{ user_id: userId, page_url: pageUrl }])
+		const { data, error } = await supabase.from('analytics').insert([
+			{
+				user_id: userId,
+				page_url: pageUrl,
+				event: 'pageload',
+				timestamp: timestamp,
+				user_agent: userAgent,
+				screen_width: screenWidth,
+				screen_height: screenHeight,
+				referrer: referrer,
+			},
+		])
 
 		if (error) {
 			console.error('Error logging page visit:', error)
 		} else {
-			console.log('Page visit logged in Supabase: ', pageUrl)
+			console.log('Page visit logged:', pageUrl)
 		}
 	} else {
 		console.log('Development mode: Supabase logging skipped')
@@ -86,7 +102,7 @@ router.afterEach(async (to, from) => {
 				page_path: to.fullPath,
 				page_title: document.title,
 			})
-			console.log(`Google Analytics pageview tracked: ${to.fullPath}`)
+			console.log(`Google Analytics`)
 		} else {
 			console.warn('Google Analytics not initialized yet or in dev mode.')
 		}

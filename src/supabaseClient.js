@@ -12,17 +12,41 @@ export async function logsCustomEvents(event, userId) {
 
 	// Get the current page URL
 	const pageUrl = window.location.href
+	const timestamp = new Date().toISOString()
+	const userAgent = navigator.userAgent
+	const screenWidth = window.screen.width
+	const screenHeight = window.screen.height
+	const referrer = document.referrer
+
+	console.log(pageUrl)
+	console.log(timestamp)
+
+	// Optional: Add metadata for the event
+	const eventMetadata = {
+		target: event.target ? event.target.id : null,
+		type: event.type,
+	}
 
 	if (process.env.NODE_ENV === 'production') {
 		// Log the event to Supabase in production mode
-		const { data, error } = await supabase
-			.from('analytics')
-			.insert([{ user_id: userId, page_url: pageUrl, event: event }])
+		const { data, error } = await supabase.from('analytics').insert([
+			{
+				user_id: userId,
+				page_url: pageUrl,
+				event: event,
+				timestamp: timestamp,
+				user_agent: userAgent,
+				screen_width: screenWidth,
+				screen_height: screenHeight,
+				referrer: referrer,
+				event_metadata: eventMetadata,
+			},
+		])
 
 		if (error) {
-			console.error('Error logging page visit:', error)
+			console.error('Error logging event:', error)
 		} else {
-			console.log('Event', event, 'logged')
+			console.log('Event', event, 'logged with additional info')
 		}
 	} else {
 		// Skip logging in development mode

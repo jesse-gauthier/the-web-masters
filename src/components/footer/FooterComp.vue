@@ -62,7 +62,7 @@
 				<h4 class="text-2xl">Company</h4>
 				<ul>
 					<li>
-						<RouterLink class="link link-hover" to="/about-us"
+						<RouterLink class="link link-hover" to="/about"
 							>About Us</RouterLink
 						>
 					</li>
