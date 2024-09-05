@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { useHead } from '@unhead/vue'
-import { supabase } from '@/supabaseClient' // Import Supabase client
 import HomeView from '@/views/HomeView.vue'
 import ServicesView from '@/views/ServicesView.vue'
 import WordPressServiceView from '@/views/WordPressServiceView.vue'
@@ -16,28 +15,9 @@ import OttawaWordpress from '@/landingpages/OttawaWordpress.vue'
 import WebsiteOptimization from '@/views/WebsiteOptimization.vue'
 import DesignExpertise from '@/views/DesignExpertise.vue'
 import ConsultationServices from '@/views/ConsultationServices.vue'
-import WebDevelopment from '@/views/WebDevelopment.vue'
 import OnboardingForm from '@/views/OnboardingForm.vue'
 // Blogs
 import OttawaSeo from '@/landingpages/OttawaSeo.vue'
-
-// Function to log page views to Supabase
-async function logPageVisit(userId, pageUrl) {
-	const { data, error } = await supabase
-		.from('analytics')
-		.insert([{ user_id: userId, page_url: pageUrl }])
-
-	if (error) {
-		console.error('Error logging page visit:', error)
-	} else {
-		console.log('Page visit logged in Supabase:', data)
-	}
-}
-
-// Function to generate a random user ID (replace with a real user ID if available)
-function generateRandomUserId() {
-	return Math.random().toString(36).substr(2, 9)
-}
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),

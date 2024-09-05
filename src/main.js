@@ -5,8 +5,8 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
-import VueGtag from 'vue-gtag-next' // Import VueGtag
-import { supabase } from './supabaseClient' // Import Supabase client
+import VueGtag from 'vue-gtag-next'
+import { supabase } from './supabaseClient'
 
 const app = createApp(App)
 
