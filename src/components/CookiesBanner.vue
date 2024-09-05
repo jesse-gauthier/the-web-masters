@@ -34,18 +34,26 @@ const message = ref(
 const acceptButtonText = ref('Accept')
 const declineButtonText = ref('Decline')
 
+// Generate random user ID (or use a real one if available)
+function generateRandomUserId() {
+	return Math.random().toString(36).substr(2, 9) // Simple random user ID
+}
+
+// Function to handle when the user accepts cookies
 function acceptCookies() {
 	localStorage.setItem('cookiesAccepted', 'true')
 	isVisible.value = false
 	enableGoogleAnalytics(true)
 }
 
+// Function to handle when the user declines cookies
 function declineCookies() {
 	localStorage.setItem('cookiesAccepted', 'false')
 	isVisible.value = false
 	enableGoogleAnalytics(false)
 }
 
+// Function to enable/disable Google Analytics
 function enableGoogleAnalytics(enable) {
 	if (enable) {
 		window.gtag('consent', 'update', {
@@ -60,8 +68,10 @@ function enableGoogleAnalytics(enable) {
 	}
 }
 
+// When the component is mounted
 onMounted(() => {
 	const cookiesAccepted = localStorage.getItem('cookiesAccepted')
+
 	if (cookiesAccepted === 'true') {
 		isVisible.value = false
 		enableGoogleAnalytics(true)

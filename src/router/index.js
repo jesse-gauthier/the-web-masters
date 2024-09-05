@@ -1,6 +1,6 @@
-/* eslint-disable no-unused-vars */
 import { createRouter, createWebHistory } from 'vue-router'
 import { useHead } from '@unhead/vue'
+import { supabase } from '@/supabaseClient' // Import Supabase client
 import HomeView from '@/views/HomeView.vue'
 import ServicesView from '@/views/ServicesView.vue'
 import WordPressServiceView from '@/views/WordPressServiceView.vue'
@@ -20,6 +20,24 @@ import WebDevelopment from '@/views/WebDevelopment.vue'
 import OnboardingForm from '@/views/OnboardingForm.vue'
 // Blogs
 import OttawaSeo from '@/landingpages/OttawaSeo.vue'
+
+// Function to log page views to Supabase
+async function logPageVisit(userId, pageUrl) {
+	const { data, error } = await supabase
+		.from('analytics')
+		.insert([{ user_id: userId, page_url: pageUrl }])
+
+	if (error) {
+		console.error('Error logging page visit:', error)
+	} else {
+		console.log('Page visit logged in Supabase:', data)
+	}
+}
+
+// Function to generate a random user ID (replace with a real user ID if available)
+function generateRandomUserId() {
+	return Math.random().toString(36).substr(2, 9)
+}
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
@@ -82,7 +100,7 @@ const router = createRouter({
 			path: '/:pathMatch(.*)*',
 			name: 'NotFound',
 			component: NotFound,
-			meta: { robots: 'index, follow' }, // Allowing indexing
+			meta: { robots: 'index, follow' },
 		},
 		{
 			path: '/about',
@@ -120,13 +138,6 @@ const router = createRouter({
 			component: ConsultationServices,
 			meta: { robots: 'index, follow' },
 		},
-
-		// {
-		// 	path: ' /custom-web-development',
-		// 	name: 'Custom Web Development',
-		// 	component: WebDevelopment,
-		// 	meta: { robots: 'index, follow' },
-		// },
 		{
 			path: '/onboarding',
 			name: 'Onboarding Form',
@@ -155,17 +166,6 @@ router.afterEach((to) => {
 			},
 		],
 	})
-
-	// Immediately trigger Google Analytics page view tracking
-	if (window.gtag) {
-		window.gtag('config', 'G-58RRPDKZYB', {
-			page_path: to.fullPath,
-			page_title: to.name,
-		})
-		console.log(`Google Analytics pageview tracked: ${to.fullPath}`)
-	} else {
-		console.warn('Google Analytics not initialized yet.')
-	}
 })
 
 export default router
