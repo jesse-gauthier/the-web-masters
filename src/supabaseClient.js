@@ -31,12 +31,6 @@ export async function logsCustomEvents(event, userId) {
 	console.log(pageUrl)
 	console.log(timestamp)
 
-	// Optional: Add metadata for the event
-	const eventMetadata = {
-		target: event.target ? event.target.id : null,
-		type: event.type,
-	}
-
 	if (process.env.NODE_ENV === 'production') {
 		// Log the event to Supabase in production mode
 		const { data, error } = await supabase.from('analytics').insert([
@@ -49,7 +43,6 @@ export async function logsCustomEvents(event, userId) {
 				screen_width: screenWidth,
 				screen_height: screenHeight,
 				referrer: referrer,
-				event_metadata: eventMetadata,
 			},
 		])
 

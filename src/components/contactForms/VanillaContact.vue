@@ -725,6 +725,10 @@ const formStarted = ref(false)
 watch(
 	() => [formData.name, formData.email, formData.phone, formData.message],
 	(newValues) => {
+		if (!formStarted.value) {
+			const userId = localStorage.getItem('randomUserId') || 'anno'
+			logsCustomEvents('formstarted', userId)
+		}
 		if (!formStarted.value && newValues.some((value) => value !== '')) {
 			if (typeof gtag === 'function') {
 				gtag('event', 'form started', {
@@ -734,8 +738,6 @@ watch(
 			}
 			formStarted.value = true
 		}
-		const userId = localStorage.getItem('randomUserId') || 'anno'
-		logsCustomEvents('form_started', userId)
 	},
 	{ immediate: false }
 )
