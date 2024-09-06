@@ -8,11 +8,21 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
 export async function logsCustomEvents(event, userId) {
 	console.log(event)
-	console.log(userId)
-
 	// Get the current page URL
 	const pageUrl = window.location.href
-	const timestamp = new Date().toISOString()
+
+	// Get the current timestamp in Eastern Time with 12-hour format and AM/PM
+	const timestamp = new Date().toLocaleString('en-US', {
+		timeZone: 'America/New_York', // Eastern Time Zone
+		hour12: true, // 12-hour format
+		hour: 'numeric',
+		minute: 'numeric',
+		second: 'numeric',
+		year: 'numeric',
+		month: 'numeric',
+		day: 'numeric',
+	})
+
 	const userAgent = navigator.userAgent
 	const screenWidth = window.screen.width
 	const screenHeight = window.screen.height
@@ -34,7 +44,7 @@ export async function logsCustomEvents(event, userId) {
 				user_id: userId,
 				page_url: pageUrl,
 				event: event,
-				timestamp: timestamp,
+				timestamp: timestamp, // Eastern Time with 12-hour format and AM/PM
 				user_agent: userAgent,
 				screen_width: screenWidth,
 				screen_height: screenHeight,

@@ -7,7 +7,7 @@ import App from './App.vue'
 import router from './router'
 import VueGtag from 'vue-gtag-next'
 import { supabase } from './supabaseClient'
-
+import { H } from 'highlight.run'
 const app = createApp(App)
 
 // Create the head management plugin instance
@@ -47,7 +47,17 @@ async function getIpAddress() {
 // Function to log page views to Supabase (only in production)
 async function logPageVisit(userId, pageUrl) {
 	// Get additional information
-	const timestamp = new Date().toISOString()
+	const timestamp = new Date().toLocaleString('en-US', {
+		timeZone: 'America/New_York', // Eastern Time Zone
+		hour12: true, // 12-hour format
+		hour: 'numeric',
+		minute: 'numeric',
+		second: 'numeric',
+		year: 'numeric',
+		month: 'numeric',
+		day: 'numeric',
+	})
+
 	const userAgent = navigator.userAgent
 	const screenWidth = window.screen.width
 	const screenHeight = window.screen.height
@@ -59,7 +69,7 @@ async function logPageVisit(userId, pageUrl) {
 				user_id: userId,
 				page_url: pageUrl,
 				event: 'pageload',
-				timestamp: timestamp,
+				timestamp: timestamp, // Eastern Time with 12-hour format and AM/PM
 				user_agent: userAgent,
 				screen_width: screenWidth,
 				screen_height: screenHeight,
@@ -113,6 +123,21 @@ router.afterEach(async (to, from) => {
 
 	const pageUrl = to.fullPath // Get the full path of the current route
 	logPageVisit(userId, pageUrl) // Log the visit to Supabase
+})
+
+H.init('lgxpo34d', {
+	environment: 'production',
+	version: 'commit:abcdefg12345',
+	networkRecording: {
+		enabled: true,
+		recordHeadersAndBody: true,
+		urlBlocklist: [
+			// insert full or partial urls that you don't want to record here
+			// Out of the box, Highlight will not record these URLs (they can be safely removed):
+			'https://www.googleapis.com/identitytoolkit',
+			'https://securetoken.googleapis.com',
+		],
+	},
 })
 
 app.mount('#app')

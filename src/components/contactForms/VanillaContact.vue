@@ -734,6 +734,8 @@ watch(
 			}
 			formStarted.value = true
 		}
+		const userId = localStorage.getItem('randomUserId') || 'anno'
+		logsCustomEvents('form_started', userId)
 	},
 	{ immediate: false }
 )
