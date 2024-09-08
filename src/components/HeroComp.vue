@@ -16,7 +16,7 @@
 					<h1
 						class="poppins-bold mb-5 text-4xl md:text-5xl font-bold tracking-widest text-white"
 					>
-						Ottawa Web Design, SEO and E-Commerce Strategy
+						Expert Web Design and development agency, in Ottawa
 					</h1>
 					<p
 						class="poppins-medium mb-5 text-2xl font-medium text-left text-white"
@@ -24,8 +24,9 @@
 						Our web design and SEO strategies are designed to significantly
 						increase traffic and lead generation for your business.
 					</p>
-					<span class="block text-3xl my-8 orange-bg w-fit rounded py-2 px-3"
-						>Backed By Our Guarantee!</span
+					<span
+						class="block text-3xl my-8 orange-bg w-fit rounded py-2 px-3 capitalize"
+						>Your Success, is our success</span
 					>
 					<router-link
 						to="/contact"

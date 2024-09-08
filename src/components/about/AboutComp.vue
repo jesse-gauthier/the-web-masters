@@ -24,25 +24,25 @@
 						>
 					</h2>
 					<p class="text-lg poppins-medium">
-						At The Web Masters, we craft impactful digital experiences that
-						resonate globally. Our expertise spans Branding, Web Design, Web
-						Development, UX Design, SEO, and Digital Marketing. Our clients seek
-						technological solutions that not only automate and enhance business
-						operations but also optimize overall performance. The solutions we
-						develop aim to improve the end user experience by focusing on
-						usability, accessibility, and availability.
+						At The Web Masters, we’re all about creating digital experiences
+						that leave a lasting impression worldwide. From nailing your
+						branding to building sleek websites, improving UX, boosting your
+						SEO, and mastering digital marketing – we’ve got it covered. Our
+						clients come to us looking for smart tech solutions that don’t just
+						streamline their business but take it to the next level. Everything
+						we build is designed to make life easier for the end user, with a
+						strong focus on usability, accessibility, and reliability.
 					</p>
 					<p class="text-lg poppins-medium">
-						Our highly skilled technical team is dedicated to delivering
-						innovative solutions tailored to meet the diverse needs of our
-						clients at every level.
+						Our talented tech team is all about crafting innovative solutions
+						that fit our clients’ unique needs, no matter the scale.
 					</p>
 					<router-link
 						class="my-12 mx-auto flex w-[fit-content] px-6 btn bg-white border-1 border-[#2b3c4f] hover:bg-[#2b3d4f] hover:text-white hover:underline underline-offset-4"
 						to="/contact"
 						aria-label="Contact us for a free consultation"
 					>
-						Get a Free Website Report
+						Get a Free Website Audit
 					</router-link>
 				</div>
 			</div>
