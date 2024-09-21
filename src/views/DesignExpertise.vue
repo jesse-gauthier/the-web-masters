@@ -1,20 +1,10 @@
 <template>
-	<div
-		class="hero min-h-screen"
-		style="background-image: url('./assets/wordpress2.jpg')"
-		aria-label="Hero section with a background image representing UX/UI Design Expertise"
-	>
-		<div class="hero-overlay bg-opacity-60"></div>
-		<div class="hero-content">
-			<h1
-				class="text-2xl md:text-5xl text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl font-medium text-center"
-				aria-label="UX/UI Design Expertise, Transforming Digital Experiences"
-			>
-				UX/UI Design Expertise, <br />
-				Transforming Digital Experiences
-			</h1>
-		</div>
-	</div>
+	<HeroTemplate
+		title="Elevate User Satisfaction with Our UX/UI Design Expertise"
+		subTitle="Crafting Intuitive and Engaging Digital Experiences with UX/UI Design Expertise"
+		backgroundImage="./assets/wordpress2.jpg"
+	/>
+
 	<main
 		class="md:max-w-[75vw] mx-auto p-8 bg-white bg-opacity-90 rounded-lg mt-8"
 	>
@@ -128,12 +118,72 @@
 			>
 				Our UX/UI Design Process
 			</h2>
-			<div class="mt-8 space-y-4">
-				<p><strong>Step 1:</strong> In-depth User Research</p>
-				<p><strong>Step 2:</strong> Ideation and Wireframing</p>
-				<p><strong>Step 3:</strong> Visual Design and Prototyping</p>
-				<p><strong>Step 4:</strong> Usability Testing and Feedback Iteration</p>
-				<p><strong>Step 5:</strong> Implementation and Ongoing Support</p>
+			<div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+				<p
+					class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500 text-bluewood"
+				>
+					<strong class="text-2xl font-bold text-[#2b3d4f] mb-2"
+						>Step 1: In-depth User Research</strong
+					>
+
+					<span class="block mt-2 text-gray-600">
+						We start by thoroughly understanding your target audience, gathering
+						key insights to inform design decisions that align with user needs
+						and expectations.
+					</span>
+				</p>
+				<p
+					class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500"
+				>
+					<strong class="text-2xl font-bold text-[#2b3d4f] mb-2"
+						>Step 2: Ideation and Wireframing</strong
+					>
+
+					<span class="block mt-2 text-gray-600">
+						Our team translates insights into initial concepts, creating
+						wireframes that serve as the foundation for a seamless user journey
+						and intuitive functionality.
+					</span>
+				</p>
+				<p
+					class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500"
+				>
+					<strong class="text-2xl font-bold text-[#2b3d4f] mb-2"
+						>Step 3: Visual Design and Prototyping</strong
+					>
+
+					<span class="block mt-2 text-gray-600">
+						Next, we bring your vision to life with visually appealing and
+						interactive prototypes that reflect your brand identity while
+						ensuring a user-friendly experience.
+					</span>
+				</p>
+				<p
+					class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500"
+				>
+					<strong class="text-2xl font-bold text-[#2b3d4f] mb-2"
+						>Step 4: Usability Testing and Feedback Iteration</strong
+					>
+
+					<span class="block mt-2 text-gray-600">
+						To ensure optimal functionality, we conduct thorough usability
+						tests, gathering feedback to refine and iterate on the design for
+						maximum effectiveness.
+					</span>
+				</p>
+				<p
+					class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500"
+				>
+					<strong class="text-2xl font-bold text-[#2b3d4f] mb-2"
+						>Step 5: Implementation and Ongoing Support</strong
+					>
+
+					<span class="block mt-2 text-gray-600">
+						Finally, we seamlessly implement the design and provide continuous
+						support, ensuring long-term success and adapting to your evolving
+						business needs.
+					</span>
+				</p>
 			</div>
 		</section>
 
@@ -247,6 +297,8 @@
 import { useHead } from '@unhead/vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+
+import HeroTemplate from '@/components/misc/HeroTemplate.vue'
 
 // Initialize AOS (Animate on Scroll)
 AOS.init({

@@ -1,32 +1,15 @@
 <template>
 	<section class="">
 		<!-- Hero -->
-		<div
-			class="hero min-h-[75dvh]"
-			style="
-				background-image: url('/assets/seohero.jpg');
-				background-repeat: no-repeat;
-				background-size: cover;
-			"
-		>
-			<div class="hero-overlay bg-opacity-60"></div>
-			<div
-				data-aos="fade-up"
-				class="hero-content flex-col text-neutral-content"
-			>
-				<h1 class="text-5xl max-w-4xl text-center">SEO Services Ottawa</h1>
-				<p class="max-w-3xl text-xl text-start">
-					At Ottawa SEO Masters, we’re dedicated to optimizing websites for
+		<HeroTemplate
+			title="SEO Services Ottawa"
+			subTitle="At Ottawa SEO Masters, we’re dedicated to optimizing websites for
 					better search engine rankings and user experiences. SEO is more than
 					just keywords; it’s about making your site accessible and
 					user-friendly. Let us help you enhance visibility and ensure your site
-					reaches everyone effectively.
-				</p>
-				<router-link to="/freeseo" class="btn btn-outline bg-white"
-					>Get A Free SEO audit</router-link
-				>
-			</div>
-		</div>
+					reaches everyone effectively."
+			backgroundImage="/assets/seohero.jpg"
+		/>
 		<div class="max-w-4xl mx-auto flex flex-col gap-y-8 p-4">
 			<SeoChecklistForm />
 			<!-- Starting Content -->
@@ -433,6 +416,7 @@ import { useHead } from '@unhead/vue'
 import { onMounted, ref } from 'vue'
 import AOS from 'aos'
 
+import HeroTemplate from '@/components/misc/HeroTemplate.vue'
 import SeoChecklistForm from '@/components/emailSignups/SeoChecklistForm.vue'
 
 onMounted(() => {

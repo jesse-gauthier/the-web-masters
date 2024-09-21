@@ -76,11 +76,7 @@
 							>Contact</RouterLink
 						>
 					</li>
-					<li>
-						<RouterLink class="link link-hover" to="/ourwork"
-							>Portfolio</RouterLink
-						>
-					</li>
+
 					<li>
 						<RouterLink class="link link-hover" to="/privacy-policy"
 							>Privacy Policy</RouterLink
