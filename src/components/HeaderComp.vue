@@ -153,7 +153,6 @@ const links = [
 		path: '/services',
 		subPages: [{ name: 'WordPress', path: 'wordpress' }],
 	},
-	{ name: 'Our Work', path: '/ourwork' },
 	{ name: 'Contact', path: '/contact' },
 	{ name: 'Free SEO Audit', path: '/freeseo' },
 ]
