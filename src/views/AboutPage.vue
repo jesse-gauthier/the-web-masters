@@ -1,36 +1,19 @@
 <template>
 	<div>
 		<!-- Hero Section -->
-		<section
-			class="hero min-h-screen"
-			style="background-image: url('/assets/about_bg.webp')"
-			aria-labelledby="about-us-heading"
-		>
-			<div class="hero-overlay bg-opacity-70"></div>
-			<div class="hero-content text-neutral-content text-center">
-				<div class="max-w-lg mx-auto">
-					<h1
-						id="about-us-heading"
-						class="text-5xl font-semibold text-orange-500 p-8 bg-white bg-opacity-95 rounded-xl"
-					>
-						About Ottawa Web Masters
-					</h1>
-					<p
-						class="text-xl mt-4 bg-white bg-opacity-80 p-4 rounded-md text-black"
-					>
-						Passionate About Empowering Small Businesses with Quality Digital
-						Solutions
-					</p>
-				</div>
-			</div>
-		</section>
+
+		<HeroTemplate
+			backgroundImage="/assets/about_bg.webp"
+			title="About Ottawa Web Masters"
+			subTitle="We're passionate about helping small businesses thrive with top-notch digital solutions"
+		/>
 
 		<!-- Core Values Section -->
 		<section data-aos="fade-up" class="w-[95dvw] md:w-[75dvw] mx-auto mt-14">
 			<h2 class="text-center text-4xl font-bold capitalize mb-14">
-				"We Love What We Do & We Do What We Love"
+				"We love what we do, and we do it with passion"
 				<span class="block self-end text-2xl font-medium w-full py-2">
-					- The Ottawa Web Masters Team
+					- Ottawa Web Masters Team
 				</span>
 			</h2>
 
@@ -56,7 +39,7 @@
 					<div class="flex flex-col justify-end grow">
 						<router-link
 							to="/freeseo"
-							class="btn bg-orange-500 text-white hover:bg-orange-600"
+							class="btn bg-[#E89E1D] text-white hover:bg-orange-600"
 							>Get Your Free SEO Audit</router-link
 						>
 					</div>
@@ -82,7 +65,7 @@
 					<div class="flex flex-col justify-end grow">
 						<router-link
 							to="/freeseo"
-							class="bg-orange-500 text-white hover:bg-orange-600 mt-auto btn"
+							class="bg-[#E89E1D] text-white hover:bg-orange-600 mt-auto btn"
 							>Get Your Free SEO Audit</router-link
 						>
 					</div>
@@ -109,7 +92,7 @@
 					<div class="flex flex-col justify-end grow mt-5">
 						<router-link
 							to="/freeseo"
-							class="bg-orange-500 text-white hover:bg-orange-600 mt-auto btn"
+							class="bg-[#E89E1D] text-white hover:bg-orange-600 mt-auto btn"
 							>Get Your Free SEO Audit</router-link
 						>
 					</div>
@@ -127,7 +110,7 @@
 				</p>
 				<router-link
 					to="/contact"
-					class="btn bg-orange-500 text-white hover:bg-orange-600 mt-4"
+					class="btn bg-[#E89E1D] text-white hover:bg-orange-600 mt-4"
 				>
 					Contact Us
 				</router-link>
@@ -141,6 +124,7 @@ import { onMounted } from 'vue'
 import { useHead } from '@unhead/vue'
 import AOS from 'aos'
 
+import HeroTemplate from '@/components/misc/HeroTemplate.vue'
 import OttawaMap from '../components/OttawaMap.vue'
 
 onMounted(() => {

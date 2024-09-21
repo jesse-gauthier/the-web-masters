@@ -16,6 +16,7 @@ import WebsiteOptimization from '@/views/WebsiteOptimization.vue'
 import DesignExpertise from '@/views/DesignExpertise.vue'
 import ConsultationServices from '@/views/ConsultationServices.vue'
 import OnboardingForm from '@/views/OnboardingForm.vue'
+import OttawaShopify from '@/landingpages/OttawaShopify.vue'
 // Blogs
 import OttawaSeo from '@/landingpages/OttawaSeo.vue'
 
@@ -122,6 +123,12 @@ const router = createRouter({
 			path: '/onboarding',
 			name: 'Onboarding Form',
 			component: OnboardingForm,
+			meta: { robots: 'index, follow' },
+		},
+		{
+			path: '/ottawa-shopify',
+			name: 'Ottawa Shopify',
+			component: OttawaShopify,
 			meta: { robots: 'index, follow' },
 		},
 	],

@@ -55,6 +55,11 @@
 							>Ottawa WordPress</RouterLink
 						>
 					</li>
+					<li>
+						<RouterLink class="link link-hover" to="/ottawa-shopify"
+							>Ottawa Shopify</RouterLink
+						>
+					</li>
 				</ul>
 			</nav>
 			<!-- Company -->

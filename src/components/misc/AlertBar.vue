@@ -20,7 +20,7 @@ const isSticky = ref(false)
 const isVisible = ref(true)
 
 const handleScroll = () => {
-	isSticky.value = window.scrollY > 50
+	isSticky.value = window.scrollY > 65
 }
 
 const closeAlert = () => {

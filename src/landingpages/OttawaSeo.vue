@@ -81,7 +81,7 @@
 					<li class="flex flex-col w-3/4 md:w-1/3 rounded-lg">
 						<div class="orange-bg px-1 py-5 text-center shadow-xl">
 							<h3 class="font-medium text-2xl my-0">Essential Package</h3>
-							<p class="italic text-lg my-1">$1500 Per Month</p>
+							<p class="italic text-lg my-1">$300 Per Month</p>
 							<p class="font-medium my-0">Results In 2-3 months</p>
 						</div>
 						<ul class="p-3">
@@ -106,7 +106,7 @@
 					>
 						<div class="orange-bg px-1 py-5 text-center shadow-xl">
 							<h3 class="font-medium text-2xl my-0">Premium Package</h3>
-							<p class="italic text-lg my-1">$2500 Per Month</p>
+							<p class="italic text-lg my-1">$800 Per Month</p>
 							<p class="font-medium my-0">Results In 1-2 months</p>
 						</div>
 						<ul class="p-3">
@@ -129,7 +129,7 @@
 					<li class="flex flex-col w-3/4 md:w-1/3 rounded-lg">
 						<div class="orange-bg px-1 py-5 text-center shadow-xl">
 							<h3 class="font-medium text-2xl my-0">Ecommerce Package</h3>
-							<p class="italic text-lg my-1">$5500 Per Month</p>
+							<p class="italic text-lg my-1">$1200 Per Month</p>
 							<p class="font-medium my-0">Results In 1 month</p>
 						</div>
 						<ul class="p-3">
