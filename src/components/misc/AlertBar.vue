@@ -1,15 +1,18 @@
 <template>
 	<div
 		v-if="isVisible"
-		:class="['z-50 text-center orange-bg flex', { fixed: isSticky }]"
+		:class="[
+			'z-50 text-center bg-orange flex w-screen justify-center max-w-screen',
+			{ fixed: isSticky },
+		]"
 	>
 		<router-link
 			to="/freeseo"
-			class="brand-font opacity-100 hover:text-white text-2xl w-screen rounded-none underline py-1"
+			class="opacity-100 hover:text-white grow text-2xl rounded-none font-subheading py-1"
 		>
 			Get a Free SEO Audit
 		</router-link>
-		<button @click="closeAlert" class="text-white mr-5">✕</button>
+		<button @click="closeAlert" class="text-white mr-14">X</button>
 	</div>
 </template>
 
