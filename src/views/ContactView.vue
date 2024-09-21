@@ -1,17 +1,9 @@
 <template>
-	<div
-		id="contact_banner"
-		class="min-h-[80vh] flex justify-center items-center bg-fixed text-center"
-		aria-labelledby="contact-heading"
-	>
-		<h1
-			id="contact-heading"
-			data-aos="fade-up"
-			class="text-5xl font-bold text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl"
-		>
-			We Would Love To Work With You
-		</h1>
-	</div>
+	<HeroTemplate
+		title="We Would Love To Work With You"
+		subTitle="Get in Touch Today to Discuss Your Next Project Contact Form Below"
+		backgroundImage="/assets/branding/contact-image.jpg"
+	/>
 	<section aria-labelledby="location-heading">
 		<OttawaMap heading="Located in Our Nation's Capital" />
 	</section>
@@ -21,6 +13,7 @@
 import { onMounted, defineAsyncComponent } from 'vue'
 import { useHead } from '@unhead/vue'
 import AOS from 'aos'
+import HeroTemplate from '@/components/misc/HeroTemplate.vue'
 import OttawaMap from '@/components/OttawaMap.vue'
 
 onMounted(() => {
@@ -72,22 +65,4 @@ useHead({
 })
 </script>
 
-<style scoped>
-#contact_banner {
-	background-image: url('../assets/branding/contact-image.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-}
-
-h1 {
-	color: #e89e1d;
-}
-
-@media (max-width: 768px) {
-	#contact_banner h1 {
-		font-size: 2.5rem;
-		padding: 4rem 2rem;
-	}
-}
-</style>
+<style scoped></style>

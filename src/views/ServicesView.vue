@@ -1,19 +1,11 @@
 <template>
 	<!-- Main Services Section -->
+	<HeroTemplate
+		title="Our Professional Web Services"
+		subTitle="Tailored Digital Solutions to Elevate Your Online Presence"
+		backgroundImage="/assets/branding/contact-image.jpg"
+	/>
 	<section aria-labelledby="services-heading" class="">
-		<!-- Banner Section -->
-		<div
-			id="contact_banner"
-			class="hero min-h-screen col-span-3 flex items-center justify-center bg-cover bg-center bg-fixed"
-		>
-			<h1
-				id="services-heading"
-				class="text-5xl font-medium text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl"
-			>
-				Our Professional Web Services
-			</h1>
-		</div>
-
 		<!-- Services Grid -->
 		<div
 			class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
@@ -200,6 +192,8 @@ import { onMounted } from 'vue'
 import { useHead } from '@unhead/vue'
 import AOS from 'aos'
 
+import HeroTemplate from '@/components/misc/HeroTemplate.vue'
+
 onMounted(() => {
 	AOS.init({
 		duration: 3000,
@@ -249,21 +243,10 @@ useHead({
 </script>
 
 <style scoped>
-#contact_banner {
+/* #contact_banner {
 	background-image: url('../assets/branding/contact-image.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-}
-
-h1 {
-	color: #e89e1d;
-}
-
-@media (max-width: 768px) {
-	#contact_banner h1 {
-		font-size: 2.5rem;
-		padding: 4rem 2rem;
-	}
-}
+} */
 </style>
