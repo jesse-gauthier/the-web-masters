@@ -485,8 +485,4 @@ const toggleDetails = (section) => {
 }
 </script>
 
-<style>
-.gradient_bg:hover {
-	background: linear-gradient(135deg, #e89e1d 0%, #ffcc66 100%);
-}
-</style>
+<style></style>

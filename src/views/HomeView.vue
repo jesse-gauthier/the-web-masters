@@ -169,10 +169,7 @@ useHead({
 		</section>
 
 		<!-- SEO Checklist Form Section -->
-		<section
-			class="max-w-xl mx-auto my-4"
-			aria-labelledby="seochecklist-heading"
-		>
+		<section aria-labelledby="seochecklist-heading">
 			<SeoChecklistForm />
 		</section>
 

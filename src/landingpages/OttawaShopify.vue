@@ -2,48 +2,25 @@
 	<section>
 		<div>
 			<!-- Hero Section -->
-			<section
-				class="hero min-h-screen bg-fixed"
-				:style="{ backgroundImage: `url(${backgroundImage})` }"
-				aria-labelledby="hero-heading"
-			>
-				<div class="hero-overlay bg-opacity-60"></div>
-				<div class="hero-content flex-col text-white max-w-[55dvw] text-center">
-					<h1
-						id="hero-heading"
-						class="text-3xl md:text-5xl text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl font-medium"
-					>
-						Custom Shopify Websites in Ottawa, ON
-					</h1>
-					<!-- New Subheading -->
-					<p
-						class="mt-4 text-lg md:text-2xl text-gray-800 bg-white bg-opacity-90 p-4 rounded-xl"
-					>
-						Elevate Your E-commerce Presence with Expert Shopify Development
-					</p>
-					<div class="flex justify-center space-x-4 mt-6">
-						<router-link
-							to="/contact"
-							class="flex btn w-fit bg-white border border-[#2b3c4f] hover:bg-[#2b3d4f] hover:text-white"
-							role="button"
-							aria-label="Start your Shopify project with us"
-						>
-							Get Started
-						</router-link>
-					</div>
-				</div>
-			</section>
-
+			<HeroTemplate
+				title="Empowering Ottawa Businesses with Custom Shopify Websites Built for Success"
+				subTitle="Tailored E-commerce Solutions to Help Your Ottawa Business Thrive Online"
+				:backgroundImage="backgroundImage"
+			/>
 			<main class="inner-wrapper">
 				<!-- Information Text Section -->
 				<section
-					class="inner-wrapper px-3 py-12 min-h-[50dvh] flex flex-col justify-center"
+					class="inner-wrapper px-3 py-16 min-h-[50dvh] flex flex-col justify-center"
 				>
-					<h2 class="text-4xl text-center font-medium text-gray-800">
+					<h2
+						class="text-3xl md:text-4xl text-center font-semibold text-gray-800"
+					>
 						Elevate Your Shopify Store with Expert Development in Ottawa, ON
 					</h2>
-					<hr class="my-6 border-t-2 border-[#2b3d4f] mx-auto w-24" />
-					<p class="text-lg text-gray-600 max-w-3xl mx-auto">
+					<hr class="my-6 border-t-2 border-gray-800 mx-auto w-24" />
+					<p
+						class="text-base md:text-lg leading-relaxed text-gray-700 max-w-3xl mx-auto"
+					>
 						We specialize in creating stunning Shopify stores tailored
 						specifically for small businesses in Ottawa, ON. Our experienced
 						team is dedicated to ensuring your online presence is not only
@@ -56,19 +33,21 @@
 
 				<!-- Services Section -->
 				<section
-					class="flex flex-col text-center max-w-[80dvw] mx-auto my-12 gap-4"
+					class="flex flex-col text-center max-w-[80dvw] mx-auto my-16 gap-8"
 				>
-					<h2 class="text-4xl font-medium text-gray-800">Our Services</h2>
-					<p class="text-lg text-gray-600 max-w-2xl mx-auto">
+					<h2 class="text-3xl md:text-4xl font-semibold text-gray-800">
+						Our Services
+					</h2>
+					<p class="text-base md:text-lg text-gray-700 max-w-2xl mx-auto">
 						Explore our comprehensive range of Shopify services designed to help
 						your business thrive online.
 					</p>
-					<hr class="my-6 border-t-2 border-[#2b3d4f] mx-auto w-24" />
+					<hr class="my-6 border-t-2 border-gray-800 mx-auto w-24" />
 					<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 						<li
-							class="p-6 rounded-lg shadow-lg bg-white hover:shadow-xl transition-shadow border border-gray-200"
+							class="p-6 rounded-lg shadow-lg bg-white hover:shadow-xl transition-transform transform hover:scale-105 border border-gray-200"
 						>
-							<h3 class="text-xl font-semibold text-[#2b3d4f] mb-2">
+							<h3 class="text-xl font-semibold text-gray-800 mb-2">
 								Custom Shopify Theme Development
 							</h3>
 							<p class="text-gray-600">
@@ -77,9 +56,9 @@
 							</p>
 						</li>
 						<li
-							class="p-6 rounded-lg shadow-lg bg-white hover:shadow-xl transition-shadow border border-gray-200"
+							class="p-6 rounded-lg shadow-lg bg-white hover:shadow-xl transition-transform transform hover:scale-105 border border-gray-200"
 						>
-							<h3 class="text-xl font-semibold text-[#2b3d4f] mb-2">
+							<h3 class="text-xl font-semibold text-gray-800 mb-2">
 								Plugin Development and Customization
 							</h3>
 							<p class="text-gray-600">
@@ -88,9 +67,9 @@
 							</p>
 						</li>
 						<li
-							class="p-6 rounded-lg shadow-lg bg-white hover:shadow-xl transition-shadow border border-gray-200"
+							class="p-6 rounded-lg shadow-lg bg-white hover:shadow-xl transition-transform transform hover:scale-105 border border-gray-200"
 						>
-							<h3 class="text-xl font-semibold text-[#2b3d4f] mb-2">
+							<h3 class="text-xl font-semibold text-gray-800 mb-2">
 								Responsive Design for Mobile and Tablet
 							</h3>
 							<p class="text-gray-600">
@@ -99,9 +78,9 @@
 							</p>
 						</li>
 						<li
-							class="p-6 rounded-lg shadow-lg bg-white hover:shadow-xl transition-shadow border border-gray-200"
+							class="p-6 rounded-lg shadow-lg bg-white hover:shadow-xl transition-transform transform hover:scale-105 border border-gray-200"
 						>
-							<h3 class="text-xl font-semibold text-[#2b3d4f] mb-2">
+							<h3 class="text-xl font-semibold text-gray-800 mb-2">
 								SEO Optimization and Performance Enhancements
 							</h3>
 							<p class="text-gray-600">
@@ -110,9 +89,9 @@
 							</p>
 						</li>
 						<li
-							class="p-6 rounded-lg shadow-lg bg-white hover:shadow-xl transition-shadow border border-gray-200"
+							class="p-6 rounded-lg shadow-lg bg-white hover:shadow-xl transition-transform transform hover:scale-105 border border-gray-200"
 						>
-							<h3 class="text-xl font-semibold text-[#2b3d4f] mb-2">
+							<h3 class="text-xl font-semibold text-gray-800 mb-2">
 								eCommerce Solutions
 							</h3>
 							<p class="text-gray-600">
@@ -121,38 +100,40 @@
 						</li>
 					</ul>
 				</section>
+
 				<!-- Client Testimonials Section -->
 				<section class="mt-16" aria-labelledby="client-testimonials">
 					<h2
 						id="client-testimonials"
-						class="text-center text-3xl font-medium text-gray-800"
+						class="text-center text-3xl font-semibold text-gray-800"
 					>
 						What Our Clients Say
 					</h2>
 					<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
 						<div class="p-4 bg-gray-100 rounded-lg shadow">
-							<p class="text-lg">
+							<p class="text-lg italic">
 								"The Shopify store they built for us is exactly what we needed.
 								It's user-friendly and has boosted our sales significantly."
 							</p>
-							<p class="mt-4 text-sm text-right font-bold">
+							<p class="mt-4 text-sm text-right font-bold text-gray-800">
 								- Emily R., Store Owner
 							</p>
 						</div>
 						<div class="p-4 bg-gray-100 rounded-lg shadow">
-							<p class="text-lg">
+							<p class="text-lg italic">
 								"Their attention to detail and understanding of our brand helped
 								us create a Shopify store that truly stands out."
 							</p>
-							<p class="mt-4 text-sm text-right font-bold">
+							<p class="mt-4 text-sm text-right font-bold text-gray-800">
 								- Michael S., Marketing Director
 							</p>
 						</div>
 					</div>
 				</section>
+
 				<!-- Technology and Partner Logos Section -->
 				<section class="inner-wrapper py-8">
-					<hr class="my-6 border-t-2 border-[#2b3d4f] mx-auto w-24" />
+					<hr class="my-6 border-t-2 border-gray-800 mx-auto w-24" />
 					<div class="grid grid-cols-2 md:grid-cols-5 gap-4 p-6">
 						<img
 							class="self-center col-span-1 w-[100%]"
@@ -181,6 +162,7 @@
 						/>
 					</div>
 				</section>
+
 				<!-- Design Process Section -->
 				<section class="mt-16" aria-labelledby="design-process">
 					<h2
@@ -191,9 +173,9 @@
 					</h2>
 					<div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 						<div
-							class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500"
+							class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-105 border-l-4 border-orange"
 						>
-							<h3 class="text-2xl font-bold text-[#2b3d4f] mb-2">
+							<h3 class="text-2xl font-bold text-gray-800 mb-2">
 								Step 1: In-depth Market Research
 							</h3>
 							<p class="text-gray-600">
@@ -202,9 +184,9 @@
 							</p>
 						</div>
 						<div
-							class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500"
+							class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-105 border-l-4 border-orange"
 						>
-							<h3 class="text-2xl font-bold text-[#2b3d4f] mb-2">
+							<h3 class="text-2xl font-bold text-gray-800 mb-2">
 								Step 2: Theme Selection and Customization
 							</h3>
 							<p class="text-gray-600">
@@ -213,9 +195,9 @@
 							</p>
 						</div>
 						<div
-							class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500"
+							class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-105 border-l-4 border-orange"
 						>
-							<h3 class="text-2xl font-bold text-[#2b3d4f] mb-2">
+							<h3 class="text-2xl font-bold text-gray-800 mb-2">
 								Step 3: Development and Integration
 							</h3>
 							<p class="text-gray-600">
@@ -224,9 +206,9 @@
 							</p>
 						</div>
 						<div
-							class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500"
+							class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-105 border-l-4 border-orange"
 						>
-							<h3 class="text-2xl font-bold text-[#2b3d4f] mb-2">
+							<h3 class="text-2xl font-bold text-gray-800 mb-2">
 								Step 4: Usability Testing and Optimization
 							</h3>
 							<p class="text-gray-600">
@@ -235,9 +217,9 @@
 							</p>
 						</div>
 						<div
-							class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500"
+							class="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-105 border-l-4 border-orange"
 						>
-							<h3 class="text-2xl font-bold text-[#2b3d4f] mb-2">
+							<h3 class="text-2xl font-bold text-gray-800 mb-2">
 								Step 5: Launch and Ongoing Support
 							</h3>
 							<p class="text-gray-600">
@@ -247,9 +229,13 @@
 						</div>
 					</div>
 				</section>
+
 				<!-- FAQ Section -->
 				<section class="mt-16" aria-labelledby="faqs">
-					<h2 id="faqs" class="text-center text-3xl font-medium text-gray-800">
+					<h2
+						id="faqs"
+						class="text-center text-3xl font-semibold text-gray-800"
+					>
 						Frequently Asked Questions
 					</h2>
 					<div class="mt-8">
@@ -257,7 +243,7 @@
 							class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
 						>
 							<input type="checkbox" class="peer" />
-							<div class="collapse-title text-xl font-medium">
+							<div class="collapse-title text-xl font-semibold text-gray-800">
 								What does your Shopify design process involve?
 							</div>
 							<div class="collapse-content">
@@ -272,7 +258,7 @@
 							class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
 						>
 							<input type="checkbox" class="peer" />
-							<div class="collapse-title text-xl font-medium">
+							<div class="collapse-title text-xl font-semibold text-gray-800">
 								How do you ensure the Shopify store meets our business needs?
 							</div>
 							<div class="collapse-content">
@@ -287,7 +273,7 @@
 							class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
 						>
 							<input type="checkbox" class="peer" />
-							<div class="collapse-title text-xl font-medium">
+							<div class="collapse-title text-xl font-semibold text-gray-800">
 								Can you help with SEO for our Shopify store?
 							</div>
 							<div class="collapse-content">
@@ -301,7 +287,7 @@
 							class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
 						>
 							<input type="checkbox" class="peer" />
-							<div class="collapse-title text-xl font-medium">
+							<div class="collapse-title text-xl font-semibold text-gray-800">
 								How long does it take to build a custom Shopify store?
 							</div>
 							<div class="collapse-content">
@@ -316,7 +302,7 @@
 							class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
 						>
 							<input type="checkbox" class="peer" />
-							<div class="collapse-title text-xl font-medium">
+							<div class="collapse-title text-xl font-semibold text-gray-800">
 								Do you offer post-launch support for Shopify stores?
 							</div>
 							<div class="collapse-content">
@@ -328,9 +314,10 @@
 						</div>
 					</div>
 				</section>
+
 				<!-- Contact CTA Section -->
 				<section class="mt-16 text-center" aria-labelledby="contact-cta">
-					<h2 id="contact-cta" class="text-3xl font-medium text-gray-800">
+					<h2 id="contact-cta" class="text-3xl font-semibold text-gray-800">
 						Ready to Elevate Your Shopify Store?
 					</h2>
 					<p class="mt-4">
@@ -339,7 +326,7 @@
 					</p>
 					<router-link
 						to="/contact"
-						class="inline-block mt-8 px-6 py-3 bg-orange-500 text-white rounded-lg shadow hover:bg-orange-600"
+						class="inline-block mt-8 px-6 py-3 bg-orange text-white rounded-lg shadow hover:bg-orange-600 transition-colors"
 					>
 						Request a Quote
 					</router-link>
@@ -359,6 +346,7 @@ import klaviyo_logo from '@/assets/klaviyo_logo.webp'
 import qb_logo from '@/assets/qb-logo.svg'
 import shipstationlogo from '@/assets/shipstation_logo.webp'
 import backgroundImage from '@/assets/shopify-background.webp'
+import HeroTemplate from '@/components/misc/HeroTemplate.vue'
 
 useHead({
 	title: 'Custom Shopify Solutions in Ottawa, ON | Ottawa Web Masters',

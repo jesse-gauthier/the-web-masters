@@ -162,7 +162,7 @@ const toggleDropdown = (index) => {
 }
 
 const handleScroll = () => {
-	isSticky.value = window.scrollY > 65
+	isSticky.value = window.scrollY > 65.1
 }
 
 onMounted(() => {
@@ -207,5 +207,6 @@ onUnmounted(() => {
 	position: sticky;
 	top: 0;
 	z-index: 1000;
+	transition: 0.2s top cubic-bezier(0.3, 0.73, 0.3, 0.74);
 }
 </style>

@@ -1,50 +1,10 @@
 <template>
-	<section>
-		<!-- Hero Section -->
-		<section
-			class="hero min-h-screen bg-fixed"
-			style="background-image: url('./assets/wordpress2.jpg')"
-			itemscope
-			itemtype="https://schema.org/ProfessionalService"
-		>
-			<meta itemprop="name" content="SEO Services in Ottawa, Ontario" />
-			<meta
-				itemprop="description"
-				content="Expert SEO services in Ottawa to improve your online presence and drive more traffic to your website."
-			/>
-
-			<div
-				data-aos="fade-up"
-				class="hero-content flex-col text-white max-w-[55dvw]"
-			>
-				<h1
-					class="text-3xl text-orange-500 p-8 bg-white bg-opacity-90 rounded-xl font-medium"
-					itemprop="headline"
-				>
-					SEO Services in Ottawa, Ontario
-				</h1>
-				<div class="flex justify-center space-x-4">
-					<router-link
-						to="/contact"
-						class="flex btn w-fit bg-white border-1 border-[#2b3c4f] hover:bg-[#2b3d4f] hover:text-white"
-						role="button"
-						aria-label="Start your SEO project with us"
-					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 512 512"
-							class="fill-[#efaa1d]"
-							width="25"
-						>
-							<path
-								d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
-							/>
-						</svg>
-						Get Started
-					</router-link>
-				</div>
-			</div>
-		</section>
+	<main>
+		<HeroTemplate
+			title="Boost Your Local Visibility with Expert SEO Services in Ottawa, Ontario"
+			subTitle="Drive More Traffic and Dominate Search Rankings with Our Tailored SEO Solutions"
+			backgroundImage="./assets/wordpress2.jpg"
+		/>
 
 		<!-- Information Text -->
 		<section
@@ -53,7 +13,7 @@
 			itemscope
 			itemtype="https://schema.org/Service"
 		>
-			<h3 class="text-4xl" itemprop="serviceType">
+			<h3 class="text-4xl text-center" itemprop="serviceType">
 				Expert SEO Services in Ottawa, Ontario
 			</h3>
 			<hr class="my-6 bg-[#2b3d4f] h-[3px]" />
@@ -276,7 +236,7 @@
 			</div>
 		</section>
 		<OttawaMap />
-	</section>
+	</main>
 </template>
 
 <script setup>
@@ -284,6 +244,7 @@ import { useHead } from '@unhead/vue'
 import { onMounted } from 'vue'
 import AOS from 'aos'
 
+import HeroTemplate from '@/components/misc/HeroTemplate.vue'
 import OttawaMap from '@/components/OttawaMap.vue'
 
 onMounted(() => {
