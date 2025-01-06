@@ -81,86 +81,85 @@ useHead({
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       aria-labelledby="packages-heading"
     >
-      <!-- Wordpress -->
+      <!-- WordPress -->
       <div data-aos="fade-up" aria-labelledby="wordpress-development">
-        <div class="flex flex-col md:flex-row h-[100%]">
+        <div class="flex flex-col h-full">
           <div
-            class="md:w-full p-6 flex flex-col justify-center bg-white rounded-lg shadow-lg"
+            class="p-6 flex flex-col justify-between bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105 h-full"
           >
             <h2
               id="wordpress-development"
-              class="text-2xl font-semibold mb-4 text-gray-900"
+              class="text-2xl font-bold mb-4 text-gray-900"
             >
               Expert WordPress Development Services
             </h2>
-            <p class="text-gray-700">
+            <p class="text-gray-600 mb-6 leading-relaxed">
               Boost your online presence with our customized WordPress
               solutions. From dynamic blogs to robust e-commerce sites, our
-              WordPress development services deliver flexibility, power, and
-              unmatched usability tailored to your needs.
+              services deliver flexibility, power, and unmatched usability
+              tailored to your needs.
             </p>
             <RouterLink
               to="/wordpress"
-              class="btn btn-outline w-fit mx-auto mt-4"
+              class="btn btn-success w-fit text-white mx-auto"
               aria-label="Learn More About WordPress Development"
             >
-              Learn More About WordPress Development
+              Learn More
             </RouterLink>
           </div>
         </div>
       </div>
+
       <!-- Shopify Development Section -->
       <div data-aos="fade-up" aria-labelledby="shopify-development">
-        <div class="flex flex-col md:flex-row h-[100%]">
+        <div class="flex flex-col h-full">
           <div
-            class="md:w-full p-6 flex flex-col justify-center bg-white rounded-lg shadow-lg"
+            class="p-6 flex flex-col justify-between bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105 h-full"
           >
             <h2
               id="shopify-development"
-              class="text-2xl font-semibold mb-4 text-gray-900"
+              class="text-2xl font-bold mb-4 text-gray-900"
             >
               Shopify Development Solutions
             </h2>
-            <p class="text-gray-700">
+            <p class="text-gray-600 mb-6 leading-relaxed">
               Transform your e-commerce business with our specialized Shopify
               development services. We create bespoke themes, integrate powerful
-              apps, and ensure your online store stands out and functions
-              smoothly, driving sales and customer satisfaction.
+              apps, and ensure your online store stands out, driving sales and
+              customer satisfaction.
             </p>
             <RouterLink
               to="/shopify"
-              class="btn btn-outline w-fit mx-auto mt-auto"
+              class="btn btn-success w-fit text-white mx-auto"
               aria-label="Learn More About Shopify Development"
             >
-              Learn More About Shopify Development
+              Learn More
             </RouterLink>
           </div>
         </div>
       </div>
+
       <!-- SEO Services Section -->
       <div data-aos="fade-up" aria-labelledby="seo-services">
-        <div class="flex flex-col md:flex-row h-[100%]">
+        <div class="flex flex-col h-full">
           <div
-            class="md:w-full p-6 flex flex-col justify-center bg-white rounded-lg shadow-lg"
+            class="p-6 flex flex-col justify-between bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105 h-full"
           >
-            <h2
-              id="seo-services"
-              class="text-2xl font-semibold mb-4 text-gray-900"
-            >
+            <h2 id="seo-services" class="text-2xl font-bold mb-4 text-gray-900">
               Professional SEO Services
             </h2>
-            <p class="text-gray-700">
+            <p class="text-gray-600 mb-6 leading-relaxed">
               Improve your website’s visibility and attract quality traffic with
               our advanced SEO strategies. We specialize in keyword research,
               on-page optimization, and link building to help your site rank
-              higher in search engine results.
+              higher in search results.
             </p>
             <RouterLink
               to="/seo"
-              class="btn btn-outline w-fit mx-auto mt-auto"
+              class="btn btn-success w-fit text-white mx-auto"
               aria-label="Learn More About SEO Services"
             >
-              Learn More About SEO
+              Learn More
             </RouterLink>
           </div>
         </div>
