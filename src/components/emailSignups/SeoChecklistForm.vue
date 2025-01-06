@@ -1,8 +1,8 @@
 <template>
   <div
-    data-aos="fade-up"
     :class="{ hidden: !isOpen }"
     class="fixed top-[30%] left-[30%] bg-white p-8 rounded-lg shadow-lg h-fit py-14 w-fit"
+    id="seo-checklist-form"
   >
     <div class="text-center">
       <!-- <button class="absolute right-0 mr-2 top-0" @click="closePopup">X</button> -->
@@ -147,5 +147,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* Add any component-specific styles here */
+#seo-checklist-form {
+  z-index: 1000;
+}
 </style>
