@@ -165,12 +165,6 @@ useHead({
         </div>
       </div>
     </section>
-
-    <!-- SEO Checklist Form Section -->
-    <!-- <section aria-labelledby="seochecklist-heading">
-			<SeoChecklistForm />
-		</section> -->
-
     <!-- FAQ Section -->
     <FaqComp aria-labelledby="faq-heading" />
 
