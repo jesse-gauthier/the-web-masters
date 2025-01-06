@@ -10,7 +10,6 @@ import FaqComp from "@/components/faq/FaqComp.vue";
 import TestimonyComp from "@/components/TestimonyComp.vue";
 import Packages from "@/components/serviceComps/Packages.vue";
 import OttawaMap from "@/components/OttawaMap.vue";
-import SeoChecklistForm from "@/components/emailSignups/SeoChecklistForm.vue";
 
 onMounted(() => {
   AOS.init({
