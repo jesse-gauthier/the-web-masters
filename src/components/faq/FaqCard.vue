@@ -27,7 +27,7 @@
     </div>
     <div class="relative">
       <p
-        class="px-4 py-3 text-gray-700 text-sm leading-relaxed transition-all duration-300 absolute top-0 left-0 w-full bg-white z-10"
+        class="bg-white px-4 py-3 text-gray-700 text-sm leading-relaxed transition-all duration-300 absolute top-0 left-0 w-full bg-white z-10"
         v-if="isExpanded"
         :id="'answer-' + faq.id"
         tabindex="-1"

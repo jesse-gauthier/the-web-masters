@@ -17,6 +17,7 @@ import DesignExpertise from '@/views/DesignExpertise.vue'
 import ConsultationServices from '@/views/ConsultationServices.vue'
 import OnboardingForm from '@/views/OnboardingForm.vue'
 import OttawaShopify from '@/landingpages/OttawaShopify.vue'
+import OnBoardForm from '@/components/onboarding/OnBoardForm.vue'
 // Blogs
 import OttawaSeo from '@/landingpages/OttawaSeo.vue'
 
@@ -122,7 +123,7 @@ const router = createRouter({
 		{
 			path: '/onboarding',
 			name: 'Onboarding Form',
-			component: OnboardingForm,
+			component: OnBoardForm,
 			meta: { robots: 'index, follow' },
 		},
 		{
