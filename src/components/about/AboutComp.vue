@@ -20,7 +20,7 @@
         </div>
         <div class="flex flex-col gap-6 justify-center">
           <!-- Heading with primary title and a secondary line styled for emphasis -->
-          <h2 class="font-bold text-2xl md:text-3xl text-gray-800">
+          <h2 class="font-normal text-2xl md:text-3xl text-gray-800">
             Based in Canada's Capital:
             <span class="block mt-2 text-bluewood"
               >Expert Web Developers and Designers</span
@@ -48,7 +48,7 @@
           </p>
           <!-- Call-to-action button encouraging users to contact for a free audit -->
           <router-link
-            class="btn w-fit btn-success text-white transition duration-300"
+            class="btn btn-primary"
             to="/contact"
             aria-label="Contact us for a free consultation"
           >
