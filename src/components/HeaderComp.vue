@@ -6,13 +6,17 @@
     ]"
     role="banner"
   >
-    <div class="navbar brand-font">
-      <MobileNav
-        :isSticky="isSticky"
-        :isOpen="isOpen"
-        @toggle="isOpen = !isOpen"
-      />
-      <DesktopNav :links="links" />
+    <div class="w-[100%]">
+      <div class="lg:hidden">
+        <MobileNav
+          :isSticky="isSticky"
+          :isOpen="isOpen"
+          @toggle="isOpen = !isOpen"
+        />
+      </div>
+      <div class="lg:block hidden py-3">
+        <DesktopNav :links="links" />
+      </div>
     </div>
   </header>
 </template>

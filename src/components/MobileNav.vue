@@ -1,28 +1,19 @@
 <template>
   <div class="flex justify-between w-full lg:navbar-start">
-    <div class="flex justify-between align-middle w-screen">
-      <router-link
-        class="transition-all duration-300"
-        :class="
-          isSticky
-            ? 'max-w-[10dvw] lg:max-w-[7dvw] xl:max-w-[3dvw]'
-            : 'max-w-[75dvw] lg:max-w-[15dvw] xl:max-w-[17dvw]'
-        "
-        to="/"
-        aria-label="Home"
-      >
+    <div class="flex justify-between align-middle w-screen items-center px-3">
+      <router-link to="/" aria-label="Home">
         <LogoComponent />
       </router-link>
       <div
         tabindex="0"
         role="button"
         aria-label="Toggle Navigation Menu"
-        class="btn btn-ghost lg:hidden self-center"
+        class=""
         @click="$emit('toggle')"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-10 w-10"
+          class="h-20 w-10 mr-8"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"

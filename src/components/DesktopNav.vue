@@ -1,6 +1,14 @@
 <template>
-  <div class="navbar-end hidden lg:flex self-end">
-    <ul class="menu menu-horizontal px-1 align-end" role="menubar">
+  <div class="flex justify-between items-center">
+    <div>
+      <router-link to="/">
+        <LogoComponent />
+      </router-link>
+    </div>
+    <ul
+      class="w-[100%] menu menu-horizontal px-1 flex justify-end"
+      role="menubar"
+    >
       <li
         v-for="(link, index) in links"
         :key="link.path"
@@ -25,6 +33,7 @@
 
 <script setup>
 import { ref } from "vue";
+import LogoComponent from "./branding/LogoComponent.vue";
 
 const props = defineProps({
   links: Array,
