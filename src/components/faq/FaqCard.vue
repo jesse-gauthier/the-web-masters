@@ -1,12 +1,12 @@
 <template>
   <div
-    class="h-full bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105 cursor-pointer flex flex-col"
+    class="rounded-lg cursor-pointer"
     @click="toggleExpand"
     :class="{ 'high-index': isExpanded }"
   >
     <div
       v-if="faq"
-      class="px-4 py-3 flex gap-3 items-center border-b border-gray-300"
+      class="px-4 py-3 flex gap-3 items-center"
       role="button"
       :aria-expanded="isExpanded"
       :aria-controls="'answer-' + faq.id"
@@ -27,7 +27,7 @@
     </div>
     <div class="relative">
       <p
-        class="bg-white px-4 py-3 text-gray-700 text-sm leading-relaxed transition-all duration-300 absolute top-0 left-0 w-full bg-white z-10"
+        class="px-4 py-3 text-gray-700 text-sm leading-relaxed transition-all duration-300"
         v-if="isExpanded"
         :id="'answer-' + faq.id"
         tabindex="-1"

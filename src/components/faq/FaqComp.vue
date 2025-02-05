@@ -6,9 +6,9 @@
     <h3 class="text-center text-4xl font-bold text-gray-900 mb-10">
       Frequently Asked Questions
     </h3>
-    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <ul class="flex flex-wrap justify-center gap-6">
       <li
-        class="flex flex-col shadow-lg border border-gray-300 rounded-lg cursor-pointer bg-white hover:shadow-xl transition duration-300"
+        class="w-[100%] md:max-w-[350px] shadow-lg border border-gray-300 rounded-lg cursor-pointer bg-white hover:shadow-xl transition duration-300 h-fit"
         v-for="faq in faqs"
         :key="faq.question"
       >
